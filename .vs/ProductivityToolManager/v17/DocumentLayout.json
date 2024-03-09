@@ -58,8 +58,7 @@
               "RelativeToolTip": "DataLayer\\Models\\WorkerDataModel.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAABQAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-09T14:13:34.229Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-09T14:13:34.229Z"
             },
             {
               "$type": "Document",
@@ -69,7 +68,7 @@
               "RelativeDocumentMoniker": "DataLayer\\Models\\TasksDataModel.cs",
               "ToolTip": "C:\\ProductivityToolManager\\DataLayer\\Models\\TasksDataModel.cs",
               "RelativeToolTip": "DataLayer\\Models\\TasksDataModel.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAkAAAAAAAAA",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABAAAAAsAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-09T14:13:32.795Z",
               "EditorCaption": ""
@@ -84,8 +83,7 @@
               "RelativeToolTip": "BusinessLayer\\Models\\TasksModel.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-09T14:13:05.481Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-09T14:13:05.481Z"
             }
           ]
         }

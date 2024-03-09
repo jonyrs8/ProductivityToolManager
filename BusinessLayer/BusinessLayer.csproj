@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{5E6CC2DC-EDD3-4124-B53E-0BC88FC8DFB6}</ProjectGuid>
+    <ProjectGuid>{6EF72B4C-D92F-4917-87C1-61234173F85D}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>BusinessLayer</RootNamespace>
@@ -41,12 +41,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Models\DepartmentModel.cs" />
+    <Compile Include="Models\TaskModel.cs" />
     <Compile Include="Models\ManageEfficienceModel.cs" />
-    <Compile Include="Models\TasksCodeModel.cs" />
+    <Compile Include="Models\TaskCodeModel.cs" />
+    <Compile Include="Models\DepartmentModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Models\TasksModel.cs" />
-    <Compile Include="Models\WorkerModel.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

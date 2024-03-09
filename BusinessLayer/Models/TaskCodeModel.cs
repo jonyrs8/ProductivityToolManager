@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BusinessLayer.Model
 {
-    public class DepartmentModel
+    public class TaskCodeModel
     {
     }
 }
