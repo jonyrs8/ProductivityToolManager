@@ -1,32 +1,49 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\jdlima\\OneDrive - Parfois, SA\\Documentos\\ProductivityToolManager\\UserInterface\\",
+  "WorkspaceRootPath": "C:\\ProductivityToolManager\\UserInterface\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{42FF5579-E981-4ABF-9228-7F22AB9D8EF4}|..\\DataLayer\\DataLayer.csproj|c:\\users\\jdlima\\onedrive - parfois, sa\\documentos\\productivitytoolmanager\\datalayer\\models\\workerdatamodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{42FF5579-E981-4ABF-9228-7F22AB9D8EF4}|..\\DataLayer\\DataLayer.csproj|c:\\users\\jdlima\\onedrive - parfois, sa\\documentos\\productivitytoolmanager\\datalayer\\models\\tasksdatamodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5E6CC2DC-EDD3-4124-B53E-0BC88FC8DFB6}|BusinessLayer\\BusinessLayer.csproj|c:\\users\\jdlima\\onedrive - parfois, sa\\documentos\\productivitytoolmanager\\userinterface\\businesslayer\\models\\manageefficiencemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5E6CC2DC-EDD3-4124-B53E-0BC88FC8DFB6}|BusinessLayer\\BusinessLayer.csproj|solutionrelative:businesslayer\\models\\manageefficiencemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5E6CC2DC-EDD3-4124-B53E-0BC88FC8DFB6}|BusinessLayer\\BusinessLayer.csproj|c:\\users\\jdlima\\onedrive - parfois, sa\\documentos\\productivitytoolmanager\\userinterface\\businesslayer\\models\\tasksmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{5E6CC2DC-EDD3-4124-B53E-0BC88FC8DFB6}|BusinessLayer\\BusinessLayer.csproj|C:\\ProductivityToolManager\\UserInterface\\businesslayer\\models\\tasksmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5E6CC2DC-EDD3-4124-B53E-0BC88FC8DFB6}|BusinessLayer\\BusinessLayer.csproj|solutionrelative:businesslayer\\models\\tasksmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5E6CC2DC-EDD3-4124-B53E-0BC88FC8DFB6}|BusinessLayer\\BusinessLayer.csproj|c:\\users\\jdlima\\onedrive - parfois, sa\\documentos\\productivitytoolmanager\\userinterface\\businesslayer\\models\\workermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{5E6CC2DC-EDD3-4124-B53E-0BC88FC8DFB6}|BusinessLayer\\BusinessLayer.csproj|c:\\productivitytoolmanager\\userinterface\\businesslayer\\models\\departmentmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5E6CC2DC-EDD3-4124-B53E-0BC88FC8DFB6}|BusinessLayer\\BusinessLayer.csproj|solutionrelative:businesslayer\\models\\departmentmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5E6CC2DC-EDD3-4124-B53E-0BC88FC8DFB6}|BusinessLayer\\BusinessLayer.csproj|C:\\ProductivityToolManager\\UserInterface\\businesslayer\\models\\manageefficiencemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5E6CC2DC-EDD3-4124-B53E-0BC88FC8DFB6}|BusinessLayer\\BusinessLayer.csproj|solutionrelative:businesslayer\\models\\manageefficiencemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5E6CC2DC-EDD3-4124-B53E-0BC88FC8DFB6}|BusinessLayer\\BusinessLayer.csproj|c:\\productivitytoolmanager\\userinterface\\businesslayer\\models\\taskscodemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5E6CC2DC-EDD3-4124-B53E-0BC88FC8DFB6}|BusinessLayer\\BusinessLayer.csproj|solutionrelative:businesslayer\\models\\taskscodemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5E6CC2DC-EDD3-4124-B53E-0BC88FC8DFB6}|BusinessLayer\\BusinessLayer.csproj|C:\\ProductivityToolManager\\UserInterface\\businesslayer\\models\\workermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5E6CC2DC-EDD3-4124-B53E-0BC88FC8DFB6}|BusinessLayer\\BusinessLayer.csproj|solutionrelative:businesslayer\\models\\workermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4389DB82-2895-4320-AA23-6A14BB8A8960}|UserInterface\\UserInterface.csproj|c:\\users\\jdlima\\onedrive - parfois, sa\\documentos\\productivitytoolmanager\\userinterface\\userinterface\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{42FF5579-E981-4ABF-9228-7F22AB9D8EF4}|..\\DataLayer\\DataLayer.csproj|c:\\productivitytoolmanager\\datalayer\\models\\workerdatamodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{42FF5579-E981-4ABF-9228-7F22AB9D8EF4}|..\\DataLayer\\DataLayer.csproj|c:\\productivitytoolmanager\\datalayer\\models\\taskscodedatamodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{42FF5579-E981-4ABF-9228-7F22AB9D8EF4}|..\\DataLayer\\DataLayer.csproj|c:\\productivitytoolmanager\\datalayer\\models\\tasksdatamodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\jdlima\\OneDrive - Parfois, SA\\Documentos\\ProductivityToolManager\\DataLayer\\Models\\WorkerDataModel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4389DB82-2895-4320-AA23-6A14BB8A8960}|UserInterface\\UserInterface.csproj|C:\\ProductivityToolManager\\UserInterface\\userinterface\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{4389DB82-2895-4320-AA23-6A14BB8A8960}|UserInterface\\UserInterface.csproj|solutionrelative:userinterface\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4389DB82-2895-4320-AA23-6A14BB8A8960}|UserInterface\\UserInterface.csproj|C:\\ProductivityToolManager\\UserInterface\\userinterface\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4389DB82-2895-4320-AA23-6A14BB8A8960}|UserInterface\\UserInterface.csproj|solutionrelative:userinterface\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4389DB82-2895-4320-AA23-6A14BB8A8960}|UserInterface\\UserInterface.csproj|c:\\users\\jdlima\\onedrive - parfois, sa\\documentos\\productivitytoolmanager\\userinterface\\userinterface\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{4389DB82-2895-4320-AA23-6A14BB8A8960}|UserInterface\\UserInterface.csproj|solutionrelative:userinterface\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\jdlima\\OneDrive - Parfois, SA\\Documentos\\ProductivityToolManager\\DataLayer\\Models\\TasksDataModel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -36,7 +53,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 10,
           "Children": [
             {
               "$type": "Bookmark",
@@ -59,27 +76,70 @@
               "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ManageEfficienceModel.cs",
-              "DocumentMoniker": "C:\\Users\\jdlima\\OneDrive - Parfois, SA\\Documentos\\ProductivityToolManager\\UserInterface\\BusinessLayer\\Models\\ManageEfficienceModel.cs",
-              "RelativeDocumentMoniker": "BusinessLayer\\Models\\ManageEfficienceModel.cs",
-              "ToolTip": "C:\\Users\\jdlima\\OneDrive - Parfois, SA\\Documentos\\ProductivityToolManager\\UserInterface\\BusinessLayer\\Models\\ManageEfficienceModel.cs",
-              "RelativeToolTip": "BusinessLayer\\Models\\ManageEfficienceModel.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAABSAAAA",
+              "DocumentIndex": 1,
+              "Title": "DepartmentModel.cs",
+              "DocumentMoniker": "C:\\ProductivityToolManager\\UserInterface\\BusinessLayer\\Models\\DepartmentModel.cs",
+              "RelativeDocumentMoniker": "BusinessLayer\\Models\\DepartmentModel.cs",
+              "ToolTip": "C:\\ProductivityToolManager\\UserInterface\\BusinessLayer\\Models\\DepartmentModel.cs",
+              "RelativeToolTip": "BusinessLayer\\Models\\DepartmentModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAyAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-08T21:42:42.44Z",
+              "WhenOpened": "2024-03-09T14:58:56.965Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "TasksCodeModel.cs",
+              "DocumentMoniker": "C:\\ProductivityToolManager\\UserInterface\\BusinessLayer\\Models\\TasksCodeModel.cs",
+              "RelativeDocumentMoniker": "BusinessLayer\\Models\\TasksCodeModel.cs",
+              "ToolTip": "C:\\ProductivityToolManager\\UserInterface\\BusinessLayer\\Models\\TasksCodeModel.cs",
+              "RelativeToolTip": "BusinessLayer\\Models\\TasksCodeModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAABAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-09T14:54:01.507Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "TasksCodeDataModel.cs",
+              "DocumentMoniker": "C:\\ProductivityToolManager\\DataLayer\\Models\\TasksCodeDataModel.cs",
+              "RelativeDocumentMoniker": "..\\DataLayer\\Models\\TasksCodeDataModel.cs",
+              "ToolTip": "C:\\ProductivityToolManager\\DataLayer\\Models\\TasksCodeDataModel.cs",
+              "RelativeToolTip": "..\\DataLayer\\Models\\TasksCodeDataModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-09T14:49:05.305Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "TasksDataModel.cs",
+              "DocumentMoniker": "C:\\ProductivityToolManager\\DataLayer\\Models\\TasksDataModel.cs",
+              "RelativeDocumentMoniker": "..\\DataLayer\\Models\\TasksDataModel.cs",
+              "ToolTip": "C:\\ProductivityToolManager\\DataLayer\\Models\\TasksDataModel.cs",
+              "RelativeToolTip": "..\\DataLayer\\Models\\TasksDataModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-09T14:25:35.312Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "TasksModel.cs",
-              "DocumentMoniker": "C:\\Users\\jdlima\\OneDrive - Parfois, SA\\Documentos\\ProductivityToolManager\\UserInterface\\BusinessLayer\\Models\\TasksModel.cs",
+              "DocumentMoniker": "C:\\ProductivityToolManager\\UserInterface\\BusinessLayer\\Models\\TasksModel.cs",
               "RelativeDocumentMoniker": "BusinessLayer\\Models\\TasksModel.cs",
-              "ToolTip": "C:\\Users\\jdlima\\OneDrive - Parfois, SA\\Documentos\\ProductivityToolManager\\UserInterface\\BusinessLayer\\Models\\TasksModel.cs",
+              "ToolTip": "C:\\ProductivityToolManager\\UserInterface\\BusinessLayer\\Models\\TasksModel.cs",
               "RelativeToolTip": "BusinessLayer\\Models\\TasksModel.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAAAAAA",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABkAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-08T21:34:58.675Z",
               "EditorCaption": ""
@@ -88,36 +148,49 @@
               "$type": "Document",
               "DocumentIndex": 4,
               "Title": "WorkerModel.cs",
-              "DocumentMoniker": "C:\\Users\\jdlima\\OneDrive - Parfois, SA\\Documentos\\ProductivityToolManager\\UserInterface\\BusinessLayer\\Models\\WorkerModel.cs",
+              "DocumentMoniker": "C:\\ProductivityToolManager\\UserInterface\\BusinessLayer\\Models\\WorkerModel.cs",
               "RelativeDocumentMoniker": "BusinessLayer\\Models\\WorkerModel.cs",
-              "ToolTip": "C:\\Users\\jdlima\\OneDrive - Parfois, SA\\Documentos\\ProductivityToolManager\\UserInterface\\BusinessLayer\\Models\\WorkerModel.cs",
+              "ToolTip": "C:\\ProductivityToolManager\\UserInterface\\BusinessLayer\\Models\\WorkerModel.cs",
               "RelativeToolTip": "BusinessLayer\\Models\\WorkerModel.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAKAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-08T21:34:46.968Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "TasksDataModel.cs",
-              "DocumentMoniker": "C:\\Users\\jdlima\\OneDrive - Parfois, SA\\Documentos\\ProductivityToolManager\\DataLayer\\Models\\TasksDataModel.cs",
-              "RelativeDocumentMoniker": "..\\DataLayer\\Models\\TasksDataModel.cs",
-              "ToolTip": "C:\\Users\\jdlima\\OneDrive - Parfois, SA\\Documentos\\ProductivityToolManager\\DataLayer\\Models\\TasksDataModel.cs",
-              "RelativeToolTip": "..\\DataLayer\\Models\\TasksDataModel.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAAAAAA",
+              "DocumentIndex": 2,
+              "Title": "ManageEfficienceModel.cs",
+              "DocumentMoniker": "C:\\ProductivityToolManager\\UserInterface\\BusinessLayer\\Models\\ManageEfficienceModel.cs",
+              "RelativeDocumentMoniker": "BusinessLayer\\Models\\ManageEfficienceModel.cs",
+              "ToolTip": "C:\\ProductivityToolManager\\UserInterface\\BusinessLayer\\Models\\ManageEfficienceModel.cs",
+              "RelativeToolTip": "BusinessLayer\\Models\\ManageEfficienceModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAABrAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-08T21:32:27.182Z",
+              "WhenOpened": "2024-03-08T21:42:42.44Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 5,
+              "Title": "WorkerDataModel.cs",
+              "DocumentMoniker": "C:\\ProductivityToolManager\\DataLayer\\Models\\WorkerDataModel.cs",
+              "RelativeDocumentMoniker": "..\\DataLayer\\Models\\WorkerDataModel.cs",
+              "ToolTip": "C:\\ProductivityToolManager\\DataLayer\\Models\\WorkerDataModel.cs",
+              "RelativeToolTip": "..\\DataLayer\\Models\\WorkerDataModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-09T14:25:40.394Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "WorkerDataModel.cs",
               "DocumentMoniker": "C:\\Users\\jdlima\\OneDrive - Parfois, SA\\Documentos\\ProductivityToolManager\\DataLayer\\Models\\WorkerDataModel.cs",
-              "RelativeDocumentMoniker": "..\\DataLayer\\Models\\WorkerDataModel.cs",
+              "RelativeDocumentMoniker": "..\\..\\Users\\jdlima\\OneDrive - Parfois, SA\\Documentos\\ProductivityToolManager\\DataLayer\\Models\\WorkerDataModel.cs",
               "ToolTip": "C:\\Users\\jdlima\\OneDrive - Parfois, SA\\Documentos\\ProductivityToolManager\\DataLayer\\Models\\WorkerDataModel.cs",
-              "RelativeToolTip": "..\\DataLayer\\Models\\WorkerDataModel.cs",
+              "RelativeToolTip": "..\\..\\Users\\jdlima\\OneDrive - Parfois, SA\\Documentos\\ProductivityToolManager\\DataLayer\\Models\\WorkerDataModel.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-08T21:28:06.173Z",
@@ -125,11 +198,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 9,
               "Title": "MainWindow.xaml",
-              "DocumentMoniker": "C:\\Users\\jdlima\\OneDrive - Parfois, SA\\Documentos\\ProductivityToolManager\\UserInterface\\UserInterface\\MainWindow.xaml",
+              "DocumentMoniker": "C:\\ProductivityToolManager\\UserInterface\\UserInterface\\MainWindow.xaml",
               "RelativeDocumentMoniker": "UserInterface\\MainWindow.xaml",
-              "ToolTip": "C:\\Users\\jdlima\\OneDrive - Parfois, SA\\Documentos\\ProductivityToolManager\\UserInterface\\UserInterface\\MainWindow.xaml",
+              "ToolTip": "C:\\ProductivityToolManager\\UserInterface\\UserInterface\\MainWindow.xaml",
               "RelativeToolTip": "UserInterface\\MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2024-03-08T21:26:54.354Z",
@@ -137,16 +210,28 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 10,
               "Title": "MainWindow.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\jdlima\\OneDrive - Parfois, SA\\Documentos\\ProductivityToolManager\\UserInterface\\UserInterface\\MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\ProductivityToolManager\\UserInterface\\UserInterface\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "UserInterface\\MainWindow.xaml.cs",
-              "ToolTip": "C:\\Users\\jdlima\\OneDrive - Parfois, SA\\Documentos\\ProductivityToolManager\\UserInterface\\UserInterface\\MainWindow.xaml.cs",
+              "ToolTip": "C:\\ProductivityToolManager\\UserInterface\\UserInterface\\MainWindow.xaml.cs",
               "RelativeToolTip": "UserInterface\\MainWindow.xaml.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAARAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAA5AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-08T21:26:53.725Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "TasksDataModel.cs",
+              "DocumentMoniker": "C:\\Users\\jdlima\\OneDrive - Parfois, SA\\Documentos\\ProductivityToolManager\\DataLayer\\Models\\TasksDataModel.cs",
+              "RelativeDocumentMoniker": "..\\..\\Users\\jdlima\\OneDrive - Parfois, SA\\Documentos\\ProductivityToolManager\\DataLayer\\Models\\TasksDataModel.cs",
+              "ToolTip": "C:\\Users\\jdlima\\OneDrive - Parfois, SA\\Documentos\\ProductivityToolManager\\DataLayer\\Models\\TasksDataModel.cs",
+              "RelativeToolTip": "..\\..\\Users\\jdlima\\OneDrive - Parfois, SA\\Documentos\\ProductivityToolManager\\DataLayer\\Models\\TasksDataModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-08T21:32:27.182Z"
             }
           ]
         }

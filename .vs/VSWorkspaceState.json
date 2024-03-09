@@ -1,6 +1,12 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\BusinessLayer",
+    "\\BusinessLayer\\Models",
+    "\\DataLayer",
+    "\\DataLayer\\Models",
+    "\\UserInterface"
   ],
+  "SelectedNode": "\\UserInterface\\UserInterface.sln",
   "PreviewInSolutionExplorer": false
 }

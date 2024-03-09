@@ -15,6 +15,12 @@ using System.Windows.Shapes;
 
 namespace UserInterface
 {
+
+    //IDEIA PARA MOSTRAR DADOS:
+
+    //TAREFAS POR FAZER, FEITAS E ACABADAS AO DIA DE HOJE
+
+
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>

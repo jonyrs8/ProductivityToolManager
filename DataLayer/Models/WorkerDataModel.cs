@@ -7,7 +7,9 @@ using System.Threading.Tasks;
 namespace DataLayer.Models
 {
     //THIS CLASS SHOULD ONLY HAVE ALL THE METHODS TO MANAGE ALL THE DATA FROM WORKER TABEL
+
     public class WorkerDataModel
     {
+
     }
 }

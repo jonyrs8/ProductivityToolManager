@@ -41,7 +41,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Models\DepartmentModel.cs" />
     <Compile Include="Models\ManageEfficienceModel.cs" />
+    <Compile Include="Models\TasksCodeModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Models\TasksModel.cs" />
     <Compile Include="Models\WorkerModel.cs" />

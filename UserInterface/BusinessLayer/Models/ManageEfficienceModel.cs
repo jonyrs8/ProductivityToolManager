@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BusinessLayer.Models
 {
-    //THIS CLASS ONLY SHOULD HAVE ALL THE METHODS TO CALCULATE THE TASKS EFFICIECE
+    //THIS CLASS ONLY SHOULD HAVE ALL THE METHODS TO CALCULATE THE TASKS EFFICIECE, ENUM AND ALL THE STUFF.
     public class ManageEfficienceModel
     {
     }
