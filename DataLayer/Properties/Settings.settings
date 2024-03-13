@@ -3,7 +3,7 @@
   <Profiles />
   <Settings>
     <Setting Name="ConnectionString" Type="System.String" Scope="User">
-      <Value Profile="(Default)">Alguma coisa</Value>
+      <Value Profile="(Default)">Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=ProdToolManagerV2;Data Source=PRFS1765\MSSQLSERVER01</Value>
     </Setting>
   </Settings>
 </SettingsFile>

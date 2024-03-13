@@ -4,6 +4,8 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace DataLayer.Models
@@ -16,7 +18,7 @@ namespace DataLayer.Models
     /// </summary>
     public class TasksDataModel
     {
-        public static DataTable ListAllTasks (out string error)
+        public static DataTable GetAllTasks (out string error)
         {
             DataTable dataTable = null;
             error = string.Empty;
@@ -44,5 +46,13 @@ namespace DataLayer.Models
             }
             return dataTable;
         }
+//        SELECT
+//    AREA,
+//    SUM(DATEDIFF(MINUTE, time_in, time_out)) AS REAL_TIME_IN_TASKS,
+//    SUM(DATEDIFF(MINUTE, time_in, EXPECTED_TIME_OUT)) AS THEORETICAL_TIME_IN_TASKS
+//FROM
+//    tasks
+//GROUP BY
+//    AREA;
     }
 }

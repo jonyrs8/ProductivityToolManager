@@ -25,7 +25,8 @@ namespace DataLayer.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("Alguma coisa")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=ProdToolMana" +
+            "gerV2;Data Source=PRFS1765\\MSSQLSERVER01")]
         public string ConnectionString {
             get {
                 return ((string)(this["ConnectionString"]));

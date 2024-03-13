@@ -31,6 +31,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DataLayer">
+      <HintPath>..\DataLayer\bin\Debug\DataLayer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -41,10 +44,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Collections\DepartmentEfficiencCollection.cs" />
+    <Compile Include="Collections\TaskCollection.cs" />
     <Compile Include="Models\TaskModel.cs" />
-    <Compile Include="Models\ManageEfficienceModel.cs" />
-    <Compile Include="Models\TaskCodeModel.cs" />
-    <Compile Include="Models\DepartmentModel.cs" />
+    <Compile Include="DepartmentEfficience.cs" />
+    <Compile Include="Models\DepartmentEfficienceModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

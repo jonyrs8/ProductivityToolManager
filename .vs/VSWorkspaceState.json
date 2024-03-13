@@ -5,7 +5,9 @@
     "\\BusinessLayer\\Models",
     "\\DataLayer",
     "\\DataLayer\\Models",
-    "\\UserInterface"
+    "\\UserInterface",
+    "\\UserInterface\\UserInterface",
+    "\\UserInterface\\UserInterface\\ChartsUC"
   ],
   "SelectedNode": "\\UserInterface\\UserInterface.sln",
   "PreviewInSolutionExplorer": false

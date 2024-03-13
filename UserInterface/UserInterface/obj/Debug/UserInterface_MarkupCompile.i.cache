@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\jdlima\OneDrive - Parfois, SA\Documentos\ProductivityToolManager\UserInterface\UserInterface\obj\Debug\
+C:\ProductivityToolManager\UserInterface\UserInterface\obj\Debug\
 UserInterface
 none
 false
 DEBUG;TRACE
-C:\Users\jdlima\OneDrive - Parfois, SA\Documentos\ProductivityToolManager\UserInterface\UserInterface\App.xaml
-1219584333
+C:\ProductivityToolManager\UserInterface\UserInterface\App.xaml
+22135417881
 
-6-793535042
-13-38814620
-MainWindow.xaml;
+7-1597588026
+161799389280
+ChartsUC\PieChartsUC.xaml;MainWindow.xaml;
 
 True
 
