@@ -65,25 +65,6 @@ VALUES
 (52, 'ARRUMAR', 'JSANTOS', '2024-03-24 09:45', '2024-03-24 11:15', '2024-03-24 11:00', 'EXPEDIÇÃO');
 
 
-SELECT * FROM TASKS;
-
 SELECT AREA, COUNT(TASK_ID) FROM TASKS GROUP BY AREA; --TAREFAS REALIZADA POR ZONA
 
 SELECT USER_ID, COUNT(TASK_ID) FROM TASKS GROUP BY USER_ID; --TAREFAS REALIZADA POR USER
-
-// Defina o tempo estimado e o tempo decorrido
-double tempoEstimado = 1.0; // 1 hora estimada
-double tempoDecorrido = 1.5; // 1.5 horas decorridas
-// Calcule a porcentagem de conclusão
-double porcentagemConclusao = Math.Min(tempoDecorrido / tempoEstimado, 1.0) * 100;
-// Exiba a porcentagem de conclusão
-Console.WriteLine($"A porcentagem de conclusão é: {porcentagemConclusao}%");
-Console.ReadLine();
-
-SELECT AREA,
-SUM(DATEDIFF(MINUTE, time_in, time_out)) AS REAL_TIME_IN_TASKS
-FROM tasks GROUP BY AREA;
-
-SELECT AREA,
-SUM(DATEDIFF(MINUTE, time_in, EXPECTED_TIME_OUT)) AS TEORICAL_TIME_IN_TASKS
-FROM tasks GROUP BY AREA;

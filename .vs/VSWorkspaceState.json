@@ -9,6 +9,6 @@
     "\\UserInterface\\UserInterface",
     "\\UserInterface\\UserInterface\\ChartsUC"
   ],
-  "SelectedNode": "\\UserInterface\\UserInterface.sln",
+  "SelectedNode": "\\BusinessLayer\\Models\\DepartmentEfficienceModel.cs",
   "PreviewInSolutionExplorer": false
 }

@@ -36,7 +36,7 @@ namespace BusinessLayer.Collections
 
             string erro = string.Empty;
 
-            DataTable dataTable = TasksDataModel.GetAllTasks(out erro);
+            DataTable dataTable = TaskData.GetAllTasks(out erro);
 
             TaskCollection task = new TaskCollection(dataTable);
 

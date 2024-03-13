@@ -12,12 +12,10 @@ namespace DataLayer.Models
 {
     //THIS CLASS SHOULD ONLY HAVE ALL THE METHODS TO MANAGE ALL THE DATA FROM TASKS TABEL
 
-
-    /// <summary>
-    /// METHOD TO EXTRACT ALL DE DATA FROM TASKS TABLE!
-    /// </summary>
-    public class TasksDataModel
-    {
+    public class TaskData
+    {    /// <summary>
+         /// METHOD TO EXTRACT ALL DE DATA FROM TASKS TABLE!
+         /// </summary>
         public static DataTable GetAllTasks (out string error)
         {
             DataTable dataTable = null;
@@ -46,13 +44,5 @@ namespace DataLayer.Models
             }
             return dataTable;
         }
-//        SELECT
-//    AREA,
-//    SUM(DATEDIFF(MINUTE, time_in, time_out)) AS REAL_TIME_IN_TASKS,
-//    SUM(DATEDIFF(MINUTE, time_in, EXPECTED_TIME_OUT)) AS THEORETICAL_TIME_IN_TASKS
-//FROM
-//    tasks
-//GROUP BY
-//    AREA;
     }
 }

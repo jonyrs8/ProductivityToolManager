@@ -25,29 +25,36 @@ namespace UserInterface.ChartsUC
     /// </summary>
     public partial class PieChartsUC : UserControl
     {
+        public string ViewType { get; set; }
         public PieChartsUC()
         {
             InitializeComponent();
             PointLabel = chartPoint =>
             string.Format("{0} ({1:P})", chartPoint.Y, chartPoint.Participation);
-            //PieSeries pieSeries = new PieSeries
+
+            //DepartmentEfficienceCollection deparEfficices = DepartmentEfficienceCollection.ListDepartmentCollection();
+
+            //foreach (var  department in deparEfficices) 
             //{
-            //    Title = "jonas",            // Title of the series
-            //    DataLabels = true,          // Display data labels
-            //    Values = new ChartValues<double> { 20 }  // Add data points to the series
-            //};
+            //    PieSeries pieSeries = new PieSeries
+            //    {
+            //        Title = department.Area,
+            //        DataLabels = true,
+            //        Values = new ChartValues<double> { department.Efficience }
+            //    };
 
-            //ChartUC.Series.Add(pieSeries);
+            //    ChartUC.Series.Add(pieSeries);
+            //}
 
-            DepartmentEfficienceCollection deparEfficices = DepartmentEfficienceCollection.ListDepartmentCollection();
+            DepartmentTasksCollection deparEfficices = DepartmentTasksCollection.ListDepartmentTasksCollection();
 
-            foreach (var  department in deparEfficices) 
+            foreach (var department in deparEfficices)
             {
                 PieSeries pieSeries = new PieSeries
                 {
-                    Title = department.Area,            // Title of the series
-                    DataLabels = true,          // Display data labels
-                    Values = new ChartValues<double> { department.Efficience }  // Add data points to the series
+                    Title = department.Area,
+                    DataLabels = true,
+                    Values = new ChartValues<double> { department.TasksNumber }
                 };
 
                 ChartUC.Series.Add(pieSeries);

@@ -3,41 +3,50 @@
   "WorkspaceRootPath": "C:\\ProductivityToolManager\\UserInterface\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6EF72B4C-D92F-4917-87C1-61234173F85D}|..\\BusinessLayer\\BusinessLayer.csproj|c:\\productivitytoolmanager\\businesslayer\\models\\departmentefficiencemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6EF72B4C-D92F-4917-87C1-61234173F85D}|..\\BusinessLayer\\BusinessLayer.csproj|c:\\productivitytoolmanager\\businesslayer\\collections\\departmenttaskscollection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6EF72B4C-D92F-4917-87C1-61234173F85D}|..\\BusinessLayer\\BusinessLayer.csproj|c:\\productivitytoolmanager\\businesslayer\\collections\\departmentefficienccollection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6EF72B4C-D92F-4917-87C1-61234173F85D}|..\\BusinessLayer\\BusinessLayer.csproj|c:\\productivitytoolmanager\\businesslayer\\collections\\departmentefficiencecollection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4389DB82-2895-4320-AA23-6A14BB8A8960}|UserInterface\\UserInterface.csproj|c:\\productivitytoolmanager\\userinterface\\userinterface\\chartsuc\\piechartsuc.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{6EF72B4C-D92F-4917-87C1-61234173F85D}|..\\BusinessLayer\\BusinessLayer.csproj|c:\\productivitytoolmanager\\businesslayer\\collections\\taskcollection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4389DB82-2895-4320-AA23-6A14BB8A8960}|UserInterface\\UserInterface.csproj|C:\\ProductivityToolManager\\UserInterface\\userinterface\\chartsuc\\piechartsuc.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4389DB82-2895-4320-AA23-6A14BB8A8960}|UserInterface\\UserInterface.csproj|solutionrelative:userinterface\\chartsuc\\piechartsuc.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{42FF5579-E981-4ABF-9228-7F22AB9D8EF4}|..\\DataLayer\\DataLayer.csproj|c:\\productivitytoolmanager\\datalayer\\models\\departmenttasksdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4389DB82-2895-4320-AA23-6A14BB8A8960}|UserInterface\\UserInterface.csproj|C:\\ProductivityToolManager\\UserInterface\\userinterface\\chartsuc\\piechartsuc.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{4389DB82-2895-4320-AA23-6A14BB8A8960}|UserInterface\\UserInterface.csproj|solutionrelative:userinterface\\chartsuc\\piechartsuc.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{42FF5579-E981-4ABF-9228-7F22AB9D8EF4}|..\\DataLayer\\DataLayer.csproj|c:\\productivitytoolmanager\\datalayer\\models\\tasksdatamodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6EF72B4C-D92F-4917-87C1-61234173F85D}|..\\BusinessLayer\\BusinessLayer.csproj|c:\\productivitytoolmanager\\businesslayer\\models\\departmenttasksmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{42FF5579-E981-4ABF-9228-7F22AB9D8EF4}|..\\DataLayer\\DataLayer.csproj|c:\\productivitytoolmanager\\datalayer\\models\\taskdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{42FF5579-E981-4ABF-9228-7F22AB9D8EF4}|..\\DataLayer\\DataLayer.csproj|c:\\productivitytoolmanager\\datalayer\\models\\departmenteefficiencedata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4389DB82-2895-4320-AA23-6A14BB8A8960}|UserInterface\\UserInterface.csproj|C:\\ProductivityToolManager\\UserInterface\\userinterface\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4389DB82-2895-4320-AA23-6A14BB8A8960}|UserInterface\\UserInterface.csproj|solutionrelative:userinterface\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6EF72B4C-D92F-4917-87C1-61234173F85D}|..\\BusinessLayer\\BusinessLayer.csproj|c:\\productivitytoolmanager\\businesslayer\\models\\departmentefficiencemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6EF72B4C-D92F-4917-87C1-61234173F85D}|..\\BusinessLayer\\BusinessLayer.csproj|c:\\productivitytoolmanager\\businesslayer\\models\\taskmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4389DB82-2895-4320-AA23-6A14BB8A8960}|UserInterface\\UserInterface.csproj|C:\\ProductivityToolManager\\UserInterface\\userinterface\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{4389DB82-2895-4320-AA23-6A14BB8A8960}|UserInterface\\UserInterface.csproj|solutionrelative:userinterface\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6EF72B4C-D92F-4917-87C1-61234173F85D}|..\\BusinessLayer\\BusinessLayer.csproj|c:\\productivitytoolmanager\\businesslayer\\collections\\taskcollection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4389DB82-2895-4320-AA23-6A14BB8A8960}|UserInterface\\UserInterface.csproj|C:\\ProductivityToolManager\\UserInterface\\userinterface\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4389DB82-2895-4320-AA23-6A14BB8A8960}|UserInterface\\UserInterface.csproj|solutionrelative:userinterface\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6EF72B4C-D92F-4917-87C1-61234173F85D}|..\\BusinessLayer\\BusinessLayer.csproj|c:\\productivitytoolmanager\\businesslayer\\departmentefficience.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6EF72B4C-D92F-4917-87C1-61234173F85D}|..\\BusinessLayer\\BusinessLayer.csproj|c:\\productivitytoolmanager\\businesslayer\\models\\taskmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -47,7 +56,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 11,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Bookmark",
@@ -76,32 +85,84 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "DepartmentEfficiencCollection.cs",
-              "DocumentMoniker": "C:\\ProductivityToolManager\\BusinessLayer\\Collections\\DepartmentEfficiencCollection.cs",
-              "RelativeDocumentMoniker": "..\\BusinessLayer\\Collections\\DepartmentEfficiencCollection.cs",
-              "ToolTip": "C:\\ProductivityToolManager\\BusinessLayer\\Collections\\DepartmentEfficiencCollection.cs",
-              "RelativeToolTip": "..\\BusinessLayer\\Collections\\DepartmentEfficiencCollection.cs",
-              "ViewState": "AQIAABIAAAAAAAAAAAAqwB8AAABFAAAA",
+              "Title": "DepartmentEfficienceCollection.cs",
+              "DocumentMoniker": "C:\\ProductivityToolManager\\BusinessLayer\\Collections\\DepartmentEfficienceCollection.cs",
+              "RelativeDocumentMoniker": "..\\BusinessLayer\\Collections\\DepartmentEfficienceCollection.cs",
+              "ToolTip": "C:\\ProductivityToolManager\\BusinessLayer\\Collections\\DepartmentEfficienceCollection.cs",
+              "RelativeToolTip": "..\\BusinessLayer\\Collections\\DepartmentEfficienceCollection.cs",
+              "ViewState": "AQIAAAEAAAAAAAAAAADgvxAAAAAdAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-12T21:43:16.024Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "DepartmenteEfficienceData.cs",
-              "DocumentMoniker": "C:\\ProductivityToolManager\\DataLayer\\Models\\DepartmenteEfficienceData.cs",
-              "RelativeDocumentMoniker": "..\\DataLayer\\Models\\DepartmenteEfficienceData.cs",
-              "ToolTip": "C:\\ProductivityToolManager\\DataLayer\\Models\\DepartmenteEfficienceData.cs",
-              "RelativeToolTip": "..\\DataLayer\\Models\\DepartmenteEfficienceData.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAABgAAAB/AAAA",
+              "DocumentIndex": 7,
+              "Title": "TaskData.cs",
+              "DocumentMoniker": "C:\\ProductivityToolManager\\DataLayer\\Models\\TaskData.cs",
+              "RelativeDocumentMoniker": "..\\DataLayer\\Models\\TaskData.cs",
+              "ToolTip": "C:\\ProductivityToolManager\\DataLayer\\Models\\TaskData.cs",
+              "RelativeToolTip": "..\\DataLayer\\Models\\TaskData.cs",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAmwBEAAAAXAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-12T21:39:05.146Z",
+              "WhenOpened": "2024-03-12T20:18:26.116Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "DepartmentTasksData.cs",
+              "DocumentMoniker": "C:\\ProductivityToolManager\\DataLayer\\Models\\DepartmentTasksData.cs",
+              "RelativeDocumentMoniker": "..\\DataLayer\\Models\\DepartmentTasksData.cs",
+              "ToolTip": "C:\\ProductivityToolManager\\DataLayer\\Models\\DepartmentTasksData.cs",
+              "RelativeToolTip": "..\\DataLayer\\Models\\DepartmentTasksData.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAB0AAABEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-13T22:14:44.446Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "DepartmentTasksCollection.cs",
+              "DocumentMoniker": "C:\\ProductivityToolManager\\BusinessLayer\\Collections\\DepartmentTasksCollection.cs",
+              "RelativeDocumentMoniker": "..\\BusinessLayer\\Collections\\DepartmentTasksCollection.cs",
+              "ToolTip": "C:\\ProductivityToolManager\\BusinessLayer\\Collections\\DepartmentTasksCollection.cs",
+              "RelativeToolTip": "..\\BusinessLayer\\Collections\\DepartmentTasksCollection.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-13T22:03:21.19Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "PieChartsUC.xaml.cs",
+              "DocumentMoniker": "C:\\ProductivityToolManager\\UserInterface\\UserInterface\\ChartsUC\\PieChartsUC.xaml.cs",
+              "RelativeDocumentMoniker": "UserInterface\\ChartsUC\\PieChartsUC.xaml.cs",
+              "ToolTip": "C:\\ProductivityToolManager\\UserInterface\\UserInterface\\ChartsUC\\PieChartsUC.xaml.cs",
+              "RelativeToolTip": "UserInterface\\ChartsUC\\PieChartsUC.xaml.cs",
+              "ViewState": "AQIAACoAAAAAAAAAAAAAADcAAAAmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-12T08:32:46.636Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "TaskCollection.cs",
+              "DocumentMoniker": "C:\\ProductivityToolManager\\BusinessLayer\\Collections\\TaskCollection.cs",
+              "RelativeDocumentMoniker": "..\\BusinessLayer\\Collections\\TaskCollection.cs",
+              "ToolTip": "C:\\ProductivityToolManager\\BusinessLayer\\Collections\\TaskCollection.cs",
+              "RelativeToolTip": "..\\BusinessLayer\\Collections\\TaskCollection.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAABAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-13T09:10:50.611Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "PieChartsUC.xaml",
               "DocumentMoniker": "C:\\ProductivityToolManager\\UserInterface\\UserInterface\\ChartsUC\\PieChartsUC.xaml",
               "RelativeDocumentMoniker": "UserInterface\\ChartsUC\\PieChartsUC.xaml",
@@ -113,33 +174,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "TasksDataModel.cs",
-              "DocumentMoniker": "C:\\ProductivityToolManager\\DataLayer\\Models\\TasksDataModel.cs",
-              "RelativeDocumentMoniker": "..\\DataLayer\\Models\\TasksDataModel.cs",
-              "ToolTip": "C:\\ProductivityToolManager\\DataLayer\\Models\\TasksDataModel.cs",
-              "RelativeToolTip": "..\\DataLayer\\Models\\TasksDataModel.cs",
-              "ViewState": "AQIAAA0AAAAAAAAAAAAmwDYAAAAKAAAA",
+              "DocumentIndex": 6,
+              "Title": "DepartmentTasksModel.cs",
+              "DocumentMoniker": "C:\\ProductivityToolManager\\BusinessLayer\\Models\\DepartmentTasksModel.cs",
+              "RelativeDocumentMoniker": "..\\BusinessLayer\\Models\\DepartmentTasksModel.cs",
+              "ToolTip": "C:\\ProductivityToolManager\\BusinessLayer\\Models\\DepartmentTasksModel.cs",
+              "RelativeToolTip": "..\\BusinessLayer\\Models\\DepartmentTasksModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-12T20:18:26.116Z",
+              "WhenOpened": "2024-03-13T22:01:17.512Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "PieChartsUC.xaml.cs",
-              "DocumentMoniker": "C:\\ProductivityToolManager\\UserInterface\\UserInterface\\ChartsUC\\PieChartsUC.xaml.cs",
-              "RelativeDocumentMoniker": "UserInterface\\ChartsUC\\PieChartsUC.xaml.cs",
-              "ToolTip": "C:\\ProductivityToolManager\\UserInterface\\UserInterface\\ChartsUC\\PieChartsUC.xaml.cs",
-              "RelativeToolTip": "UserInterface\\ChartsUC\\PieChartsUC.xaml.cs",
-              "ViewState": "AQIAABwAAAAAAAAAAAAEwDEAAABNAAAA",
+              "DocumentIndex": 8,
+              "Title": "DepartmenteEfficienceData.cs",
+              "DocumentMoniker": "C:\\ProductivityToolManager\\DataLayer\\Models\\DepartmenteEfficienceData.cs",
+              "RelativeDocumentMoniker": "..\\DataLayer\\Models\\DepartmenteEfficienceData.cs",
+              "ToolTip": "C:\\ProductivityToolManager\\DataLayer\\Models\\DepartmenteEfficienceData.cs",
+              "RelativeToolTip": "..\\DataLayer\\Models\\DepartmenteEfficienceData.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAABAAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-12T08:32:46.636Z",
+              "WhenOpened": "2024-03-12T21:39:05.146Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 9,
               "Title": "DepartmentEfficienceModel.cs",
               "DocumentMoniker": "C:\\ProductivityToolManager\\BusinessLayer\\Models\\DepartmentEfficienceModel.cs",
               "RelativeDocumentMoniker": "..\\BusinessLayer\\Models\\DepartmentEfficienceModel.cs",
@@ -148,31 +209,6 @@
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAABFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-12T21:43:36.64Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "MainWindow.xaml.cs",
-              "DocumentMoniker": "C:\\ProductivityToolManager\\UserInterface\\UserInterface\\MainWindow.xaml.cs",
-              "RelativeDocumentMoniker": "UserInterface\\MainWindow.xaml.cs",
-              "ToolTip": "C:\\ProductivityToolManager\\UserInterface\\UserInterface\\MainWindow.xaml.cs",
-              "RelativeToolTip": "UserInterface\\MainWindow.xaml.cs",
-              "ViewState": "AQIAACEAAAAAAAAAAAAvwDsAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-12T21:51:53.134Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "MainWindow.xaml",
-              "DocumentMoniker": "C:\\ProductivityToolManager\\UserInterface\\UserInterface\\MainWindow.xaml",
-              "RelativeDocumentMoniker": "UserInterface\\MainWindow.xaml",
-              "ToolTip": "C:\\ProductivityToolManager\\UserInterface\\UserInterface\\MainWindow.xaml",
-              "RelativeToolTip": "UserInterface\\MainWindow.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-03-12T21:51:21.763Z",
               "EditorCaption": ""
             },
             {
@@ -190,20 +226,32 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "TaskCollection.cs",
-              "DocumentMoniker": "C:\\ProductivityToolManager\\BusinessLayer\\Collections\\TaskCollection.cs",
-              "RelativeDocumentMoniker": "..\\BusinessLayer\\Collections\\TaskCollection.cs",
-              "ToolTip": "C:\\ProductivityToolManager\\BusinessLayer\\Collections\\TaskCollection.cs",
-              "RelativeToolTip": "..\\BusinessLayer\\Collections\\TaskCollection.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACEAAAAzAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-13T09:10:50.611Z",
+              "DocumentIndex": 11,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "C:\\ProductivityToolManager\\UserInterface\\UserInterface\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "UserInterface\\MainWindow.xaml",
+              "ToolTip": "C:\\ProductivityToolManager\\UserInterface\\UserInterface\\MainWindow.xaml",
+              "RelativeToolTip": "UserInterface\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-03-12T21:51:21.763Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 12,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\ProductivityToolManager\\UserInterface\\UserInterface\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "UserInterface\\MainWindow.xaml.cs",
+              "ToolTip": "C:\\ProductivityToolManager\\UserInterface\\UserInterface\\MainWindow.xaml.cs",
+              "RelativeToolTip": "UserInterface\\MainWindow.xaml.cs",
+              "ViewState": "AQIAABYAAAAAAAAAAAArwDsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-12T21:51:53.134Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
               "Title": "DepartmentEfficience.cs",
               "DocumentMoniker": "C:\\ProductivityToolManager\\BusinessLayer\\DepartmentEfficience.cs",
               "RelativeDocumentMoniker": "..\\BusinessLayer\\DepartmentEfficience.cs",
@@ -211,8 +259,7 @@
               "RelativeToolTip": "..\\BusinessLayer\\DepartmentEfficience.cs",
               "ViewState": "AQIAAAcAAAAAAAAAAAAAABcAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-12T19:58:06.157Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-12T19:58:06.157Z"
             }
           ]
         }

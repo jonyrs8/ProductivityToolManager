@@ -56,11 +56,11 @@ namespace BusinessLayer.Collections
         /// CREATE A LIST OF DEPARTMENT EFFICIENT COLLECTION
         /// </summary>
         /// <returns>DEPARTMENTEFFICIENCECOLLECTION</returns>
-        public static DepartmentEfficienceCollection ListDepartmentCollection()
+        public static DepartmentEfficienceCollection ListDepartmentEfficienceCollection()
         {
             string erro = string.Empty;
             DepartmentEfficienceCollection colection = new DepartmentEfficienceCollection
-            (DepartmenteEfficienceData.GetDepartmentData(out erro));
+            (DepartmenteEfficienceData.GetDepartmentEfficienceData(out erro));
 
             return colection;
         }
