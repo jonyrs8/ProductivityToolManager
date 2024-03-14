@@ -27,7 +27,7 @@ namespace DataLayer.Models
                 sqlConnection.Open();
 
                 //TRANFORMAR ISTO EM VIEW
-                string query = "SELECT AREA, COUNT(TASK_ID) AS TASKs_NUMBER FROM TASKS GROUP BY AREA;";
+                string query = "SELECT AREA, COUNT(TASK_ID) AS TASKS_NUMBER FROM TASKS GROUP BY AREA;";
 
                 SqlCommand sqlCommand = new SqlCommand(query, sqlConnection);
 

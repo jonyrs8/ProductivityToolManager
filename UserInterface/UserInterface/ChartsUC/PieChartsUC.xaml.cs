@@ -26,47 +26,59 @@ namespace UserInterface.ChartsUC
     public partial class PieChartsUC : UserControl
     {
         public string ViewType { get; set; }
+
+        public Func<ChartPoint, string> PointLabel { get; set; }
         public PieChartsUC()
         {
             InitializeComponent();
             PointLabel = chartPoint =>
             string.Format("{0} ({1:P})", chartPoint.Y, chartPoint.Participation);
 
-            //DepartmentEfficienceCollection deparEfficices = DepartmentEfficienceCollection.ListDepartmentCollection();
-
-            //foreach (var  department in deparEfficices) 
-            //{
-            //    PieSeries pieSeries = new PieSeries
-            //    {
-            //        Title = department.Area,
-            //        DataLabels = true,
-            //        Values = new ChartValues<double> { department.Efficience }
-            //    };
-
-            //    ChartUC.Series.Add(pieSeries);
-            //}
-
-            DepartmentTasksCollection deparEfficices = DepartmentTasksCollection.ListDepartmentTasksCollection();
-
-            foreach (var department in deparEfficices)
-            {
-                PieSeries pieSeries = new PieSeries
-                {
-                    Title = department.Area,
-                    DataLabels = true,
-                    Values = new ChartValues<double> { department.TasksNumber }
-                };
-
-                ChartUC.Series.Add(pieSeries);
-            }
-
-
+            Filter.Items.Add("EFICIENCIA");
+            Filter.Items.Add("TAREFAS");
 
             DataContext = this;
         }
 
+        // Método para carregar os dados com base na ViewType recebida
+        public void LoadData()
+        {
+            if (ViewType == "TAREFAS")
+            {
+                DepartmentTasksCollection deparEfficices = DepartmentTasksCollection.ListDepartmentTasksCollection();
 
-        public Func<ChartPoint, string> PointLabel { get; set; }
+                foreach (var department in deparEfficices)
+                {
+                    PieSeries pieSeries = new PieSeries
+                    {
+                        Title = department.Area,
+                        DataLabels = true,
+                        Values = new ChartValues<double> { department.TasksNumber },
+                        LabelPoint = PointLabel
+                    };
+
+                    ChartUC.Series.Add(pieSeries);
+                }
+            }
+            else if (ViewType == "EFICIENCIA")
+            {
+                DepartmentEfficienceCollection deparEfficices = DepartmentEfficienceCollection.ListDepartmentEfficienceCollection();
+
+                foreach (var department in deparEfficices)
+                {
+                    PieSeries pieSeries = new PieSeries
+                    {
+                        Title = department.Area,
+                        DataLabels = true,
+                        Values = new ChartValues<double> { department.Efficience },
+                        LabelPoint = PointLabel
+                    };
+
+                    ChartUC.Series.Add(pieSeries);
+                }
+            }
+            // Adicione mais lógica conforme necessário
+        }
 
         private void Chart_OnDataClick(object sender, ChartPoint chartpoint)
         {
@@ -79,6 +91,14 @@ namespace UserInterface.ChartsUC
 
             var selectedSeries = (PieSeries)chartpoint.SeriesView;
             selectedSeries.PushOut = 8;
+        }
+
+        private void ViewType_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            ViewType = Filter.SelectedItem as string;
+            Title.Text = ViewType;
+            ChartUC.Series.Clear();
+            LoadData();
         }
     }
 }

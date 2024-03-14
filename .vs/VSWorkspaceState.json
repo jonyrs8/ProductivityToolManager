@@ -2,6 +2,7 @@
   "ExpandedNodes": [
     "",
     "\\BusinessLayer",
+    "\\BusinessLayer\\Collections",
     "\\BusinessLayer\\Models",
     "\\DataLayer",
     "\\DataLayer\\Models",
@@ -9,6 +10,6 @@
     "\\UserInterface\\UserInterface",
     "\\UserInterface\\UserInterface\\ChartsUC"
   ],
-  "SelectedNode": "\\BusinessLayer\\Models\\DepartmentEfficienceModel.cs",
+  "SelectedNode": "\\BusinessLayer\\Collections\\DepartmentTasksCollection.cs",
   "PreviewInSolutionExplorer": false
 }

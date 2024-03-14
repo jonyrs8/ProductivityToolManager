@@ -10,11 +10,8 @@
         x:Name="Main"
         Loaded="MainWindow_Loaded">
     <Grid>
-        <DataGrid x:Name="DataGrid"/>
-        <ChartsUC:PieChartsUC HorizontalAlignment="Center" VerticalAlignment="Center" Height="260" Width="562"/>
+        <ChartsUC:PieChartsUC x:Name="Chart" HorizontalAlignment="Center" VerticalAlignment="Center" Height="375" Width="562"
+                              ViewType="1"/>
 
-        <!--<DataGrid x:Name="datagrid">
-            
-        </DataGrid>-->
     </Grid>
 </Window>

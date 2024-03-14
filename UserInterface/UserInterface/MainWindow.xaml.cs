@@ -15,6 +15,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using UserInterface.ChartsUC;
 
 namespace UserInterface
 {
@@ -29,6 +30,7 @@ namespace UserInterface
     /// </summary>
     public partial class MainWindow : Window
     {
+        public string ViewType { get; set; }
 
         public TaskCollection taskslist;
         public IEnumerable<string> areas;
@@ -40,20 +42,7 @@ namespace UserInterface
 
         private void MainWindow_Loaded(object sender, RoutedEventArgs e)
         {
-            //TaskCollection _taskslist = TaskModel.ListAllTasks(); //CARREGA A TABELA DE UMA VEZ SÓ
-            ////IEnumerable<string> _areas = DepartmentEfficience.GetDistinctAreas(taskslist);
-            //taskslist = _taskslist;
-            //var taskRealTime = DepartmentEfficience.GetTasksRealTime(taskslist).ToList();
-            //var displayData = taskRealTime.Select(item => new {
-            //    Area = item.Area,
-            //    TeoricalTimeInTasks = item.TeoricalTimeInTasks
-            //}).ToList();
-
-            //this.datagrid.ItemsSource = DepartmentEfficience.depCollection() ;
-
-            //areas = _areas;
+            Chart.LoadData();
         }
-
-        
     }
 }
