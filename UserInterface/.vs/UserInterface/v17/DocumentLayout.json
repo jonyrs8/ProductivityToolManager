@@ -3,11 +3,17 @@
   "WorkspaceRootPath": "C:\\ProductivityToolManager\\UserInterface\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4389DB82-2895-4320-AA23-6A14BB8A8960}|UserInterface\\UserInterface.csproj|C:\\ProductivityToolManager\\UserInterface\\userinterface\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{42FF5579-E981-4ABF-9228-7F22AB9D8EF4}|..\\DataLayer\\DataLayer.csproj|c:\\productivitytoolmanager\\datalayer\\models\\departmenttasksdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{42FF5579-E981-4ABF-9228-7F22AB9D8EF4}|..\\DataLayer\\DataLayer.csproj|c:\\productivitytoolmanager\\datalayer\\models\\departmenteefficiencedata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4389DB82-2895-4320-AA23-6A14BB8A8960}|UserInterface\\UserInterface.csproj|c:\\productivitytoolmanager\\userinterface\\userinterface\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4389DB82-2895-4320-AA23-6A14BB8A8960}|UserInterface\\UserInterface.csproj|solutionrelative:userinterface\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4389DB82-2895-4320-AA23-6A14BB8A8960}|UserInterface\\UserInterface.csproj|c:\\productivitytoolmanager\\userinterface\\userinterface\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{4389DB82-2895-4320-AA23-6A14BB8A8960}|UserInterface\\UserInterface.csproj|C:\\ProductivityToolManager\\UserInterface\\userinterface\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{4389DB82-2895-4320-AA23-6A14BB8A8960}|UserInterface\\UserInterface.csproj|solutionrelative:userinterface\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     }
   ],
@@ -18,8 +24,34 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "DepartmentTasksData.cs",
+              "DocumentMoniker": "C:\\ProductivityToolManager\\DataLayer\\Models\\DepartmentTasksData.cs",
+              "RelativeDocumentMoniker": "..\\DataLayer\\Models\\DepartmentTasksData.cs",
+              "ToolTip": "C:\\ProductivityToolManager\\DataLayer\\Models\\DepartmentTasksData.cs",
+              "RelativeToolTip": "..\\DataLayer\\Models\\DepartmentTasksData.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-18T09:10:08.151Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DepartmenteEfficienceData.cs",
+              "DocumentMoniker": "C:\\ProductivityToolManager\\DataLayer\\Models\\DepartmenteEfficienceData.cs",
+              "RelativeDocumentMoniker": "..\\DataLayer\\Models\\DepartmenteEfficienceData.cs",
+              "ToolTip": "C:\\ProductivityToolManager\\DataLayer\\Models\\DepartmenteEfficienceData.cs",
+              "RelativeToolTip": "..\\DataLayer\\Models\\DepartmenteEfficienceData.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAACRAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-18T09:08:15.905Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:1562279363:0:{83107a3e-496a-485e-b455-16ddb978e55e}"
@@ -46,19 +78,18 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "C:\\ProductivityToolManager\\UserInterface\\UserInterface\\MainWindow.xaml",
               "RelativeDocumentMoniker": "UserInterface\\MainWindow.xaml",
               "ToolTip": "C:\\ProductivityToolManager\\UserInterface\\UserInterface\\MainWindow.xaml",
               "RelativeToolTip": "UserInterface\\MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-03-12T21:51:21.763Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-12T21:51:21.763Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "MainWindow.xaml.cs",
               "DocumentMoniker": "C:\\ProductivityToolManager\\UserInterface\\UserInterface\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "UserInterface\\MainWindow.xaml.cs",

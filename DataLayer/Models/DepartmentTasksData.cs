@@ -9,7 +9,9 @@ using System.Threading.Tasks;
 namespace DataLayer.Models
 {
     /// <summary>
-    /// THIS CLASS SHOULD ONLY BE USED TO EXTRACT DATA FROM VIEW - DEPARTMENT_TASKS_VIEW
+    /// THIS CLASS SHOULD ONLY BE USED TO EXTRACT DATA FROM VIEW:
+    /// NAME: DEPARTMENT_TASKS_VIEW
+    /// COLUNS: AREA, TASKS_NUMBER (NUMBER OF TASKS DONE BY DEPARTMENT)
     /// </summary>
     public class DepartmentTasksData
     {
