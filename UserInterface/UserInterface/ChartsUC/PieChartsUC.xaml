@@ -5,20 +5,25 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:UserInterface.ChartsUC"
              mc:Ignorable="d" 
-             d:DesignHeight="500" d:DesignWidth="800"
+             d:DesignHeight="350" d:DesignWidth="400"
              xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf">
     <Grid>
-        <ComboBox x:Name="Filter" Height="20" IsEnabled="True" Width="100" VerticalAlignment="Top"
-                  SelectionChanged="ViewType_SelectionChanged" HorizontalAlignment="Left">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <ComboBox x:Name="Filter" Height="20" IsEnabled="True" Width="100"
+                  SelectionChanged="ViewType_SelectionChanged"
+                  VerticalAlignment="Center" HorizontalContentAlignment="Center"
+                  HorizontalAlignment="Center">
         </ComboBox>
 
-        <TextBlock x:Name="Title" Width="200" Height="40" VerticalAlignment="Top">
-            
-        </TextBlock>
-        
         <lvc:PieChart x:Name="ChartUC"
-            LegendLocation="Bottom" DataClick="Chart_OnDataClick" Hoverable="False" DataTooltip="{x:Null}" Margin="50,56,0,0">
-
+            LegendLocation="Bottom" DataClick="Chart_OnDataClick" Hoverable="False" DataTooltip="{x:Null}"
+                      Height="250" Width="400" VerticalAlignment="Center" FontSize="9.5"
+                      Grid.Row="2" Grid.RowSpan="4" HorizontalAlignment="Center"
+                      Margin="0 0 0 50">
         </lvc:PieChart>
     </Grid>
 </UserControl>

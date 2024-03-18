@@ -10,12 +10,15 @@ using System.Threading.Tasks;
 
 namespace DataLayer.Models
 {
-    //THIS CLASS SHOULD ONLY HAVE ALL THE METHODS TO MANAGE ALL THE DATA FROM TASKS TABEL
-
+    /// <summary>
+    /// THIS CLASS SHOULD ONLY BE USED TO EXTRACT DATA FROM TABLE - TASKS
+    /// </summary>
     public class TaskData
-    {    /// <summary>
-         /// METHOD TO EXTRACT ALL DE DATA FROM TASKS TABLE!
-         /// </summary>
+    {
+        #region METHODS
+        /// <summary>
+        /// METHOD TO EXTRACT ALL DE DATA FROM TASKS TABLE!
+        /// </summary>
         public static DataTable GetAllTasks (out string error)
         {
             DataTable dataTable = null;
@@ -44,5 +47,6 @@ namespace DataLayer.Models
             }
             return dataTable;
         }
+        #endregion
     }
 }

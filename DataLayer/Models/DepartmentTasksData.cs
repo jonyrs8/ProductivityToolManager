@@ -8,10 +8,14 @@ using System.Threading.Tasks;
 
 namespace DataLayer.Models
 {
+    /// <summary>
+    /// THIS CLASS SHOULD ONLY BE USED TO EXTRACT DATA FROM VIEW - DEPARTMENT_TASKS_VIEW
+    /// </summary>
     public class DepartmentTasksData
     {
+        #region METHODS
         /// <summary>
-        /// METHOD TO EXTRACT ALL DATA FROM DEPARTMENT EFFICIENCE DATA
+        /// METHOD TO EXTRACT ALL DATA FROM DEPARTMENT TASKS DATA
         /// </summary>
         /// <param name="error"></param>
         /// <returns></returns>
@@ -43,6 +47,6 @@ namespace DataLayer.Models
             }
             return dataTable;
         }
-
+        #endregion
     }
 }

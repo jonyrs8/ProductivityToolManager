@@ -18,8 +18,6 @@ C:\ProductivityToolManager\UserInterface\UserInterface\bin\Debug\LiveCharts.Wpf.
 C:\ProductivityToolManager\UserInterface\UserInterface\bin\Debug\LiveCharts.Wpf.xml
 C:\ProductivityToolManager\UserInterface\UserInterface\bin\Debug\DataLayer.pdb
 C:\ProductivityToolManager\UserInterface\UserInterface\bin\Debug\DataLayer.dll.config
-C:\ProductivityToolManager\UserInterface\UserInterface\obj\Debug\ChartsUC\PieChartsUC.baml
-C:\ProductivityToolManager\UserInterface\UserInterface\obj\Debug\MainWindow.baml
 C:\ProductivityToolManager\UserInterface\UserInterface\obj\Debug\UserInterface.g.resources
 C:\ProductivityToolManager\UserInterface\UserInterface\obj\Debug\UserInterface.Properties.Resources.resources
 C:\ProductivityToolManager\UserInterface\UserInterface\obj\Debug\UserInterface.csproj.GenerateResource.cache
@@ -28,3 +26,5 @@ C:\ProductivityToolManager\UserInterface\UserInterface\obj\Debug\UserInte.9C7395
 C:\ProductivityToolManager\UserInterface\UserInterface\obj\Debug\UserInterface.exe
 C:\ProductivityToolManager\UserInterface\UserInterface\obj\Debug\UserInterface.pdb
 C:\ProductivityToolManager\UserInterface\UserInterface\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\ProductivityToolManager\UserInterface\UserInterface\obj\Debug\ChartsUC\PieChartsUC.baml
+C:\ProductivityToolManager\UserInterface\UserInterface\obj\Debug\MainWindow.baml

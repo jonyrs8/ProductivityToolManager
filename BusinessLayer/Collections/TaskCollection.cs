@@ -10,8 +10,12 @@ using System.Threading.Tasks;
 
 namespace BusinessLayer.Collections
 {
+    /// <summary>
+    /// THIS CLASS SHOULD ONLY BE USED TO MANAGE TASKS COLLECTION
+    /// </summary>
     public class TaskCollection : List<TaskModel>
     {
+        #region CONSTRUCTORS
         public TaskCollection() { }
 
         public TaskCollection(DataTable tasks)
@@ -30,7 +34,9 @@ namespace BusinessLayer.Collections
                 this.Add(task); // Adiciona a tarefa individualmente à coleção
             }
         }
+        #endregion
 
+        #region METHODS
         public static TaskCollection ListAllTasks()
         {
 
@@ -43,5 +49,6 @@ namespace BusinessLayer.Collections
             return task;
 
         }
+        #endregion
     }
 }

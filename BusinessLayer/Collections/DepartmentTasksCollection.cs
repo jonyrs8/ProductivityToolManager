@@ -1,5 +1,4 @@
-﻿using BusinessLayer.Model;
-using BusinessLayer.Models;
+﻿using BusinessLayer.Models;
 using DataLayer.Models;
 using System;
 using System.Collections.Generic;
@@ -10,9 +9,12 @@ using System.Threading.Tasks;
 
 namespace BusinessLayer.Collections
 {
+    /// <summary>
+    /// THIS CLASS SHOULD ONLY BE USED TO MANAGE DEPARTMENT TASKS COLLECTION
+    /// </summary>
     public class DepartmentTasksCollection : List<DepartmentTasksModel>
     {
-        #region CONSTRUCTORES
+        #region CONSTRUCTORS
         DepartmentTasksCollection() { }
         public DepartmentTasksCollection(DataTable tasks)
         : this()

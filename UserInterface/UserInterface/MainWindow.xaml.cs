@@ -30,8 +30,6 @@ namespace UserInterface
     /// </summary>
     public partial class MainWindow : Window
     {
-        public string ViewType { get; set; }
-
         public TaskCollection taskslist;
         public IEnumerable<string> areas;
         public MainWindow()

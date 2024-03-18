@@ -10,8 +10,7 @@
         x:Name="Main"
         Loaded="MainWindow_Loaded">
     <Grid>
-        <ChartsUC:PieChartsUC x:Name="Chart" HorizontalAlignment="Center" VerticalAlignment="Center" Height="375" Width="562"
-                              ViewType="1"/>
+        <ChartsUC:PieChartsUC x:Name="Chart" HorizontalAlignment="Center" VerticalAlignment="Center" Height="375" Width="562"/>
 
     </Grid>
 </Window>

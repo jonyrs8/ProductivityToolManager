@@ -10,6 +10,6 @@
     "\\UserInterface\\UserInterface",
     "\\UserInterface\\UserInterface\\ChartsUC"
   ],
-  "SelectedNode": "\\BusinessLayer\\Collections\\DepartmentTasksCollection.cs",
+  "SelectedNode": "\\UserInterface\\UserInterface\\MainWindow.xaml",
   "PreviewInSolutionExplorer": false
 }

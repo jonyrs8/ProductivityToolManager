@@ -14,7 +14,7 @@ namespace BusinessLayer.Collections
     /// </summary>
     public class DepartmentEfficienceCollection : List<DepartmentEfficienceModel>
     {
-        #region CONSTRUCTORES
+        #region CONSTRUCTORS
         public DepartmentEfficienceCollection() { }
 
         private DepartmentEfficienceCollection(DataTable Departments)

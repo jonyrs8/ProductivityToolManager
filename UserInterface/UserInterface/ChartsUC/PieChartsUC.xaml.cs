@@ -36,8 +36,9 @@ namespace UserInterface.ChartsUC
 
             Filter.Items.Add("EFICIENCIA");
             Filter.Items.Add("TAREFAS");
-
+            Filter.SelectedIndex = 0;
             DataContext = this;
+
         }
 
         // Método para carregar os dados com base na ViewType recebida
@@ -51,6 +52,7 @@ namespace UserInterface.ChartsUC
                 {
                     PieSeries pieSeries = new PieSeries
                     {
+                        FontSize = 8,
                         Title = department.Area,
                         DataLabels = true,
                         Values = new ChartValues<double> { department.TasksNumber },
@@ -60,14 +62,16 @@ namespace UserInterface.ChartsUC
                     ChartUC.Series.Add(pieSeries);
                 }
             }
-            else if (ViewType == "EFICIENCIA")
+            else if (ViewType == "EFICIENCIA" || ViewType == null)
             {
+                ChartUC.Series.Clear();
                 DepartmentEfficienceCollection deparEfficices = DepartmentEfficienceCollection.ListDepartmentEfficienceCollection();
 
                 foreach (var department in deparEfficices)
                 {
                     PieSeries pieSeries = new PieSeries
                     {
+                        FontSize = 8,
                         Title = department.Area,
                         DataLabels = true,
                         Values = new ChartValues<double> { department.Efficience },
@@ -96,7 +100,6 @@ namespace UserInterface.ChartsUC
         private void ViewType_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             ViewType = Filter.SelectedItem as string;
-            Title.Text = ViewType;
             ChartUC.Series.Clear();
             LoadData();
         }
