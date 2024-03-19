@@ -30,8 +30,6 @@ namespace UserInterface
     /// </summary>
     public partial class MainWindow : Window
     {
-        public TaskCollection taskslist;
-        public IEnumerable<string> areas;
         public MainWindow()
         {
             InitializeComponent();
@@ -40,7 +38,7 @@ namespace UserInterface
 
         private void MainWindow_Loaded(object sender, RoutedEventArgs e)
         {
-            Chart.LoadData();
+            //Chart.LoadData();
         }
     }
 }

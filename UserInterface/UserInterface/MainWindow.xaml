@@ -10,7 +10,10 @@
         x:Name="Main"
         Loaded="MainWindow_Loaded">
     <Grid>
-        <ChartsUC:PieChartsUC x:Name="Chart" HorizontalAlignment="Center" VerticalAlignment="Center" Height="375" Width="562"/>
+        <ChartsUC:AngularGaugeChartsUC HorizontalAlignment="Left" VerticalAlignment="Center"
+                                       x:Name="angular" Height="300" Width="300" Margin="35,0,0,0"/>
+        <ChartsUC:PieChartsUC x:Name="Chart" HorizontalAlignment="Left" VerticalAlignment="Center" Height="375" Width="562" Margin="262,0,0,0"/>
+
 
     </Grid>
 </Window>

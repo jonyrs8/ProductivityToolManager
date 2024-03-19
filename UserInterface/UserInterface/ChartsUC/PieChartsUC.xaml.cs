@@ -81,7 +81,6 @@ namespace UserInterface.ChartsUC
                     ChartUC.Series.Add(pieSeries);
                 }
             }
-            // Adicione mais lógica conforme necessário
         }
 
         private void Chart_OnDataClick(object sender, ChartPoint chartpoint)
