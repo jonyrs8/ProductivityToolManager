@@ -12,13 +12,17 @@
             <RowDefinition Height="Auto"></RowDefinition>
             <RowDefinition Height="*"></RowDefinition>
         </Grid.RowDefinitions>
-        <ComboBox Width="100" x:Name="comboYearObjectives" HorizontalContentAlignment="Center"
+        <ComboBox Width="100" x:Name="comboYearObjectives" 
+                  HorizontalContentAlignment="Center"
                   SelectionChanged="comboYearObjectives_SelectionChanged">
             
         </ComboBox>
         <lvc:AngularGauge x:Name="angularGauge" Grid.Row="1"
                           Loaded="angularGauge_Loaded"
-                          TicksForeground="White" Foreground="White" 
+                          Unloaded="angularGauge_Unloaded"
+                          TicksForeground="White" 
+                          Foreground="White"
+                          FontSize="12"
                           FontWeight="Bold"
                           SectionsInnerRadius=".4"
                           Margin="0 40 0 0">

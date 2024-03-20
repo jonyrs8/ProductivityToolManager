@@ -1,4 +1,5 @@
-
+######### CREATE #########
+##########################
 
 
 
@@ -45,6 +46,9 @@ VALUES
 ('PICKING GRANDE', 'Processo de picking para grandes quantidades.'),
 ('VERIFICAR', 'Verificação de itens e controle de qualidade.');
 
+######### INSERTS #########
+###########################
+
 -- Inserting sample data into the TaskManager table
 INSERT INTO TaskManager (task_id, department_id, start_date, end_date, expectedtimeout, update_user, update_date) VALUES
 (1, 2, '2024-02-02 08:00', '2024-02-02 10:30', '2024-02-02 10:00', 'JSANTOS', GETDATE()),
@@ -70,15 +74,50 @@ INSERT INTO TaskManager (task_id, department_id, start_date, end_date, expectedt
 (1, 1, '2024-02-22 09:30', '2024-02-22 11:30', '2024-02-22 11:00', 'JSANTOS', GETDATE()),
 (5, 1, '2024-02-23 09:15', '2024-02-23 11:00', '2024-02-23 11:00', 'JSANTOS', GETDATE());
 
+######### VIEWS #########
+#########################
 
-CREATE VIEW SLA_DEPARTMENT_VIEW AS
+CREATE VIEW DEPARTMENT_EFFICIENCY_VIEW AS
 SELECT 
-    D.Department_Name,
-    DATEDIFF(MINUTE, TM.start_date, TM.end_date) AS Realtasktime,
-    DATEDIFF(MINUTE, TM.start_date, TM.expectedtimeout) AS ExpectedTimeOut
+    D.DEPARTMENT_NAME AS AREA,
+    SUM(DATEDIFF(MINUTE, TM.start_date, TM.end_date)) AS REAL_TIME_IN_TASKS,
+    SUM(DATEDIFF(MINUTE, TM.start_date, TM.expectedtimeout)) AS THEORETICAL_TIME_IN_TASKS
 FROM 
     TaskManager TM
 JOIN 
-    Department D ON TM.department_id = D.Department_Id;
+    Department D ON TM.department_id = D.Department_Id
+GROUP BY 
+    D.DEPARTMENT_NAME;
 
-	SELECT * FROM SLA_DEPARTMENT_VIEW;
+SELECT * FROM DEPARTMENT_EFFICIENCY_VIEW;
+
+
+
+
+CREATE VIEW DEPARTMENT_TASKS_VIEW AS
+SELECT 
+    D.Department_Name AS AREA,
+    COUNT(TM.task_id) AS TASKS_NUMBER
+FROM 
+    TaskManager TM
+JOIN 
+    Department D ON TM.department_id = D.Department_Id
+GROUP BY 
+    D.Department_Name;
+
+	COMMIT;
+
+SELECT * FROM DEPARTMENT_TASKS_VIEW;
+
+
+
+CREATE VIEW USER_TASKS_VIEW AS
+SELECT 
+    UPDATE_USER AS USER_ID,
+    COUNT(TASK_ID) AS TASKS_NUMBER
+FROM 
+    TASKMANAGER
+GROUP BY 
+    UPDATE_USER;
+
+SELECT * FROM USER_TASKS_VIEW;

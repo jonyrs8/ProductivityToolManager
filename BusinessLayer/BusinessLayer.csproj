@@ -44,14 +44,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Collections\DepartmentEfficienceCollection.cs" />
+    <Compile Include="Collections\DepartmentEfficiencyCollection.cs" />
     <Compile Include="Collections\DepartmentTasksCollection.cs" />
     <Compile Include="Collections\TaskCollection.cs" />
     <Compile Include="Collections\TasksYearObjectivesCollection.cs" />
     <Compile Include="Models\DepartmentTasksModel.cs" />
     <Compile Include="Models\TaskModel.cs" />
-    <Compile Include="DepartmentEfficience.cs" />
-    <Compile Include="Models\DepartmentEfficienceModel.cs" />
+    <Compile Include="Models\DepartmentEfficiencyModel.cs" />
     <Compile Include="Models\TasksYearObjectivesModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

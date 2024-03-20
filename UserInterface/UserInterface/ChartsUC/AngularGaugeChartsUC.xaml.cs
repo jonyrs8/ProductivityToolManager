@@ -25,16 +25,24 @@ namespace UserInterface.ChartsUC
     /// </summary>
     public partial class AngularGaugeChartsUC : UserControl
     {
-        TasksYearObjectivesCollection tasksYearObjectives = TasksYearObjectivesCollection.ListAllTasksYearObjectives();
+        TasksYearObjectivesCollection yearList; //YEAR LIST WITH DEFINED OBJECTIVES IN DATABASE
 
-        int objective; //RECIBE OBJECTIVE FROM COLLECTION IN COMBO SELECTED CHANGE, AND IS USED TO CONSTRUCT DINAMIC CHART
+        TaskCollection allTasksList; //ALL TASKS IN THE DATABASE
+
+        int objective; //RECIBE OBJECTIVE FROM COLLECTION IN COMBO SELECTED CHANGE, AND IS USED TO CONSTRUCT DYNAMIC CHART
+
+        int tasksDoneInTheYear = 0; //RECIBE TASK DONE IN A SPECIFIC YEAR FROM COLLECTION IN COMBO SELECTED CHANGE,
+                                    //AND IS USED TO CONSTRUCT DYNAMIC CHART
         public AngularGaugeChartsUC()
         {
             InitializeComponent();
             DataContext = this;
         }
 
-        public void LoadSections()
+        /// <summary>
+        /// METHOD TO CONSTRUCT AND MAKE ALL LOGIC BEHIND CHART BASED IN OBJECTIVE AND TASKS DONE
+        /// </summary>
+        public void LoadChart()
         {
             angularGauge.Sections.Clear();
 
@@ -79,35 +87,46 @@ namespace UserInterface.ChartsUC
             angularGauge.Sections.Add(angularSectionLightGreen);
             angularGauge.Sections.Add(angularSectionOrange);
             angularGauge.Sections.Add(angularSectionRed);
-        }
 
-        private void comboYearObjectives_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            int YearObjectives = (int)comboYearObjectives.SelectedItem;
-            objective = TasksYearObjectivesCollection.YearObjective(YearObjectives);
-            LoadSections();
             //CHART CONSTRUCTION
-            angularGauge.Value = 50; //NUMBER OF TASKS DONE IN A YEAR
+            angularGauge.Value = tasksDoneInTheYear; //NUMBER OF TASKS DONE IN A YEAR
             angularGauge.FromValue = 0;
             angularGauge.ToValue = objective; //OBJECTIVE IN THIS YEAR
             angularGauge.LabelsStep = objective / 5; //OBJECTIVE/5
             angularGauge.TicksStep = objective; //OBJECTIVE/10
             angularGauge.Wedge = 200;
+        }
 
+        private void comboYearObjectives_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            int _yearObjectivesComboSelected = (int)comboYearObjectives.SelectedItem;
+            int year = _yearObjectivesComboSelected;
+            objective = TasksYearObjectivesCollection.YearObjective(year, yearList);
+            tasksDoneInTheYear = TaskCollection.TasksDoneInTheYear(year, allTasksList);
+            LoadChart();
         }
 
         private void angularGauge_Loaded(object sender, RoutedEventArgs e)
         {
-            angularGauge.FontSize = 12;
-            int countYears = 0;
+            yearList = TasksYearObjectivesCollection.ListAllTasksYearObjectives();
+            allTasksList = TaskCollection.ListAllTasks();
+            int countYearsInComboBox = 0;
             //YEARS
-            foreach (var task in tasksYearObjectives)
+            foreach (var task in yearList)
             {
                 comboYearObjectives.Items.Add(task.Year);
-                countYears++;
+                countYearsInComboBox++;
             }
+            //CHART WILL ALWAYS SHOW THE CURRENT YEAR,
+            //THIS CREATE A TRIGGER
+            //FOR COMBO BOX EVENT - SELECTION CHANGED
+            comboYearObjectives.SelectedIndex = (countYearsInComboBox - 1); 
+        }
 
-            comboYearObjectives.SelectedIndex = countYears - 1; //CHART WILL ALWAYS SHOW THE CURRENT YEAR
+        private void angularGauge_Unloaded(object sender, RoutedEventArgs e)
+        {
+            yearList = null;
+            allTasksList = null;
         }
     }
 }

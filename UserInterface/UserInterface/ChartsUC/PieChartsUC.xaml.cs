@@ -25,30 +25,26 @@ namespace UserInterface.ChartsUC
     /// </summary>
     public partial class PieChartsUC : UserControl
     {
-        public string ViewType { get; set; }
-
+        DepartmentTasksCollection departementTasksDone;
+        DepartmentEfficiencyCollection departmentEfficiency; //SHOW THE MOST EFFICIENT DEPARTMENT DURING TASKS
+        public string ViewType { get; set; } //RECIBE THE VIEW TYPE SELECTED IN COMBOX
         public Func<ChartPoint, string> PointLabel { get; set; }
         public PieChartsUC()
         {
             InitializeComponent();
             PointLabel = chartPoint =>
             string.Format("{0} ({1:P})", chartPoint.Y, chartPoint.Participation);
-
-            Filter.Items.Add("EFICIENCIA");
-            Filter.Items.Add("TAREFAS");
-            Filter.SelectedIndex = 0;
             DataContext = this;
-
         }
 
-        // Método para carregar os dados com base na ViewType recebida
+        /// <summary>
+        /// METHOD TO CHARGE DATA FOR CHART FROM VIEW TYPE SELECTED
+        /// </summary>
         public void LoadData()
         {
             if (ViewType == "TAREFAS")
             {
-                DepartmentTasksCollection deparEfficices = DepartmentTasksCollection.ListDepartmentTasksCollection();
-
-                foreach (var department in deparEfficices)
+                foreach (var department in departementTasksDone)
                 {
                     PieSeries pieSeries = new PieSeries
                     {
@@ -64,17 +60,14 @@ namespace UserInterface.ChartsUC
             }
             else if (ViewType == "EFICIENCIA" || ViewType == null)
             {
-                ChartUC.Series.Clear();
-                DepartmentEfficienceCollection deparEfficices = DepartmentEfficienceCollection.ListDepartmentEfficienceCollection();
-
-                foreach (var department in deparEfficices)
+                foreach (var department in departmentEfficiency)
                 {
                     PieSeries pieSeries = new PieSeries
                     {
                         FontSize = 8,
                         Title = department.Area,
                         DataLabels = true,
-                        Values = new ChartValues<double> { department.Efficience },
+                        Values = new ChartValues<double> { department.Efficiency },
                         LabelPoint = PointLabel
                     };
 
@@ -85,7 +78,6 @@ namespace UserInterface.ChartsUC
 
         private void Chart_OnDataClick(object sender, ChartPoint chartpoint)
         {
-
             var chart = (LiveCharts.Wpf.PieChart)chartpoint.ChartView;
 
             //clear selected slice.
@@ -98,9 +90,25 @@ namespace UserInterface.ChartsUC
 
         private void ViewType_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            ViewType = Filter.SelectedItem as string;
+            string _selectedViewInComboBox = Filter.SelectedItem as string;
+            ViewType = _selectedViewInComboBox;
             ChartUC.Series.Clear();
             LoadData();
+        }
+
+        private void ChartUC_Loaded(object sender, RoutedEventArgs e)
+        {
+            departementTasksDone = DepartmentTasksCollection.ListDepartmentTasksCollection();
+            departmentEfficiency = DepartmentEfficiencyCollection.ListDepartmentEfficiencyCollection();
+            Filter.Items.Add("EFICIENCIA");
+            Filter.Items.Add("TAREFAS");
+            Filter.SelectedIndex = 0; //DEFINE COMBO SELECTED ITEM AS THE FIRST VIEW - EFFICIENCY
+        }
+
+        private void ChartUC_Unloaded(object sender, RoutedEventArgs e)
+        {
+            departementTasksDone = null;
+            departmentEfficiency = null;
         }
     }
 }

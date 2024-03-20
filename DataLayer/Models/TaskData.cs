@@ -21,30 +21,8 @@ namespace DataLayer.Models
         /// </summary>
         public static DataTable GetAllTasks (out string error)
         {
-            DataTable dataTable = null;
-            error = string.Empty;
-            string connectionString = Properties.Settings.Default.ConnectionString;
-            try
-            {
-                SqlConnection sqlConnection = new SqlConnection(connectionString);
-
-                sqlConnection.Open();
-
-                string query = "SELECT * FROM DBO.TASKS;";
-
-
-                SqlCommand sqlCommand = new SqlCommand(query, sqlConnection);
-
-                SqlDataReader dataReader = sqlCommand.ExecuteReader();
-                dataTable = new DataTable();
-                dataTable.Load(dataReader);
-
-                sqlConnection.Close();
-            }
-            catch (Exception ex)
-            {
-                error = ex.Message;
-            }
+            string table = "TASKMANAGER"; //PRECISA SER TASK_MANAGER !!!!!!!!!
+            DataTable dataTable = ListAllTableLogicData.GetTableData(out error, table);
             return dataTable;
         }
         #endregion

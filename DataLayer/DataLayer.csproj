@@ -41,7 +41,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Models\DepartmenteEfficienceData.cs" />
+    <Compile Include="ListAllTableLogicData.cs" />
+    <Compile Include="Models\DepartmentEfficiencyData.cs" />
     <Compile Include="Models\DepartmentTasksData.cs" />
     <Compile Include="Models\TaskData.cs" />
     <Compile Include="Models\TasksYearObjectivesData.cs" />

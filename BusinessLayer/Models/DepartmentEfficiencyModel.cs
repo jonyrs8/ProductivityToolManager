@@ -8,17 +8,17 @@ using System.Threading.Tasks;
 namespace BusinessLayer.Model
 {
     /// <summary>
-    /// THIS CLASS SHOULD ONLY BE USED TO SET PROPERTIES TO DEPARTMENT EFFICIENCE OBJECTS
+    /// THIS CLASS SHOULD ONLY BE USED TO SET PROPERTIES TO DEPARTMENT EFFICIENCY OBJECTS
     /// </summary>
-    public class DepartmentEfficienceModel
+    public class DepartmentEfficiencyModel
     {
         #region PROPERTIES
-        public DepartmentEfficienceModel() { }
+        public DepartmentEfficiencyModel() { }
         public string Area { get; set; }
         public int RealTasksTime { get; set; } //OUT - IN
         public int TheoricalTasksTime { get; set; }
-        public double Efficience { get; set; } //HARDCODE
-        public int TotalDepartmentEfficience { get; set; } //HARDCODE
+        public double Efficiency { get; set; } //HARDCODE
+        public int TotalDepartmentEfficiency { get; set; } //HARDCODE
         #endregion
 
     }

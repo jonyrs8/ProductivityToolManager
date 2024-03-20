@@ -13,17 +13,26 @@
             <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
 
-        <ComboBox x:Name="Filter" Height="20" IsEnabled="True" Width="100"
+        <ComboBox x:Name="Filter" Height="20" IsEnabled="True" 
+                  Width="100"
                   SelectionChanged="ViewType_SelectionChanged"
-                  VerticalAlignment="Center" HorizontalContentAlignment="Center"
+                  VerticalAlignment="Center" 
+                  HorizontalContentAlignment="Center"
                   HorizontalAlignment="Center">
         </ComboBox>
 
         <lvc:PieChart x:Name="ChartUC"
-            LegendLocation="Bottom" DataClick="Chart_OnDataClick" Hoverable="False" DataTooltip="{x:Null}"
-                      Height="250" Width="400" VerticalAlignment="Center" FontSize="9.5"
-                      Grid.Row="2" Grid.RowSpan="4" HorizontalAlignment="Center"
-                      Margin="0 0 0 50">
+            LegendLocation="Bottom" 
+                      DataClick="Chart_OnDataClick" 
+                      Hoverable="False"
+                      DataTooltip="{x:Null}" Height="250" 
+                      Width="400" VerticalAlignment="Center" 
+                      FontSize="9.5" Grid.Row="2" 
+                      Grid.RowSpan="4" 
+                      HorizontalAlignment="Center"
+                      Margin="0 0 0 50" 
+                      Loaded="ChartUC_Loaded"
+                      Unloaded="ChartUC_Unloaded">
         </lvc:PieChart>
     </Grid>
 </UserControl>

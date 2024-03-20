@@ -49,6 +49,15 @@ namespace BusinessLayer.Collections
             return task;
 
         }
+
+        public static int TasksDoneInTheYear(int year, TaskCollection tasks)
+        {
+            var result = (from task in tasks
+                             where task.TimeOut.Year == year
+                             select task.TaskID).Count();
+
+            return result;
+        }
         #endregion
     }
 }

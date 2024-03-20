@@ -10,6 +10,6 @@
     "\\UserInterface\\UserInterface",
     "\\UserInterface\\UserInterface\\ChartsUC"
   ],
-  "SelectedNode": "\\BusinessLayer\\Collections\\TasksYearObjectivesCollection.cs",
+  "SelectedNode": "\\UserInterface\\UserInterface\\ChartsUC\\AngularGaugeChartsUC.xaml",
   "PreviewInSolutionExplorer": false
 }

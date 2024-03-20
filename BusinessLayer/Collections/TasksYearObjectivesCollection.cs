@@ -42,9 +42,8 @@ namespace BusinessLayer.Collections
             return task;
         }
 
-        public static int YearObjective(int year)
+        public static int YearObjective(int year, TasksYearObjectivesCollection tasks)
         {
-            TasksYearObjectivesCollection tasks = TasksYearObjectivesCollection.ListAllTasksYearObjectives();
 
             var objective = (from task in tasks
                              where task.Year == year
