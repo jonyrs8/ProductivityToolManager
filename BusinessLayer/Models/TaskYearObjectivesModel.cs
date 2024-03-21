@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BusinessLayer.Models
 {
-    public class TasksYearObjectivesModel
+    public class TaskYearObjectivesModel
     {
         public int Year { get; set; }
         public int Tasks_Objective { get; set; }

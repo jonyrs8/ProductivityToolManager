@@ -10,6 +10,6 @@
     "\\UserInterface\\UserInterface",
     "\\UserInterface\\UserInterface\\ChartsUC"
   ],
-  "SelectedNode": "\\UserInterface\\UserInterface\\ChartsUC\\AngularGaugeChartsUC.xaml",
+  "SelectedNode": "\\DataLayer\\Models\\TaskManagerData.cs",
   "PreviewInSolutionExplorer": false
 }

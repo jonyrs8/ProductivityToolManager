@@ -25,9 +25,9 @@ namespace UserInterface.ChartsUC
     /// </summary>
     public partial class AngularGaugeChartsUC : UserControl
     {
-        TasksYearObjectivesCollection yearList; //YEAR LIST WITH DEFINED OBJECTIVES IN DATABASE
+        TaskYearObjectivesCollection yearList; //YEAR LIST WITH DEFINED OBJECTIVES IN DATABASE
 
-        TaskCollection allTasksList; //ALL TASKS IN THE DATABASE
+        TaskManagerCollection allTasksList; //ALL TASKS IN THE DATABASE
 
         int objective; //RECIBE OBJECTIVE FROM COLLECTION IN COMBO SELECTED CHANGE, AND IS USED TO CONSTRUCT DYNAMIC CHART
 
@@ -101,15 +101,15 @@ namespace UserInterface.ChartsUC
         {
             int _yearObjectivesComboSelected = (int)comboYearObjectives.SelectedItem;
             int year = _yearObjectivesComboSelected;
-            objective = TasksYearObjectivesCollection.YearObjective(year, yearList);
-            tasksDoneInTheYear = TaskCollection.TasksDoneInTheYear(year, allTasksList);
+            objective = TaskYearObjectivesCollection.YearObjective(year, yearList);
+            tasksDoneInTheYear = TaskManagerCollection.TasksDoneInTheYear(year, allTasksList);
             LoadChart();
         }
 
         private void angularGauge_Loaded(object sender, RoutedEventArgs e)
         {
-            yearList = TasksYearObjectivesCollection.ListAllTasksYearObjectives();
-            allTasksList = TaskCollection.ListAllTasks();
+            yearList = TaskYearObjectivesCollection.ListAllTasksYearObjectives();
+            allTasksList = TaskManagerCollection.ListAllTasks();
             int countYearsInComboBox = 0;
             //YEARS
             foreach (var task in yearList)

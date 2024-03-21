@@ -12,7 +12,7 @@ namespace DataLayer.Models
     /// THIS CLASS SHOULD ONLY MANAGE DATA FROM:
     /// TABLE - TASKS_YEAR_OBJECTIVES
     /// </summary>
-    public class TasksYearObjectivesData
+    public class TaskYearObjectivesData
     {
         #region METHODS
         /// <summary>

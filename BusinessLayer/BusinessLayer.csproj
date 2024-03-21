@@ -45,14 +45,28 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Collections\DepartmentEfficiencyCollection.cs" />
-    <Compile Include="Collections\DepartmentTasksCollection.cs" />
-    <Compile Include="Collections\TaskCollection.cs" />
-    <Compile Include="Collections\TasksYearObjectivesCollection.cs" />
-    <Compile Include="Models\DepartmentTasksModel.cs" />
-    <Compile Include="Models\TaskModel.cs" />
+    <Compile Include="Collections\DepartmentTaskManagerCollection.cs" />
+    <Compile Include="Collections\TaskManagerCollection.cs" />
+    <Compile Include="Collections\TaskYearObjectivesCollection.cs" />
+    <Compile Include="Enumerations\ViewType.cs" />
+    <Compile Include="Interfaces\IAreaValue.cs" />
+    <Compile Include="Models\DepartmentTaskModel.cs" />
+    <Compile Include="Models\TaskManagerModel.cs" />
     <Compile Include="Models\DepartmentEfficiencyModel.cs" />
-    <Compile Include="Models\TasksYearObjectivesModel.cs" />
+    <Compile Include="Models\TaskYearObjectivesModel.cs" />
+    <Compile Include="Models\ViewTypeDescription.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

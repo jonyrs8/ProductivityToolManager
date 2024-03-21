@@ -13,23 +13,23 @@ namespace BusinessLayer.Collections
     /// <summary>
     /// THIS CLASS SHOULD ONLY BE USED TO MANAGE TASKS COLLECTION
     /// </summary>
-    public class TaskCollection : List<TaskModel>
+    public class TaskManagerCollection : List<TaskManagerModel>
     {
         #region CONSTRUCTORS
-        public TaskCollection() { }
+        public TaskManagerCollection() { }
 
-        public TaskCollection(DataTable tasks)
+        public TaskManagerCollection(DataTable tasks)
             : this()
         {
             foreach (DataRow datarow in tasks.Rows)
             {
-                TaskModel task = new TaskModel();
+                TaskManagerModel task = new TaskManagerModel();
                 task.TaskID = datarow.Field<int>("TASK_ID");
-                task.TaskName = datarow.Field<string>("TASK_NAME");
+                task.DepartmentID = datarow.Field<int>("DEPARTMENT_ID");
                 task.TimeIn = datarow.Field<DateTime>("TIME_IN");
                 task.TimeOut = datarow.Field<DateTime>("TIME_OUT");
+                task.UserID = datarow.Field<string>("USER_ID");
                 task.ExpectedTimeOut = datarow.Field<DateTime>("EXPECTED_TIME_OUT");
-                task.Area = datarow.Field<string>("AREA");
 
                 this.Add(task); // Adiciona a tarefa individualmente à coleção
             }
@@ -37,20 +37,20 @@ namespace BusinessLayer.Collections
         #endregion
 
         #region METHODS
-        public static TaskCollection ListAllTasks()
+        public static TaskManagerCollection ListAllTasks()
         {
 
             string erro = string.Empty;
 
-            DataTable dataTable = TaskData.GetAllTasks(out erro);
+            DataTable dataTable = TaskManagerData.GetAllTasks(out erro);
 
-            TaskCollection task = new TaskCollection(dataTable);
+            TaskManagerCollection task = new TaskManagerCollection(dataTable);
 
             return task;
 
         }
 
-        public static int TasksDoneInTheYear(int year, TaskCollection tasks)
+        public static int TasksDoneInTheYear(int year, TaskManagerCollection tasks)
         {
             var result = (from task in tasks
                              where task.TimeOut.Year == year

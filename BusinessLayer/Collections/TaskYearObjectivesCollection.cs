@@ -10,17 +10,17 @@ using System.Threading.Tasks;
 
 namespace BusinessLayer.Collections
 {
-    public class TasksYearObjectivesCollection : List<TasksYearObjectivesModel>
+    public class TaskYearObjectivesCollection : List<TaskYearObjectivesModel>
     {
         #region CONSTRUCTORS
-        public TasksYearObjectivesCollection() { }
+        public TaskYearObjectivesCollection() { }
 
-        public TasksYearObjectivesCollection(DataTable tasks)
+        public TaskYearObjectivesCollection(DataTable tasks)
             : this()
         {
             foreach (DataRow datarow in tasks.Rows)
             {
-                TasksYearObjectivesModel task = new TasksYearObjectivesModel();
+                TaskYearObjectivesModel task = new TaskYearObjectivesModel();
                 task.Year = datarow.Field<int>("YEAR");
                 task.Tasks_Objective = datarow.Field<int>("TASKS_OBJECTIVES");;
 
@@ -30,19 +30,19 @@ namespace BusinessLayer.Collections
         #endregion
 
         #region METHODS
-        public static TasksYearObjectivesCollection ListAllTasksYearObjectives()
+        public static TaskYearObjectivesCollection ListAllTasksYearObjectives()
         {
 
             string erro = string.Empty;
 
-            DataTable dataTable = TasksYearObjectivesData.GetTasksYearObjectivesData(out erro);
+            DataTable dataTable = TaskYearObjectivesData.GetTasksYearObjectivesData(out erro);
 
-            TasksYearObjectivesCollection task = new TasksYearObjectivesCollection(dataTable);
+            TaskYearObjectivesCollection task = new TaskYearObjectivesCollection(dataTable);
 
             return task;
         }
 
-        public static int YearObjective(int year, TasksYearObjectivesCollection tasks)
+        public static int YearObjective(int year, TaskYearObjectivesCollection tasks)
         {
 
             var objective = (from task in tasks

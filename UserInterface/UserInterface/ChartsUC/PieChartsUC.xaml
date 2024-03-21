@@ -13,7 +13,7 @@
             <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
 
-        <ComboBox x:Name="Filter" Height="20" IsEnabled="True" 
+        <ComboBox x:Name="filterComboBox" Height="20" IsEnabled="True" 
                   Width="100"
                   SelectionChanged="ViewType_SelectionChanged"
                   VerticalAlignment="Center" 

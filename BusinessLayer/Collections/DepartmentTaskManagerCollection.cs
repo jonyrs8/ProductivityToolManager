@@ -1,4 +1,5 @@
-﻿using BusinessLayer.Models;
+﻿using BusinessLayer.Interfaces;
+using BusinessLayer.Models;
 using DataLayer.Models;
 using System;
 using System.Collections.Generic;
@@ -12,16 +13,16 @@ namespace BusinessLayer.Collections
     /// <summary>
     /// THIS CLASS SHOULD ONLY BE USED TO MANAGE DEPARTMENT TASKS COLLECTION
     /// </summary>
-    public class DepartmentTasksCollection : List<DepartmentTasksModel>
+    public class DepartmentTaskManagerCollection : List<IAreaValue>
     {
         #region CONSTRUCTORS
-        DepartmentTasksCollection() { }
-        public DepartmentTasksCollection(DataTable tasks)
+        DepartmentTaskManagerCollection() { }
+        public DepartmentTaskManagerCollection(DataTable tasks)
         : this()
         {
             foreach (DataRow datarow in tasks.Rows)
             {
-                DepartmentTasksModel task = new DepartmentTasksModel();
+                DepartmentTaskModel task = new DepartmentTaskModel();
                 task.Area = datarow.Field<string>("AREA");
                 task.TasksNumber = datarow.Field<int>("TASKS_NUMBER");
  
@@ -36,11 +37,11 @@ namespace BusinessLayer.Collections
         /// CREATE A LIST OF DEPARTMENT TASKS COLLECTION
         /// </summary>
         /// <returns>DEPARTMENTTASKSCOLLECTION</returns>
-        public static DepartmentTasksCollection ListDepartmentTasksCollection()
+        public static DepartmentTaskManagerCollection ListDepartmentTasksCollection()
         {
             string erro = string.Empty;
-            DepartmentTasksCollection colection = new DepartmentTasksCollection
-            (DataLayer.Models.DepartmentTasksData.GetDepartmentTasksData(out erro));
+            DepartmentTaskManagerCollection colection = new DepartmentTaskManagerCollection
+            (DataLayer.Models.DepartmentTaskData.GetDepartmentTasksData(out erro));
 
             return colection;
         }

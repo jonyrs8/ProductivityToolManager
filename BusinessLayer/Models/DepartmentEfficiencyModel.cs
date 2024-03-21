@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BusinessLayer.Interfaces;
+using BusinessLayer.Models;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -10,7 +12,7 @@ namespace BusinessLayer.Model
     /// <summary>
     /// THIS CLASS SHOULD ONLY BE USED TO SET PROPERTIES TO DEPARTMENT EFFICIENCY OBJECTS
     /// </summary>
-    public class DepartmentEfficiencyModel
+    public class DepartmentEfficiencyModel : IAreaValue
     {
         #region PROPERTIES
         public DepartmentEfficiencyModel() { }
@@ -19,6 +21,7 @@ namespace BusinessLayer.Model
         public int TheoricalTasksTime { get; set; }
         public double Efficiency { get; set; } //HARDCODE
         public int TotalDepartmentEfficiency { get; set; } //HARDCODE
+        public double Value { get { return this.Efficiency; } }
         #endregion
 
     }

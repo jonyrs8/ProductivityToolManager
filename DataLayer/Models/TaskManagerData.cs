@@ -13,7 +13,7 @@ namespace DataLayer.Models
     /// <summary>
     /// THIS CLASS SHOULD ONLY BE USED TO EXTRACT DATA FROM TABLE - TASKS
     /// </summary>
-    public class TaskData
+    public class TaskManagerData
     {
         #region METHODS
         /// <summary>
@@ -21,7 +21,7 @@ namespace DataLayer.Models
         /// </summary>
         public static DataTable GetAllTasks (out string error)
         {
-            string table = "TASKMANAGER"; //PRECISA SER TASK_MANAGER !!!!!!!!!
+            string table = "TASK_MANAGER"; //PRECISA SER TASK_MANAGER !!!!!!!!!
             DataTable dataTable = ListAllTableLogicData.GetTableData(out error, table);
             return dataTable;
         }

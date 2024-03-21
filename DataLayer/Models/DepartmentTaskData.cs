@@ -13,7 +13,7 @@ namespace DataLayer.Models
     /// NAME: DEPARTMENT_TASKS_VIEW
     /// COLUNS: AREA, TASKS_NUMBER (NUMBER OF TASKS DONE BY DEPARTMENT)
     /// </summary>
-    public class DepartmentTasksData
+    public class DepartmentTaskData
     {
         #region METHODS
         /// <summary>

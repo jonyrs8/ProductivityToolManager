@@ -1,4 +1,5 @@
-﻿using BusinessLayer.Model;
+﻿using BusinessLayer.Interfaces;
+using BusinessLayer.Model;
 using DataLayer.Models;
 using System;
 using System.Collections.Generic;
@@ -12,7 +13,7 @@ namespace BusinessLayer.Collections
     /// <summary>
     /// THIS CLASS SHOULD ONLY BE USED TO MANAGE DEPARTMENT EFFICIENCY COLLECTION
     /// </summary>
-    public class DepartmentEfficiencyCollection : List<DepartmentEfficiencyModel>
+    public class DepartmentEfficiencyCollection : List<IAreaValue>
     {
         #region CONSTRUCTORS
         public DepartmentEfficiencyCollection() { }
