@@ -25,6 +25,7 @@ namespace UserInterface.ChartsUC
     /// </summary>
     public partial class AngularGaugeChartsUC : UserControl
     {
+        #region GLOBAL VARIAVELS
         TaskYearObjectivesCollection yearList; //YEAR LIST WITH DEFINED OBJECTIVES IN DATABASE
 
         TaskManagerCollection allTasksList; //ALL TASKS IN THE DATABASE
@@ -33,16 +34,21 @@ namespace UserInterface.ChartsUC
 
         int tasksDoneInTheYear = 0; //RECIBE TASK DONE IN A SPECIFIC YEAR FROM COLLECTION IN COMBO SELECTED CHANGE,
                                     //AND IS USED TO CONSTRUCT DYNAMIC CHART
+        #endregion
+
+        #region CONSTRUCTORES
         public AngularGaugeChartsUC()
         {
             InitializeComponent();
             DataContext = this;
         }
+        #endregion
 
+        #region METHODS
         /// <summary>
         /// METHOD TO CONSTRUCT AND MAKE ALL LOGIC BEHIND CHART BASED IN OBJECTIVE AND TASKS DONE
         /// </summary>
-        public void LoadChart()
+        public void LoadChart() //POSSIVEL MELHORAR
         {
             angularGauge.Sections.Clear();
 
@@ -52,7 +58,6 @@ namespace UserInterface.ChartsUC
                 ToValue = objective, //OBJECTIVE
                 Fill = new SolidColorBrush(Colors.DarkGreen)
             };
-
 
             AngularSection angularSectionLimeGreen = new AngularSection()
             {
@@ -97,12 +102,22 @@ namespace UserInterface.ChartsUC
             angularGauge.Wedge = 200;
         }
 
+        #endregion
+
+        #region EVENTS
+
         private void comboYearObjectives_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             int _yearObjectivesComboSelected = (int)comboYearObjectives.SelectedItem;
             int year = _yearObjectivesComboSelected;
             objective = TaskYearObjectivesCollection.YearObjective(year, yearList);
             tasksDoneInTheYear = TaskManagerCollection.TasksDoneInTheYear(year, allTasksList);
+            tasksDoneTextBox.Text = tasksDoneInTheYear.ToString();
+            //IF TASKS DONE IS GREATER THAN OBJECTIVE, TASKS DONE WILL BE THE OBJECTIVE
+            if (tasksDoneInTheYear > objective)
+            {
+                tasksDoneInTheYear = objective;
+            }
             LoadChart();
         }
 
@@ -112,7 +127,7 @@ namespace UserInterface.ChartsUC
             allTasksList = TaskManagerCollection.ListAllTasks();
             int countYearsInComboBox = 0;
             //YEARS
-            foreach (var task in yearList)
+            foreach (BusinessLayer.Models.TaskYearObjectivesModel task in yearList)
             {
                 comboYearObjectives.Items.Add(task.Year);
                 countYearsInComboBox++;
@@ -120,7 +135,7 @@ namespace UserInterface.ChartsUC
             //CHART WILL ALWAYS SHOW THE CURRENT YEAR,
             //THIS CREATE A TRIGGER
             //FOR COMBO BOX EVENT - SELECTION CHANGED
-            comboYearObjectives.SelectedIndex = (countYearsInComboBox - 1); 
+            comboYearObjectives.SelectedIndex = (countYearsInComboBox - 1); //NEXT STEP IS SELECTION CHANGED EVENT
         }
 
         private void angularGauge_Unloaded(object sender, RoutedEventArgs e)
@@ -128,5 +143,6 @@ namespace UserInterface.ChartsUC
             yearList = null;
             allTasksList = null;
         }
+        #endregion
     }
 }

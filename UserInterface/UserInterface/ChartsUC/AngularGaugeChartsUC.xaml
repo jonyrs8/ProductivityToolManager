@@ -27,5 +27,10 @@
                           SectionsInnerRadius=".4"
                           Margin="0 40 0 0">
         </lvc:AngularGauge>
+
+        <TextBlock x:Name="tasksDoneTextBox" Grid.Row="1" VerticalAlignment="Bottom"
+                   HorizontalAlignment="Center" FontSize="24" Foreground="Black"
+                   Margin="0 0 0 40">
+        </TextBlock>
     </Grid>
 </UserControl>

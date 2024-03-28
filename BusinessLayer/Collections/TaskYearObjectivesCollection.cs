@@ -10,6 +10,9 @@ using System.Threading.Tasks;
 
 namespace BusinessLayer.Collections
 {
+    /// <summary>
+    /// THIS CLASS SHOULD ONLY BE USED TO MANAGE YEAR OBJECTIVES COLLECTION
+    /// </summary>
     public class TaskYearObjectivesCollection : List<TaskYearObjectivesModel>
     {
         #region CONSTRUCTORS
@@ -32,7 +35,6 @@ namespace BusinessLayer.Collections
         #region METHODS
         public static TaskYearObjectivesCollection ListAllTasksYearObjectives()
         {
-
             string erro = string.Empty;
 
             DataTable dataTable = TaskYearObjectivesData.GetTasksYearObjectivesData(out erro);

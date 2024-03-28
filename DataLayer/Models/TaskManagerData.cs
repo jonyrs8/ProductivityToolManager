@@ -11,13 +11,15 @@ using System.Threading.Tasks;
 namespace DataLayer.Models
 {
     /// <summary>
-    /// THIS CLASS SHOULD ONLY BE USED TO EXTRACT DATA FROM TABLE - TASKS
+    /// THIS CLASS SHOULD ONLY BE USED TO EXTRACT DATA FROM TABLE - TASK_MANAGER
+    /// NAME: TASK_MANAGER
+    /// COLUNS: TASK_ID, DEPARTMENT_ID, TIME_IN, TIME_OUT, USER_ID, EXPECTED_TIME_OUT
     /// </summary>
     public class TaskManagerData
     {
         #region METHODS
         /// <summary>
-        /// METHOD TO EXTRACT ALL DE DATA FROM TASKS TABLE!
+        /// METHOD TO EXTRACT ALL DE DATA FROM TASK_MANAGER TABLE!
         /// </summary>
         public static DataTable GetAllTasks (out string error)
         {

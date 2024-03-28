@@ -27,10 +27,17 @@ namespace UserInterface.ChartsUC
     /// </summary>
     public partial class PieChartsUC : UserControl
     {
+        #region GLOBAL VARIAVELS
         DepartmentTaskManagerCollection departmentTasks;
         DepartmentEfficiencyCollection departmentEfficiency; //SHOW THE MOST EFFICIENT DEPARTMENT DURING TASKS
         ViewType viewType;
+        #endregion
+
+        #region PROPERTIES
         public Func<ChartPoint, string> PointLabel { get; set; }
+        #endregion
+
+        #region CONSTRUCTORES
         public PieChartsUC()
         {
             InitializeComponent();
@@ -38,6 +45,9 @@ namespace UserInterface.ChartsUC
             string.Format("{0} ({1:P})", chartPoint.Y, chartPoint.Participation);
             DataContext = this;
         }
+        #endregion
+
+        #region METHODS
 
         /// <summary>
         /// METHOD TO CHARGE VIEW FOR CHART FROM VIEW TYPE SELECTED
@@ -75,6 +85,9 @@ namespace UserInterface.ChartsUC
             }
 
         }
+        #endregion
+
+        #region EVENTS
 
         private void Chart_OnDataClick(object sender, ChartPoint chartpoint)
         {
@@ -118,5 +131,6 @@ namespace UserInterface.ChartsUC
             departmentTasks = null;
             departmentEfficiency = null;
         }
+        #endregion
     }
 }

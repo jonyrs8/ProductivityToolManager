@@ -11,7 +11,7 @@ namespace BusinessLayer.Enumerations
         Task = 0,
         Efficiency = 1
     }
-
+    #region METHODS
     public static class ViewTypeExtensionsMethods 
     {
         public static string Description(this ViewType viewType) 
@@ -25,8 +25,7 @@ namespace BusinessLayer.Enumerations
                 default:
                     return string.Empty;
             }
-        }
-
-        
+        } 
     }
+    #endregion
 }

@@ -21,7 +21,7 @@ namespace BusinessLayer.Collections
         private DepartmentEfficiencyCollection(DataTable Departments)
             : this()
         {
-            //THE OBJECTIVE OF THIS LOOP IS TO OBTAIN totalDepartmentEfficiency VARIAVEL. 
+            //THE OBJECTIVE OF THIS LOOP IS TO OBTAIN totalDepartmentEfficiency VARIAVEL = SUM OF ALL DEPARTMENT SINGLE EFFICIENCY. 
             double totalDepartmentEfficiency = 0;
             foreach (DataRow datarow in Departments.Rows)
             {

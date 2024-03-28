@@ -10,6 +10,6 @@
     "\\UserInterface\\UserInterface",
     "\\UserInterface\\UserInterface\\ChartsUC"
   ],
-  "SelectedNode": "\\DataLayer\\Models\\TaskManagerData.cs",
+  "SelectedNode": "\\BusinessLayer\\Collections\\DepartmentTaskManagerCollection.cs",
   "PreviewInSolutionExplorer": false
 }

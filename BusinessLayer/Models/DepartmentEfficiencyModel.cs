@@ -23,6 +23,5 @@ namespace BusinessLayer.Model
         public int TotalDepartmentEfficiency { get; set; } //HARDCODE
         public double Value { get { return this.Efficiency; } }
         #endregion
-
     }
 }

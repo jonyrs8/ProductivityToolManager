@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\ProductivityToolManager\UserInterface\UserInterface\App.xaml
-3-248706794
+6-1955755583
 
-82002425717
-161799389280
-ChartsUC\AngularGaugeChartsUC.xaml;ChartsUC\PieChartsUC.xaml;MainWindow.xaml;
+11-276983378
+172048150404
+ChartsUC\AngularGaugeChartsUC.xaml;ChartsUC\EmployCardUC.xaml;ChartsUC\FormLoginUC.xaml;ChartsUC\PieChartsUC.xaml;MainWindow.xaml;Windows\TesteWindow.xaml;
 
-True
+False
 

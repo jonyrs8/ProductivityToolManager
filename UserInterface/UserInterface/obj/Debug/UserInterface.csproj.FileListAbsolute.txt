@@ -1,6 +1,5 @@
 C:\ProductivityToolManager\UserInterface\UserInterface\obj\Debug\UserInterface.csproj.AssemblyReference.cache
 C:\ProductivityToolManager\UserInterface\UserInterface\obj\Debug\ChartsUC\PieChartsUC.g.cs
-C:\ProductivityToolManager\UserInterface\UserInterface\obj\Debug\MainWindow.g.cs
 C:\ProductivityToolManager\UserInterface\UserInterface\obj\Debug\App.g.cs
 C:\ProductivityToolManager\UserInterface\UserInterface\obj\Debug\UserInterface_MarkupCompile.cache
 C:\ProductivityToolManager\UserInterface\UserInterface\obj\Debug\UserInterface_MarkupCompile.lref
@@ -26,7 +25,14 @@ C:\ProductivityToolManager\UserInterface\UserInterface\obj\Debug\UserInterface.e
 C:\ProductivityToolManager\UserInterface\UserInterface\obj\Debug\UserInterface.pdb
 C:\ProductivityToolManager\UserInterface\UserInterface\obj\Debug\GeneratedInternalTypeHelper.g.cs
 C:\ProductivityToolManager\UserInterface\UserInterface\obj\Debug\ChartsUC\PieChartsUC.baml
-C:\ProductivityToolManager\UserInterface\UserInterface\obj\Debug\MainWindow.baml
 C:\ProductivityToolManager\UserInterface\UserInterface\obj\Debug\UserInterface.g.resources
 C:\ProductivityToolManager\UserInterface\UserInterface\obj\Debug\ChartsUC\AngularGaugeChartsUC.g.cs
 C:\ProductivityToolManager\UserInterface\UserInterface\obj\Debug\ChartsUC\AngularGaugeChartsUC.baml
+C:\ProductivityToolManager\UserInterface\UserInterface\obj\Debug\Windows\TesteWindow.g.cs
+C:\ProductivityToolManager\UserInterface\UserInterface\obj\Debug\Windows\TesteWindow.baml
+C:\ProductivityToolManager\UserInterface\UserInterface\obj\Debug\ChartsUC\FormLoginUC.g.cs
+C:\ProductivityToolManager\UserInterface\UserInterface\obj\Debug\ChartsUC\FormLoginUC.baml
+C:\ProductivityToolManager\UserInterface\UserInterface\obj\Debug\ChartsUC\EmployCardUC.g.cs
+C:\ProductivityToolManager\UserInterface\UserInterface\obj\Debug\ChartsUC\EmployCardUC.baml
+C:\ProductivityToolManager\UserInterface\UserInterface\obj\Debug\MainWindow.g.cs
+C:\ProductivityToolManager\UserInterface\UserInterface\obj\Debug\MainWindow.baml

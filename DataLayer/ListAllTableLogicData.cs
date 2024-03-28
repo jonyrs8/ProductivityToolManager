@@ -8,8 +8,18 @@ using System.Threading.Tasks;
 
 namespace DataLayer
 {
+    /// <summary>
+    /// THIS CLASS SHOULD ONLY BE USED TO EXTRACT DATA FROM DATABASE
+    /// </summary>
     public class ListAllTableLogicData
     {
+        #region METHODS
+        /// <summary>
+        /// METHOD TO EXTRACT ALL DATA TABLE FROM DATABASE
+        /// </summary>
+        /// <param name="error"></param>
+        /// <param name="table"></param>
+        /// <returns></returns>
         public static DataTable GetTableData(out string error, string table)
         {
             DataTable dataTable = null;
@@ -35,5 +45,6 @@ namespace DataLayer
             }
             return dataTable;
         }
+        #endregion
     }
 }

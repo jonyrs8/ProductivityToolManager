@@ -9,8 +9,9 @@ using System.Threading.Tasks;
 namespace DataLayer.Models
 {
     /// <summary>
-    /// THIS CLASS SHOULD ONLY MANAGE DATA FROM:
-    /// TABLE - TASKS_YEAR_OBJECTIVES
+    /// THIS CLASS SHOULD ONLY BE USED TO EXTRACT DATA FROM TABLE - TASKS_YEAR_OBJECTIVES
+    /// NAME: TASKS_YEAR_OBJECTIVES
+    /// COLUNS: YEAR, TASKS_OBJECTIVES 
     /// </summary>
     public class TaskYearObjectivesData
     {
