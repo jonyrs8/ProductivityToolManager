@@ -74,7 +74,7 @@ namespace UserInterface.ChartsUC
             {
                 PieSeries pieSeries = new PieSeries
                 {
-                    FontSize = 8,
+                    FontSize = 9,
                     Title = department.Area,
                     DataLabels = true,
                     Values = new ChartValues<double> { department.Value },

@@ -8,8 +8,9 @@
     "\\DataLayer\\Models",
     "\\UserInterface",
     "\\UserInterface\\UserInterface",
-    "\\UserInterface\\UserInterface\\ChartsUC"
+    "\\UserInterface\\UserInterface\\ChartsUC",
+    "\\UserInterface\\UserInterface\\Windows"
   ],
-  "SelectedNode": "\\BusinessLayer\\Collections\\DepartmentTaskManagerCollection.cs",
+  "SelectedNode": "\\UserInterface\\UserInterface\\ChartsUC\\FormLoginUC.xaml",
   "PreviewInSolutionExplorer": false
 }

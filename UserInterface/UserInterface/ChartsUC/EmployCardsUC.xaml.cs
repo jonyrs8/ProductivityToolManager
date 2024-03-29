@@ -10,16 +10,17 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace UserInterface.ChartsUC
 {
     /// <summary>
-    /// Interaction logic for EmployCardUC.xaml
+    /// Interaction logic for EmployCardsUC.xaml
     /// </summary>
-    public partial class EmployCardUC : Window
+    public partial class EmployCardsUC : UserControl
     {
-        public EmployCardUC()
+        public EmployCardsUC()
         {
             InitializeComponent();
         }

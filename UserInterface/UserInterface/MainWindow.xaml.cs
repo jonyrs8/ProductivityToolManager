@@ -38,7 +38,36 @@ namespace UserInterface
 
         private void MainWindow_Loaded(object sender, RoutedEventArgs e)
         {
+            CheckBox geral = new CheckBox();
+            geral.Content = "GERAL";
+            geral.Foreground = Brushes.White;
+            geral.Margin = new Thickness(5);
+            checkBoxDadWrapPanel.Children.Add(geral);
+            geral.IsChecked = true;
 
+            IEnumerable<string> distinctDepartments = BusinessLayer.Collections.DepartmentTaskManagerCollection.DistinctDepartments();
+
+            foreach(var department in distinctDepartments) 
+            { 
+                CheckBox depart = new CheckBox();
+                depart.Content = department;
+                depart.Foreground = Brushes.White;
+                depart.Margin = new Thickness(5);
+                checkBoxDadWrapPanel.Children.Add(depart);
+            }
+
+            for (int i = 2; i <= 10; i++)
+            {
+                if (i % 2 == 0) // Verifica se o número é par
+                {
+                    topComboBox.Items.Add(i);
+                }
+            }
+        }
+
+        private void exitButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
         }
     }
 }

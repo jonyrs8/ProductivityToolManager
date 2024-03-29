@@ -6,16 +6,181 @@
         xmlns:local="clr-namespace:UserInterface.Windows"
         xmlns:ChartsUC="clr-namespace:UserInterface.ChartsUC" x:Class="UserInterface.MainWindow"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800"
+        Title="MainWindow" Height="800" Width="1500"
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="None"
+        ResizeMode="NoResize"
+        Background="Transparent"
+        AllowsTransparency="True"
         x:Name="Main"
         Loaded="MainWindow_Loaded">
-    <Grid>
-        <ChartsUC:AngularGaugeChartsUC HorizontalAlignment="Left" VerticalAlignment="Center"
-                                       x:Name="angular" Height="300" Width="300" Margin="35,0,0,0"/>
-        <ChartsUC:PieChartsUC x:Name="Chart" HorizontalAlignment="Left" 
-                              VerticalAlignment="Center" 
-                              Height="375" Width="562" Margin="262,0,0,0"/>
+    <Border CornerRadius="20">
+        <Border.Background>
+            <LinearGradientBrush StartPoint="0,2" EndPoint="0,0">
+                <GradientStop Color="#00008b" Offset="0"/>
+                <!-- Cor original -->
+                <GradientStop Color="Black" Offset="0.8"/>
+                <!-- Cor mais escura -->
+            </LinearGradientBrush>
+        </Border.Background>
 
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="80"></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition Height="30"></RowDefinition>
+            </Grid.RowDefinitions>
 
-    </Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="350"></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                <TextBlock Text="PRODUCTIVITY TOOL MANAGER" FontSize="22"
+                           Foreground="White">
+
+                </TextBlock>
+
+                <TextBlock Text="A TOOL YOU CAN USE TO TRACK YOUR BUSINESS" 
+                           FontSize="14" HorizontalAlignment="Center"
+                           FontWeight="Light" Foreground="White">
+                </TextBlock>
+            </StackPanel>
+
+            <Border Grid.Row="1" BorderBrush="White" BorderThickness="0 0 1 0">
+                <StackPanel>
+                    <TextBlock Text="AngularGaugeChart" FontSize="16" 
+                           HorizontalAlignment="Center"
+                           Foreground="White"
+                           Margin="0 40 0 0">
+                    </TextBlock>
+
+                    <TextBlock Text="Track tasks done by year objective!" 
+                           FontSize="12" HorizontalAlignment="Center"
+                           FontWeight="Light" Foreground="White"
+                           Margin="0 0 0 10">
+                    </TextBlock>
+                    <ChartsUC:AngularGaugeChartsUC HorizontalAlignment="Center"/>
+                </StackPanel>
+            </Border>
+
+            <Border Grid.Row="2" BorderBrush="White" BorderThickness="0 0 1 0">
+                <StackPanel Grid.Row="2">
+                    <TextBlock Text="PieChart" FontSize="16" 
+                           HorizontalAlignment="Center"
+                           Foreground="White"
+                           Margin="0 10 0 0">
+                    </TextBlock>
+
+                    <TextBlock Text="Track efficience and tasks!" 
+                           FontSize="12" HorizontalAlignment="Center"
+                           FontWeight="Light" Foreground="White">
+                    </TextBlock>
+                    <ChartsUC:PieChartsUC VerticalAlignment="Center"/>
+                </StackPanel>
+            </Border>
+
+            <StackPanel Grid.Column="5" Margin="0 10 10 0">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition Width="0.05*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    
+                    <Button Grid.Column="1" HorizontalAlignment="Right"
+                            x:Name="exitButton" Click="exitButton_Click"
+                            HorizontalContentAlignment="Center"
+                            Style="{StaticResource ButtonsHover}">
+                        <Image Source="C:\ProductivityToolManager\Images\closeIcon.png"
+                                Height="40">
+                        </Image>
+                    </Button>
+
+                    <Button Grid.Column="0" HorizontalAlignment="Right"
+                            HorizontalContentAlignment="Center"
+                            Style="{StaticResource ButtonsHover}">
+                        <Image Source="C:\ProductivityToolManager\Images\settingsIcon.png"
+                               Height="40">
+                        </Image>
+                    </Button>
+                </Grid>
+            </StackPanel>
+
+            <StackPanel Grid.Column="1" Grid.Row="1" Grid.RowSpan="2">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="2*"></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="100"></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                    </Grid.RowDefinitions>
+
+                    <StackPanel Grid.Row="0">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition></ColumnDefinition>
+                                <ColumnDefinition></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+
+                            <WrapPanel x:Name="checkBoxDadWrapPanel" Grid.Column="0"
+                                       Margin="20">
+
+                            </WrapPanel>
+
+                            <StackPanel Grid.Column="1" Margin="0 20 0 0">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="1.5*"></ColumnDefinition>
+                                        <ColumnDefinition></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+
+                                    <ComboBox Grid.Column="1" Width="60" Height="30"
+                                      VerticalAlignment="Center" x:Name="topComboBox"
+                                      HorizontalContentAlignment="Center" HorizontalAlignment="Left"
+                                              FontSize="14">
+                                    </ComboBox>
+
+                                    <TextBlock Text="NUMBER OF COLLABORATORS" Foreground="White"
+                                               HorizontalAlignment="Right" Margin="0 0 10 0"
+                                               VerticalAlignment="Center" FontSize="14">
+                                        
+                                    </TextBlock>
+                                </Grid>
+                                
+                            </StackPanel>
+
+                        </Grid>
+                    </StackPanel>
+
+                    <WrapPanel Margin="20 0 0 0" Grid.Column="0" Grid.Row="1"
+                               x:Name="cardsDadWrapPanel">
+                        <ChartsUC:EmployCardsUC Margin="5"/>
+                        <ChartsUC:EmployCardsUC Margin="5"/>
+                        <ChartsUC:EmployCardsUC Margin="5"/>
+                        <ChartsUC:EmployCardsUC Margin="5"/>
+                        <ChartsUC:EmployCardsUC Margin="5"/>
+                        <ChartsUC:EmployCardsUC Margin="5"/>
+                        <ChartsUC:EmployCardsUC Margin="5"/>
+                        <ChartsUC:EmployCardsUC Margin="5"/>
+                        <ChartsUC:EmployCardsUC Margin="5"/>
+                        <ChartsUC:EmployCardsUC Margin="5"/>
+                        <!-- Adicione mais UserControl aqui conforme necessário -->
+                    </WrapPanel>
+
+                    <StackPanel Grid.Column="1">
+                        
+                    </StackPanel>
+                </Grid>
+            </StackPanel>
+
+            <TextBlock Text="This sample was created to show advanced programation code techniques and dinamyc user interface!"
+                       Foreground="White" Grid.Row="3" Grid.ColumnSpan="5"
+                       HorizontalAlignment="Center"></TextBlock>
+        </Grid>
+    </Border>
 </Window>

@@ -65,8 +65,8 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="ChartsUC\EmployCardUC.xaml.cs">
-      <DependentUpon>EmployCardUC.xaml</DependentUpon>
+    <Compile Include="ChartsUC\EmployCardsUC.xaml.cs">
+      <DependentUpon>EmployCardsUC.xaml</DependentUpon>
     </Compile>
     <Compile Include="ChartsUC\FormLoginUC.xaml.cs">
       <DependentUpon>FormLoginUC.xaml</DependentUpon>
@@ -78,7 +78,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="ChartsUC\EmployCardUC.xaml">
+    <Page Include="ChartsUC\EmployCardsUC.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -108,6 +108,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="StyleDictionary\ButtonsHoverTheme.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Windows\TesteWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

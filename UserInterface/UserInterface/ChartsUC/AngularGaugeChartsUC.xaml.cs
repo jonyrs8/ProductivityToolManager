@@ -99,7 +99,7 @@ namespace UserInterface.ChartsUC
             angularGauge.ToValue = objective; //OBJECTIVE IN THIS YEAR
             angularGauge.LabelsStep = objective / 5; //OBJECTIVE/5
             angularGauge.TicksStep = objective; //OBJECTIVE/10
-            angularGauge.Wedge = 200;
+            angularGauge.Wedge = 325;
         }
 
         #endregion
@@ -112,7 +112,7 @@ namespace UserInterface.ChartsUC
             int year = _yearObjectivesComboSelected;
             objective = TaskYearObjectivesCollection.YearObjective(year, yearList);
             tasksDoneInTheYear = TaskManagerCollection.TasksDoneInTheYear(year, allTasksList);
-            tasksDoneTextBox.Text = tasksDoneInTheYear.ToString();
+            tasksDoneLabel.Content = $"TASKS DONE: {tasksDoneInTheYear.ToString()}";
             //IF TASKS DONE IS GREATER THAN OBJECTIVE, TASKS DONE WILL BE THE OBJECTIVE
             if (tasksDoneInTheYear > objective)
             {

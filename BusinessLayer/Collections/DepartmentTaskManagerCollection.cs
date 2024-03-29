@@ -45,6 +45,16 @@ namespace BusinessLayer.Collections
 
             return colection;
         }
+
+        public static IEnumerable<string> DistinctDepartments()
+        {
+            DepartmentTaskManagerCollection tasks = ListDepartmentTasksCollection();
+
+            var result = (from task in tasks
+                          select task.Area).Distinct();
+
+            return result;
+        }
         #endregion
     }
 }

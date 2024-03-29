@@ -1,12 +1,12 @@
-C:\ProductivityToolManager\BusinessLayer\obj\Debug\BusinessLayer.csproj.AssemblyReference.cache
-C:\ProductivityToolManager\BusinessLayer\obj\Debug\BusinessLayer.csproj.CoreCompileInputs.cache
 C:\ProductivityToolManager\BusinessLayer\bin\Debug\BusinessLayer.dll
 C:\ProductivityToolManager\BusinessLayer\bin\Debug\BusinessLayer.pdb
 C:\ProductivityToolManager\BusinessLayer\bin\Debug\DataLayer.dll
 C:\ProductivityToolManager\BusinessLayer\bin\Debug\DataLayer.pdb
 C:\ProductivityToolManager\BusinessLayer\bin\Debug\DataLayer.dll.config
+C:\ProductivityToolManager\BusinessLayer\obj\Debug\BusinessLayer.csproj.AssemblyReference.cache
+C:\ProductivityToolManager\BusinessLayer\obj\Debug\BusinessLayer.Properties.Resources.resources
+C:\ProductivityToolManager\BusinessLayer\obj\Debug\BusinessLayer.csproj.GenerateResource.cache
+C:\ProductivityToolManager\BusinessLayer\obj\Debug\BusinessLayer.csproj.CoreCompileInputs.cache
 C:\ProductivityToolManager\BusinessLayer\obj\Debug\Business.EA331CBA.Up2Date
 C:\ProductivityToolManager\BusinessLayer\obj\Debug\BusinessLayer.dll
 C:\ProductivityToolManager\BusinessLayer\obj\Debug\BusinessLayer.pdb
-C:\ProductivityToolManager\BusinessLayer\obj\Debug\BusinessLayer.Properties.Resources.resources
-C:\ProductivityToolManager\BusinessLayer\obj\Debug\BusinessLayer.csproj.GenerateResource.cache

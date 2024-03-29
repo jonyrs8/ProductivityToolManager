@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:UserInterface.ChartsUC"
              mc:Ignorable="d" 
-             d:DesignHeight="350" d:DesignWidth="400"
+             d:DesignHeight="350" d:DesignWidth="370"
              xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf">
     <Grid>
         <Grid.RowDefinitions>
@@ -26,14 +26,15 @@
             LegendLocation="Bottom" 
                       DataClick="Chart_OnDataClick" 
                       Hoverable="False"
-                      DataTooltip="{x:Null}" Height="250" 
-                      Width="400" VerticalAlignment="Center" 
-                      FontSize="9.5" Grid.Row="2" 
+                      DataTooltip="{x:Null}" Height="220" 
+                      Width="370" VerticalAlignment="Center" 
+                      FontSize="9" Grid.Row="2" 
                       Grid.RowSpan="4" 
                       HorizontalAlignment="Center"
                       Margin="0 0 0 50" 
                       Loaded="ChartUC_Loaded"
-                      Unloaded="ChartUC_Unloaded">
+                      Unloaded="ChartUC_Unloaded"
+                      Foreground="White">
         </lvc:PieChart>
     </Grid>
 </UserControl>
