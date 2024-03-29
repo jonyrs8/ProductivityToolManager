@@ -11,6 +11,6 @@
     "\\UserInterface\\UserInterface\\ChartsUC",
     "\\UserInterface\\UserInterface\\Windows"
   ],
-  "SelectedNode": "\\UserInterface\\UserInterface\\ChartsUC\\FormLoginUC.xaml",
+  "SelectedNode": "\\DataLayer\\Models\\TasksDoneByUserData.cs",
   "PreviewInSolutionExplorer": false
 }

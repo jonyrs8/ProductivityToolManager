@@ -14,7 +14,7 @@
         <ComboBox Width="100" x:Name="comboYearObjectives" 
                   HorizontalContentAlignment="Center" HorizontalAlignment="Left"
                   SelectionChanged="comboYearObjectives_SelectionChanged"
-                  Margin="20 0 0 10">
+                  Margin="20 0 0 10" Height="20">
         </ComboBox>
 
         <Label x:Name="tasksDoneLabel" Content="sjsjjd"

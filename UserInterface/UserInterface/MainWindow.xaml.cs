@@ -1,6 +1,7 @@
 ﻿using BusinessLayer;
 using BusinessLayer.Collections;
 using BusinessLayer.Model;
+using BusinessLayer.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -30,6 +31,7 @@ namespace UserInterface
     /// </summary>
     public partial class MainWindow : Window
     {
+        TasksDoneByUserCollection tasksDoneByUsers;
         public MainWindow()
         {
             InitializeComponent();
@@ -38,24 +40,17 @@ namespace UserInterface
 
         private void MainWindow_Loaded(object sender, RoutedEventArgs e)
         {
-            CheckBox geral = new CheckBox();
-            geral.Content = "GERAL";
-            geral.Foreground = Brushes.White;
-            geral.Margin = new Thickness(5);
-            checkBoxDadWrapPanel.Children.Add(geral);
-            geral.IsChecked = true;
+            tasksDoneByUsers = TasksDoneByUserCollection.ListNumberOfTasksDoneByUser();
+            EmployCardsFiltersCreate();
+        }
 
-            IEnumerable<string> distinctDepartments = BusinessLayer.Collections.DepartmentTaskManagerCollection.DistinctDepartments();
+        private void exitButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
 
-            foreach(var department in distinctDepartments) 
-            { 
-                CheckBox depart = new CheckBox();
-                depart.Content = department;
-                depart.Foreground = Brushes.White;
-                depart.Margin = new Thickness(5);
-                checkBoxDadWrapPanel.Children.Add(depart);
-            }
-
+        private void EmployCardsFiltersCreate() 
+        {
             for (int i = 2; i <= 10; i++)
             {
                 if (i % 2 == 0) // Verifica se o número é par
@@ -63,11 +58,71 @@ namespace UserInterface
                     topComboBox.Items.Add(i);
                 }
             }
+
+            CheckBox geralComboBox = new CheckBox();
+            geralComboBox.Content = "GERAL";
+            geralComboBox.Foreground = Brushes.White;
+            geralComboBox.Margin = new Thickness(5);
+            checkBoxDadWrapPanel.Children.Add(geralComboBox);
+            geralComboBox.IsChecked = true;
+
+            geralComboBox.Checked += CheckBox_CheckedChanged;
+            geralComboBox.Unchecked += CheckBox_CheckedChanged;
+
+            IEnumerable<string> distinctDepartments = BusinessLayer.Collections.DepartmentTaskManagerCollection.DistinctDepartments();
+
+            foreach (var department in distinctDepartments)
+            {
+                CheckBox depart = new CheckBox();
+                depart.Content = department;
+                depart.Foreground = Brushes.White;
+                depart.Margin = new Thickness(5);
+                checkBoxDadWrapPanel.Children.Add(depart);
+                depart.Checked += CheckBox_CheckedChanged;
+                depart.Unchecked += CheckBox_CheckedChanged;
+            }
         }
 
-        private void exitButton_Click(object sender, RoutedEventArgs e)
+        private void EmployCardsCreate()
         {
-            this.Close();
+            cardsDadWrapPanel.Children.Clear();
+            int counter = 0;
+            foreach (TasksDoneByUserModel user in tasksDoneByUsers)
+            {
+                if (counter < (int)topComboBox.SelectedItem)
+                {
+                    EmployCardsUC cardsUC = new EmployCardsUC(user.UserID, user.TasksNumber); //PASSAR LISTA DE SECÇOES SELECIONADAS
+                    cardsUC.Margin = new Thickness(5);
+                    cardsDadWrapPanel.Children.Add(cardsUC);
+                    counter++;
+                }
+            }
+        }
+
+        private void topComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            EmployCardsCreate();
+        }
+
+        private void CheckBox_CheckedChanged(object sender, RoutedEventArgs e)
+        {
+            CheckBox checkBox = (CheckBox)sender;
+            List<string> departmentSelected = new List<string>();
+            string checkBoxSelected = checkBox.Content.ToString();
+
+            if (checkBox.IsChecked == true) 
+            { 
+                labelTeste.Text = checkBoxSelected;
+                departmentSelected.Add(checkBoxSelected);
+            }
+
+            else 
+            {
+                if (departmentSelected.Contains(checkBoxSelected)) 
+                {
+                    departmentSelected.Remove(checkBoxSelected);
+                }
+            }
         }
     }
 }

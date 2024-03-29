@@ -64,14 +64,16 @@
 
                             <TextBlock Foreground="White" Grid.Row="1"
                                    VerticalAlignment="Bottom"
-                                   FontSize="10" HorizontalAlignment="Center">
+                                   FontSize="10" HorizontalAlignment="Center"
+                                       x:Name="userNameTextBlock">
                         NAME: JONAS LIMA
                             </TextBlock>
 
                             <TextBlock Foreground="White" Grid.Row="2"
                                    VerticalAlignment="Top" FontSize="6"
                                    FontWeight="Light"
-                                   HorizontalAlignment="Center">
+                                   HorizontalAlignment="Center"
+                                       x:Name="departmentTextBlock">
                         DEPARTMENT: QUALITY
                             </TextBlock>
 
@@ -123,7 +125,8 @@
                                 Margin="10 0">
                                 <TextBlock Foreground="White" FontSize="30"
                                        HorizontalAlignment="Center"
-                                       VerticalAlignment="Center">
+                                       VerticalAlignment="Center"
+                                           x:Name="tasksNumberTextBlock">
                                 1000
                                 </TextBlock>
                             </Border>

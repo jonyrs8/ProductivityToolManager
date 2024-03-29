@@ -20,9 +20,13 @@ namespace UserInterface.ChartsUC
     /// </summary>
     public partial class EmployCardsUC : UserControl
     {
-        public EmployCardsUC()
+        public EmployCardsUC(string userID, int tasksNumer)
         {
             InitializeComponent();
+            DataContext = this.DataContext;
+
+            userNameTextBlock.Text = $"NAME: {userID}";
+            tasksNumberTextBlock.Text = tasksNumer.ToString();
         }
     }
 }

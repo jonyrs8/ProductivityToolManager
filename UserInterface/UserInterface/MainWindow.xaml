@@ -142,7 +142,7 @@
                                     <ComboBox Grid.Column="1" Width="60" Height="30"
                                       VerticalAlignment="Center" x:Name="topComboBox"
                                       HorizontalContentAlignment="Center" HorizontalAlignment="Left"
-                                              FontSize="14">
+                                              FontSize="14" SelectionChanged="topComboBox_SelectionChanged">
                                     </ComboBox>
 
                                     <TextBlock Text="NUMBER OF COLLABORATORS" Foreground="White"
@@ -159,21 +159,13 @@
 
                     <WrapPanel Margin="20 0 0 0" Grid.Column="0" Grid.Row="1"
                                x:Name="cardsDadWrapPanel">
-                        <ChartsUC:EmployCardsUC Margin="5"/>
-                        <ChartsUC:EmployCardsUC Margin="5"/>
-                        <ChartsUC:EmployCardsUC Margin="5"/>
-                        <ChartsUC:EmployCardsUC Margin="5"/>
-                        <ChartsUC:EmployCardsUC Margin="5"/>
-                        <ChartsUC:EmployCardsUC Margin="5"/>
-                        <ChartsUC:EmployCardsUC Margin="5"/>
-                        <ChartsUC:EmployCardsUC Margin="5"/>
-                        <ChartsUC:EmployCardsUC Margin="5"/>
-                        <ChartsUC:EmployCardsUC Margin="5"/>
                         <!-- Adicione mais UserControl aqui conforme necessário -->
                     </WrapPanel>
 
                     <StackPanel Grid.Column="1">
-                        
+                        <TextBlock Text="Label" Foreground="White"
+                               x:Name="labelTeste"/>
+
                     </StackPanel>
                 </Grid>
             </StackPanel>
