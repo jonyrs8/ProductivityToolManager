@@ -47,6 +47,7 @@
     <Compile Include="Collections\DepartmentEfficiencyCollection.cs" />
     <Compile Include="Collections\DepartmentTaskManagerCollection.cs" />
     <Compile Include="Collections\TaskManagerCollection.cs" />
+    <Compile Include="Collections\UserInformationCollection.cs" />
     <Compile Include="Collections\TasksDoneByUserCollection.cs" />
     <Compile Include="Collections\TaskYearObjectivesCollection.cs" />
     <Compile Include="Enumerations\ViewType.cs" />
@@ -54,6 +55,7 @@
     <Compile Include="Models\DepartmentTaskModel.cs" />
     <Compile Include="Models\TaskManagerModel.cs" />
     <Compile Include="Models\DepartmentEfficiencyModel.cs" />
+    <Compile Include="Models\UserInformationModel.cs" />
     <Compile Include="Models\TasksDoneByUserModel.cs" />
     <Compile Include="Models\TaskYearObjectivesModel.cs" />
     <Compile Include="Models\ViewTypeDescription.cs" />

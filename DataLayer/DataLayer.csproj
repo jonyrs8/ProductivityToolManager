@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ListAllTableLogicData.cs" />
+    <Compile Include="Models\UserInfomationData.cs" />
     <Compile Include="Models\TasksDoneByUserData.cs" />
     <Compile Include="Models\DepartmentEfficiencyData.cs" />
     <Compile Include="Models\DepartmentTaskData.cs" />

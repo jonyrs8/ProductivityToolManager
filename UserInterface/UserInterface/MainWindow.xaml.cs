@@ -31,7 +31,9 @@ namespace UserInterface
     /// </summary>
     public partial class MainWindow : Window
     {
-        TasksDoneByUserCollection tasksDoneByUsers;
+        IEnumerable<UserInformationModel> userInformationList;
+        List<string> departmentSelected = new List<string>();
+        CheckBox geralCheckBox = new CheckBox();
         public MainWindow()
         {
             InitializeComponent();
@@ -40,7 +42,6 @@ namespace UserInterface
 
         private void MainWindow_Loaded(object sender, RoutedEventArgs e)
         {
-            tasksDoneByUsers = TasksDoneByUserCollection.ListNumberOfTasksDoneByUser();
             EmployCardsFiltersCreate();
         }
 
@@ -59,15 +60,14 @@ namespace UserInterface
                 }
             }
 
-            CheckBox geralComboBox = new CheckBox();
-            geralComboBox.Content = "GERAL";
-            geralComboBox.Foreground = Brushes.White;
-            geralComboBox.Margin = new Thickness(5);
-            checkBoxDadWrapPanel.Children.Add(geralComboBox);
-            geralComboBox.IsChecked = true;
+            topComboBox.SelectedIndex = 0;
+            geralCheckBox.Content = "GERAL";
+            geralCheckBox.Foreground = Brushes.White;
+            geralCheckBox.Margin = new Thickness(5);
+            checkBoxDadWrapPanel.Children.Add(geralCheckBox);
 
-            geralComboBox.Checked += CheckBox_CheckedChanged;
-            geralComboBox.Unchecked += CheckBox_CheckedChanged;
+            geralCheckBox.Checked += CheckBox_CheckedChanged;
+            geralCheckBox.Unchecked += CheckBox_CheckedChanged;
 
             IEnumerable<string> distinctDepartments = BusinessLayer.Collections.DepartmentTaskManagerCollection.DistinctDepartments();
 
@@ -87,32 +87,37 @@ namespace UserInterface
         {
             cardsDadWrapPanel.Children.Clear();
             int counter = 0;
-            foreach (TasksDoneByUserModel user in tasksDoneByUsers)
+            string employNumber = "1";
+
+            if (userInformationList != null) 
             {
-                if (counter < (int)topComboBox.SelectedItem)
+                foreach (UserInformationModel user in userInformationList)
                 {
-                    EmployCardsUC cardsUC = new EmployCardsUC(user.UserID, user.TasksNumber); //PASSAR LISTA DE SECÇOES SELECIONADAS
-                    cardsUC.Margin = new Thickness(5);
-                    cardsDadWrapPanel.Children.Add(cardsUC);
-                    counter++;
+                    if (counter < (int)topComboBox.SelectedItem && topComboBox.SelectedItem != null)
+                    {
+                        EmployCardsUC cardsUC = new EmployCardsUC(user.FullName, user.TasksDone, user.DepartmentName, employNumber); //PASSAR LISTA DE SECÇOES SELECIONADAS
+                        cardsUC.Margin = new Thickness(5);
+                        cardsDadWrapPanel.Children.Add(cardsUC);
+                        counter++;
+                        employNumber = (counter + 1).ToString();
+                    }
                 }
             }
         }
 
         private void topComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            userInformationList = UserInformationCollection.UsersByDepartment(departmentSelected); //CHARGE CHOSEN DEPARTMENTS IN TEXT BOXES
             EmployCardsCreate();
         }
 
         private void CheckBox_CheckedChanged(object sender, RoutedEventArgs e)
         {
             CheckBox checkBox = (CheckBox)sender;
-            List<string> departmentSelected = new List<string>();
             string checkBoxSelected = checkBox.Content.ToString();
 
             if (checkBox.IsChecked == true) 
             { 
-                labelTeste.Text = checkBoxSelected;
                 departmentSelected.Add(checkBoxSelected);
             }
 
@@ -123,6 +128,28 @@ namespace UserInterface
                     departmentSelected.Remove(checkBoxSelected);
                 }
             }
+
+             if (checkBoxSelected != "GERAL" && checkBox.IsChecked == true)
+             {
+                geralCheckBox.IsChecked = false;
+             }
+
+             else if (checkBoxSelected == "GERAL" && checkBox.IsChecked == true) 
+                {
+                foreach (CheckBox control in checkBoxDadWrapPanel.Children)
+                {
+                    if (control.Content.ToString() != "GERAL")
+                    {
+                        control.IsChecked = false;
+                    }
+                }
+            }
+
+
+
+
+            userInformationList = UserInformationCollection.UsersByDepartment(departmentSelected); //CHARGE CHOSEN DEPARTMENTS IN TEXT BOXES
+            EmployCardsCreate();
         }
     }
 }

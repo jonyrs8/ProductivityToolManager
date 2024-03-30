@@ -159,14 +159,7 @@
 
                     <WrapPanel Margin="20 0 0 0" Grid.Column="0" Grid.Row="1"
                                x:Name="cardsDadWrapPanel">
-                        <!-- Adicione mais UserControl aqui conforme necessário -->
                     </WrapPanel>
-
-                    <StackPanel Grid.Column="1">
-                        <TextBlock Text="Label" Foreground="White"
-                               x:Name="labelTeste"/>
-
-                    </StackPanel>
                 </Grid>
             </StackPanel>
 

@@ -43,6 +43,27 @@ namespace BusinessLayer.Collections
 
             return user;
         }
+
+        public static IOrderedEnumerable<TasksDoneByUserModel> ListNumberOfTasksDoneByUserOrdered()
+        {
+            TasksDoneByUserCollection tasks = ListNumberOfTasksDoneByUser();
+
+            // Ordena as tarefas por número de tarefas concluídas por usuário
+            var result = tasks.OrderByDescending(task => task.TasksNumber);
+
+            return result;
+        }
+
+        public static int GetTasksNumber(string userID) 
+        {
+            TasksDoneByUserCollection tasks = ListNumberOfTasksDoneByUser();
+
+            int result = (from task in tasks
+                             where task.UserID == userID
+                             select task.TasksNumber).FirstOrDefault();
+
+            return result;
+        }
         #endregion
     }
 }

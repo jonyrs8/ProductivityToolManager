@@ -41,7 +41,8 @@
 
                             <TextBlock Foreground="White" Grid.Row="0"
                                    HorizontalAlignment="Center"
-                                   VerticalAlignment="Center">
+                                   VerticalAlignment="Center"
+                                   x:Name="employNumberTextBlock">
                         EMPLOY NUMBER 1
                             </TextBlock>
 
@@ -73,15 +74,16 @@
                                    VerticalAlignment="Top" FontSize="6"
                                    FontWeight="Light"
                                    HorizontalAlignment="Center"
-                                       x:Name="departmentTextBlock">
-                        DEPARTMENT: QUALITY
+                                       x:Name="userDepartmentTextBlock">
+                                       DEPARTMENT: QUALITY
                             </TextBlock>
 
                             <TextBlock Foreground="White" Grid.Row="2"
                                    VerticalAlignment="Bottom"
                                    Padding="0 0 0 10" FontSize="6"
                                    FontWeight="Bold"
-                                   HorizontalAlignment="Center">
+                                   HorizontalAlignment="Center"
+                                   x:Name="efficienceTextBlock">
                         DEPARTMENT EFFICIENCY: 89%
                             </TextBlock>
                         </Grid>
@@ -126,7 +128,7 @@
                                 <TextBlock Foreground="White" FontSize="30"
                                        HorizontalAlignment="Center"
                                        VerticalAlignment="Center"
-                                           x:Name="tasksNumberTextBlock">
+                                       x:Name="tasksNumberTextBlock">
                                 1000
                                 </TextBlock>
                             </Border>

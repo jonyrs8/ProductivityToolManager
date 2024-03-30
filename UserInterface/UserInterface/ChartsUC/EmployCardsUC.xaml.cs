@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BusinessLayer.Collections;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,13 +21,14 @@ namespace UserInterface.ChartsUC
     /// </summary>
     public partial class EmployCardsUC : UserControl
     {
-        public EmployCardsUC(string userID, int tasksNumer)
+        public EmployCardsUC(string name, int tasksNumber, string departmentName, string employNumber)
         {
             InitializeComponent();
             DataContext = this.DataContext;
-
-            userNameTextBlock.Text = $"NAME: {userID}";
-            tasksNumberTextBlock.Text = tasksNumer.ToString();
+            employNumberTextBlock.Text = $"EMPLOY NUMBER {employNumber}";
+            userNameTextBlock.Text = $"NAME: {name}";
+            userDepartmentTextBlock.Text = $"DEPARTMENT: {departmentName}";
+            tasksNumberTextBlock.Text = tasksNumber.ToString();
         }
     }
 }
