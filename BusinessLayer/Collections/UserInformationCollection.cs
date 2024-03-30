@@ -46,9 +46,8 @@ namespace BusinessLayer.Collections
             return user;
         }
 
-        public static IEnumerable<UserInformationModel> UsersByDepartment(List<string> departmentsList)
+        public static IEnumerable<UserInformationModel> UsersByDepartment(List<string> departmentsList, UserInformationCollection tasks)
         {
-            UserInformationCollection tasks = ListUserInformation();
 
             IEnumerable<UserInformationModel> result;
 

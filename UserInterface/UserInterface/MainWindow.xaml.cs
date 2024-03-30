@@ -20,20 +20,16 @@ using UserInterface.ChartsUC;
 
 namespace UserInterface
 {
-
-    //IDEIA PARA MOSTRAR DADOS:
-
-    //TAREFAS POR FAZER, FEITAS E ACABADAS AO DIA DE HOJE
-
-
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window
     {
-        IEnumerable<UserInformationModel> userInformationList;
-        List<string> departmentSelected = new List<string>();
-        CheckBox geralCheckBox = new CheckBox();
+        List<string> departmentSelected = new List<string>(); //CONTAINS THE CONTENT OF THE CHECK BOXES SELECTED TO MANAGE CARDS
+        CheckBox geralCheckBox = new CheckBox(); //CHECKBOX GERAL
+        DepartmentEfficiencyCollection efficiencyDepartmentsList; //CONTAINS ALL EFFICIENCIES BY ALL DEPARTMENTS
+        UserInformationCollection allUsersInformationList; //CONTAINS THE GREATEST PART OF CARDS INFORMATIONS OF ALL USERS
+
         public MainWindow()
         {
             InitializeComponent();
@@ -43,24 +39,30 @@ namespace UserInterface
         private void MainWindow_Loaded(object sender, RoutedEventArgs e)
         {
             EmployCardsFiltersCreate();
+            efficiencyDepartmentsList = DepartmentEfficiencyCollection.ListDepartmentEfficiencyCollection();
+            allUsersInformationList = UserInformationCollection.ListUserInformation();
         }
 
         private void exitButton_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
         }
-
+        /// <summary>
+        /// THIS METHOD CREATE CHECKBOXES OF ALL DEPARTMENTS EXISTIS IN DATABASE WITH TASKS DONE
+        /// AND CHARGE OPTIONS TO THE TOP COMBO BOX
+        /// </summary>
         private void EmployCardsFiltersCreate() 
         {
             for (int i = 2; i <= 10; i++)
             {
-                if (i % 2 == 0) // Verifica se o número é par
+                if (i % 2 == 0)
                 {
                     topComboBox.Items.Add(i);
                 }
             }
 
             topComboBox.SelectedIndex = 0;
+
             geralCheckBox.Content = "GERAL";
             geralCheckBox.Foreground = Brushes.White;
             geralCheckBox.Margin = new Thickness(5);
@@ -83,8 +85,10 @@ namespace UserInterface
             }
         }
 
-        private void EmployCardsCreate()
+        private void EmployCardsCreate(List<string> departmentSelected)
         {
+            //CONTAINS THE GREATEST PART OF CARD INFORMATION OF ONE USER
+            IEnumerable<UserInformationModel> userInformationList = UserInformationCollection.UsersByDepartment(departmentSelected, allUsersInformationList);
             cardsDadWrapPanel.Children.Clear();
             int counter = 0;
             string employNumber = "1";
@@ -95,7 +99,7 @@ namespace UserInterface
                 {
                     if (counter < (int)topComboBox.SelectedItem && topComboBox.SelectedItem != null)
                     {
-                        EmployCardsUC cardsUC = new EmployCardsUC(user.FullName, user.TasksDone, user.DepartmentName, employNumber); //PASSAR LISTA DE SECÇOES SELECIONADAS
+                        EmployCardsUC cardsUC = new EmployCardsUC(user.FullName, user.TasksDone, user.DepartmentName, employNumber, efficiencyDepartmentsList); //PASSAR LISTA DE SECÇOES SELECIONADAS
                         cardsUC.Margin = new Thickness(5);
                         cardsDadWrapPanel.Children.Add(cardsUC);
                         counter++;
@@ -107,8 +111,11 @@ namespace UserInterface
 
         private void topComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            userInformationList = UserInformationCollection.UsersByDepartment(departmentSelected); //CHARGE CHOSEN DEPARTMENTS IN TEXT BOXES
-            EmployCardsCreate();
+            if (departmentSelected.Count != 0) 
+            {
+                EmployCardsCreate(departmentSelected);
+            }
+
         }
 
         private void CheckBox_CheckedChanged(object sender, RoutedEventArgs e)
@@ -145,11 +152,7 @@ namespace UserInterface
                 }
             }
 
-
-
-
-            userInformationList = UserInformationCollection.UsersByDepartment(departmentSelected); //CHARGE CHOSEN DEPARTMENTS IN TEXT BOXES
-            EmployCardsCreate();
+            EmployCardsCreate(departmentSelected);
         }
     }
 }

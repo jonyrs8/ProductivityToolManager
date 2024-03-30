@@ -44,7 +44,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Collections\DepartmentEfficiencyCollection.cs" />
+    <Compile Include="Collections\DepartmentEfficiencyColection.cs" />
+    <Compile Include="Collections\DepartmentEfficiencyInCompanyColection.cs" />
     <Compile Include="Collections\DepartmentTaskManagerCollection.cs" />
     <Compile Include="Collections\TaskManagerCollection.cs" />
     <Compile Include="Collections\UserInformationCollection.cs" />

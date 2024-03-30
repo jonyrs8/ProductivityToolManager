@@ -21,14 +21,38 @@ namespace UserInterface.ChartsUC
     /// </summary>
     public partial class EmployCardsUC : UserControl
     {
-        public EmployCardsUC(string name, int tasksNumber, string departmentName, string employNumber)
+        public EmployCardsUC()
         {
             InitializeComponent();
             DataContext = this.DataContext;
+        }
+        public EmployCardsUC(string name, int tasksNumber, string departmentName, string employNumber, DepartmentEfficiencyCollection list) 
+            :this()
+        {
+            InitializeComponent();
+            DataContext = this.DataContext;
+
+            string departmentEfficiency = DepartmentEfficiencyCollection.GetDepartmentEfficiency(departmentName, list).ToString();
+
             employNumberTextBlock.Text = $"EMPLOY NUMBER {employNumber}";
+            name = NameValidation(name);
             userNameTextBlock.Text = $"NAME: {name}";
             userDepartmentTextBlock.Text = $"DEPARTMENT: {departmentName}";
             tasksNumberTextBlock.Text = tasksNumber.ToString();
+            efficienceTextBlock.Text = $"DEPARTMENT EFFICIENCY: {departmentEfficiency}";
+        }
+
+        private string NameValidation(string fullName)
+        {
+
+            if (fullName.Length > 12)
+            {
+
+                string[] nameParts = fullName.Split(' ');
+                return nameParts[0];
+            }
+
+            return fullName;
         }
     }
 }

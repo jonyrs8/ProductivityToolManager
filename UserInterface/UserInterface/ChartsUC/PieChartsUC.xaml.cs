@@ -29,7 +29,7 @@ namespace UserInterface.ChartsUC
     {
         #region GLOBAL VARIAVELS
         DepartmentTaskManagerCollection departmentTasks;
-        DepartmentEfficiencyCollection departmentEfficiency; //SHOW THE MOST EFFICIENT DEPARTMENT DURING TASKS
+        DepartmentEfficiencyInCompanyColection departmentEfficiency; //SHOW THE MOST EFFICIENT DEPARTMENT DURING TASKS
         ViewType viewType;
         #endregion
 
@@ -115,7 +115,7 @@ namespace UserInterface.ChartsUC
         private void ChartUC_Loaded(object sender, RoutedEventArgs e)
         {
             departmentTasks = DepartmentTaskManagerCollection.ListDepartmentTasksCollection();
-            departmentEfficiency = DepartmentEfficiencyCollection.ListDepartmentEfficiencyCollection();
+            departmentEfficiency = DepartmentEfficiencyInCompanyColection.ListDepartmentEfficienceInCompanyColection();
 
             filterComboBox.DisplayMemberPath = "Description"; //MOSTRA A PROPRIEDADE DESCRIPTION DO ITEM SELECIONADO
             filterComboBox.SelectedValuePath = "ViewType"; //SELECIONA INTERNAMENTE A PROPRIEDADE VIEWTYPE DO OBJETO

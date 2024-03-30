@@ -13,12 +13,12 @@ namespace BusinessLayer.Collections
     /// <summary>
     /// THIS CLASS SHOULD ONLY BE USED TO MANAGE DEPARTMENT EFFICIENCY COLLECTION
     /// </summary>
-    public class DepartmentEfficiencyCollection : List<IAreaValue>
+    public class DepartmentEfficiencyInCompanyColection : List<IAreaValue>
     {
         #region CONSTRUCTORS
-        public DepartmentEfficiencyCollection() { }
+        public DepartmentEfficiencyInCompanyColection() { }
 
-        private DepartmentEfficiencyCollection(DataTable Departments)
+        private DepartmentEfficiencyInCompanyColection(DataTable Departments)
             : this()
         {
             //THE OBJECTIVE OF THIS LOOP IS TO OBTAIN totalDepartmentEfficiency VARIAVEL = SUM OF ALL DEPARTMENT SINGLE EFFICIENCY. 
@@ -57,10 +57,10 @@ namespace BusinessLayer.Collections
         /// CREATE A LIST OF DEPARTMENT EFFICIENCY COLLECTION
         /// </summary>
         /// <returns>DEPARTMENTEFFICIENCYCOLLECTION</returns>
-        public static DepartmentEfficiencyCollection ListDepartmentEfficiencyCollection()
+        public static DepartmentEfficiencyInCompanyColection ListDepartmentEfficienceInCompanyColection()
         {
             string erro = string.Empty;
-            DepartmentEfficiencyCollection colection = new DepartmentEfficiencyCollection
+            DepartmentEfficiencyInCompanyColection colection = new DepartmentEfficiencyInCompanyColection
             (DepartmentEfficiencyData.GetDepartmentEfficiencyData(out erro));
 
             return colection;
