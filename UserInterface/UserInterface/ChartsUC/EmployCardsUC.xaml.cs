@@ -21,18 +21,34 @@ namespace UserInterface.ChartsUC
     /// </summary>
     public partial class EmployCardsUC : UserControl
     {
+        #region CONSTRUCTORES
         public EmployCardsUC()
         {
             InitializeComponent();
             DataContext = this.DataContext;
         }
-        public EmployCardsUC(string name, int tasksNumber, string departmentName, string employNumber, DepartmentEfficiencyCollection list) 
+        public EmployCardsUC(string name, int tasksNumber, string departmentName, string employNumber, DepartmentEfficiencyCollection departmentEfficiencyList) 
             :this()
         {
             InitializeComponent();
             DataContext = this.DataContext;
+            ChargeCardInformation(name,tasksNumber,departmentName, employNumber, departmentEfficiencyList);
 
-            string departmentEfficiency = DepartmentEfficiencyCollection.GetDepartmentEfficiency(departmentName, list).ToString();
+        }
+        #endregion
+
+        #region METHODS
+        /// <summary>
+        /// METHOD TO CHARGE CARD INFORMATION
+        /// </summary>
+        /// <param name="name"></param>
+        /// <param name="tasksNumber"></param>
+        /// <param name="departmentName"></param>
+        /// <param name="employNumber"></param>
+        /// <param name="departmentEfficiencyList"></param>
+        public void ChargeCardInformation(string name, int tasksNumber, string departmentName, string employNumber, DepartmentEfficiencyCollection departmentEfficiencyList) 
+        {
+            string departmentEfficiency = DepartmentEfficiencyCollection.GetDepartmentEfficiency(departmentName, departmentEfficiencyList).ToString();
             name = NameValidation(name);
 
             employNumberTextBlock.Text = $"EMPLOY NUMBER {employNumber}";
@@ -42,17 +58,30 @@ namespace UserInterface.ChartsUC
             efficienceTextBlock.Text = $"DEPARTMENT EFFICIENCY: {departmentEfficiency}%";
         }
 
+        /// <summary>
+        /// THIS METHOD IS USED TO VERIFY IF FULL NAME HAS MORE THAN MAX CHARCTERS ALLOWED
+        /// </summary>
+        /// <param name="fullName"></param>
+        /// <returns></returns>
         private string NameValidation(string fullName)
         {
+            int maxCharacteres = 12;
 
-            if (fullName.Length > 12)
+            if (fullName.Length > maxCharacteres)
             {
-
                 string[] nameParts = fullName.Split(' ');
-                return nameParts[0];
+ 
+                if (nameParts[0].Length <= maxCharacteres) 
+                {
+                    return nameParts[0];
+                }
+
+                //IF FIRST NAME IS BIGGER THAN MAX CHARACTERS WILL RETUN "-"
+                else {return "-";}
             }
 
             return fullName;
         }
+        #endregion
     }
 }

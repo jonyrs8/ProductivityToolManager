@@ -13,7 +13,7 @@
         Background="Transparent"
         AllowsTransparency="True"
         x:Name="Main"
-        Loaded="MainWindow_Loaded">
+        Loaded="MainWindow_Loaded" Unloaded="Main_Unloaded">
     <Border CornerRadius="20">
         <Border.Background>
             <LinearGradientBrush StartPoint="0,2" EndPoint="0,0">
@@ -78,7 +78,8 @@
                            FontSize="12" HorizontalAlignment="Center"
                            FontWeight="Light" Foreground="White">
                     </TextBlock>
-                    <ChartsUC:PieChartsUC VerticalAlignment="Center"/>
+                    <ChartsUC:PieChartsUC VerticalAlignment="Center"
+                                          Margin="0 2 0 0"/>
                 </StackPanel>
             </Border>
 

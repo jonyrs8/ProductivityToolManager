@@ -17,6 +17,7 @@ using BusinessLayer.Collections;
 using BusinessLayer.Enumerations;
 using BusinessLayer.Interfaces;
 using BusinessLayer.Model;
+using BusinessLayer.Models;
 using LiveCharts;
 using LiveCharts.Wpf;
 
@@ -31,6 +32,7 @@ namespace UserInterface.ChartsUC
         DepartmentTaskManagerCollection departmentTasks;
         DepartmentEfficiencyInCompanyColection departmentEfficiency; //SHOW THE MOST EFFICIENT DEPARTMENT DURING TASKS
         ViewType viewType;
+        string topDepartment = string.Empty;
         #endregion
 
         #region PROPERTIES
@@ -62,6 +64,8 @@ namespace UserInterface.ChartsUC
             {
                 LoadChart(departmentEfficiency);
             }
+
+            topDepartmentLabel.Content = topDepartment;
         }
 
         /// <summary>
@@ -70,6 +74,7 @@ namespace UserInterface.ChartsUC
         /// <param name="list"></param>
         public void LoadChart(List<IAreaValue> list) 
         {
+            double value = 0;
             foreach (IAreaValue department in list)
             {
                 PieSeries pieSeries = new PieSeries
@@ -80,9 +85,44 @@ namespace UserInterface.ChartsUC
                     Values = new ChartValues<double> { department.Value },
                     LabelPoint = PointLabel
                 };
+                
+                if (viewType == ViewType.Efficiency && department.Value > value) 
+                {
+                    value = department.Value;
+                    topDepartment = $"TOP DEPARTMENT: {department.Area}";
+                }
+
+                else if(viewType == ViewType.Task && department.Value > value)
+                {
+                    value = department.Value;
+                    topDepartment = $"TOP DEPARTMENT: {department.Area}";
+                }
 
                 ChartUC.Series.Add(pieSeries);
             }
+        }
+
+        public void Label(string departmentArea, List<IAreaValue> list)
+        {
+            double value = 0;
+            foreach (IAreaValue department in list)
+            {
+                if (departmentArea == department.Area)
+                {
+                    value = (double)department.Value;
+                }
+
+            }
+
+            if (viewType == ViewType.Efficiency)
+            {
+                topDepartmentLabel.Content = topDepartmentLabel.Content + departmentArea + " " + value + "%";
+            }
+            else
+            {
+                topDepartmentLabel.Content = topDepartmentLabel.Content + departmentArea + " " + value;
+            }
+
 
         }
         #endregion
@@ -94,11 +134,28 @@ namespace UserInterface.ChartsUC
             var chart = (LiveCharts.Wpf.PieChart)chartpoint.ChartView;
 
             //clear selected slice.
-            foreach (PieSeries series in chart.Series)
+            foreach (PieSeries series in chart.Series) 
+            {
                 series.PushOut = 0;
+            }
 
             var selectedSeries = (PieSeries)chartpoint.SeriesView;
+
+            if (viewType == ViewType.Task)
+            {
+                topDepartmentLabel.Content = "TASKS DONE: ";
+                Label(selectedSeries.Title.ToString(), departmentTasks);
+
+            }
+            else if (viewType == ViewType.Efficiency)
+            {
+                topDepartmentLabel.Content = "EFFICIENCY: ";
+                Label(selectedSeries.Title.ToString(), departmentEfficiency);
+
+            }
+
             selectedSeries.PushOut = 8;
+
         }
 
         private void ViewType_SelectionChanged(object sender, SelectionChangedEventArgs e)

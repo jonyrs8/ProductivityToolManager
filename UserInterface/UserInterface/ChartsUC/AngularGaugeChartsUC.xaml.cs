@@ -46,52 +46,14 @@ namespace UserInterface.ChartsUC
 
         #region METHODS
         /// <summary>
-        /// METHOD TO CONSTRUCT AND MAKE ALL LOGIC BEHIND CHART BASED IN OBJECTIVE AND TASKS DONE
+        /// METHOD TO CONSTRUCT CHART
         /// </summary>
-        public void LoadChart() //POSSIVEL MELHORAR
+        public void LoadTasksYearObjectivesChart()
         {
             angularGauge.Sections.Clear();
 
-            AngularSection angularSectionDarkGreen = new AngularSection()
-            {
-                FromValue = objective * 0.8, //OBJECTIVE*0.8 = 80%
-                ToValue = objective, //OBJECTIVE
-                Fill = new SolidColorBrush(Colors.DarkGreen)
-            };
-
-            AngularSection angularSectionLimeGreen = new AngularSection()
-            {
-                FromValue = objective * 0.6, //OBJECTIVE*0.6 = 60%
-                ToValue = objective * 0.8, //OBJECTIVE*0.8 = 80%
-                Fill = new SolidColorBrush(Colors.LimeGreen)
-            };
-
-            AngularSection angularSectionLightGreen = new AngularSection()
-            {
-                FromValue = objective * 0.4, //OBJECTIVE*0.4 = 40%
-                ToValue = objective * 0.6, //OBJECTIVE*0.6 = 60%
-                Fill = new SolidColorBrush(Colors.LightGreen)
-            };
-
-            AngularSection angularSectionOrange = new AngularSection()
-            {
-                FromValue = objective * 0.2, //OBJECTIVE*0.2 = 20%
-                ToValue = objective * 0.4, //OBJECTIVE*0.4 = 40%
-                Fill = new SolidColorBrush(Colors.Orange)
-            };
-
-            AngularSection angularSectionRed = new AngularSection()
-            {
-                FromValue = 0, //0
-                ToValue = objective * 0.2, //OBJECTIVE*0.2 = 20%
-                Fill = new SolidColorBrush(Colors.Red)
-            };
-
-            angularGauge.Sections.Add(angularSectionDarkGreen);
-            angularGauge.Sections.Add(angularSectionLimeGreen);
-            angularGauge.Sections.Add(angularSectionLightGreen);
-            angularGauge.Sections.Add(angularSectionOrange);
-            angularGauge.Sections.Add(angularSectionRed);
+            List<SolidColorBrush> colorList = this.sectionsColorsYearObjectivesListCreator();
+            LoadSections(colorList);
 
             //CHART CONSTRUCTION
             angularGauge.Value = tasksDoneInTheYear; //NUMBER OF TASKS DONE IN A YEAR
@@ -100,6 +62,49 @@ namespace UserInterface.ChartsUC
             angularGauge.LabelsStep = objective / 5; //OBJECTIVE/5
             angularGauge.TicksStep = objective / 10; //OBJECTIVE/10
             angularGauge.Wedge = 325;
+        }
+
+        /// <summary>
+        /// METHOD TO CREATE COLORS THAT WE WILL USE IN YEAR OBJECTIVES CHART
+        /// </summary>
+        /// <returns></returns>
+        public List<SolidColorBrush> sectionsColorsYearObjectivesListCreator() 
+        {
+            List<SolidColorBrush> colorList = new List<SolidColorBrush>();
+            colorList.Add(new SolidColorBrush(Colors.Red));
+            colorList.Add(new SolidColorBrush(Colors.Orange));
+            colorList.Add(new SolidColorBrush(Colors.LightGreen));
+            colorList.Add(new SolidColorBrush(Colors.LimeGreen));
+            colorList.Add(new SolidColorBrush(Colors.DarkGreen));
+
+            return colorList;
+        }
+
+        /// <summary>
+        /// METHOD TO CREATE CHART SECTIONS BASED ON A COLOR LIST RECEIVED
+        /// </summary>
+        /// <param name="colorList"></param>
+        public void LoadSections(List<SolidColorBrush> colorList) 
+        {
+            List<AngularSection> sectionsList = new List<AngularSection>();
+
+            double calcPercentage = 0.2;
+            double initValue = 0;
+            double finalValue = objective * calcPercentage;
+
+            foreach (SolidColorBrush color in colorList)
+            {
+                AngularSection section = new AngularSection();
+                section.FromValue = initValue;
+                section.ToValue = finalValue;
+                section.Fill = color;
+
+                initValue = finalValue;
+                calcPercentage = calcPercentage + 0.2;
+                finalValue = objective * calcPercentage;
+
+                angularGauge.Sections.Add(section);
+            }
         }
 
         #endregion
@@ -118,7 +123,7 @@ namespace UserInterface.ChartsUC
             {
                 tasksDoneInTheYear = objective;
             }
-            LoadChart();
+            LoadTasksYearObjectivesChart();
         }
 
         private void angularGauge_Loaded(object sender, RoutedEventArgs e)
@@ -127,9 +132,9 @@ namespace UserInterface.ChartsUC
             allTasksList = TaskManagerCollection.ListAllTasks();
             int countYearsInComboBox = 0;
             //YEARS
-            foreach (BusinessLayer.Models.TaskYearObjectivesModel year in yearObjectivesList)
+            foreach (BusinessLayer.Models.TaskYearObjectivesModel yearAndObjectives in yearObjectivesList)
             {
-                comboYearObjectives.Items.Add(year.Year);
+                comboYearObjectives.Items.Add(yearAndObjectives.Year);
                 countYearsInComboBox++;
             }
             //CHART WILL ALWAYS SHOW THE CURRENT YEAR,

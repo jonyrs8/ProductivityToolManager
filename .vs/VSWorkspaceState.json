@@ -11,6 +11,6 @@
     "\\UserInterface\\UserInterface\\ChartsUC",
     "\\UserInterface\\UserInterface\\Windows"
   ],
-  "SelectedNode": "\\UserInterface\\UserInterface\\MainWindow.xaml.cs",
+  "SelectedNode": "\\BusinessLayer\\Models\\DepartmentTaskModel.cs",
   "PreviewInSolutionExplorer": false
 }

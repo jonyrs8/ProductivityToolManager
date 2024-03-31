@@ -19,8 +19,16 @@
                   SelectionChanged="ViewType_SelectionChanged"
                   VerticalAlignment="Center" 
                   HorizontalContentAlignment="Center"
-                  HorizontalAlignment="Center">
+                  HorizontalAlignment="Left" Margin="25 0 0 0">
         </ComboBox>
+
+        <StackPanel HorizontalAlignment="Right"
+                    Margin="0 0 20 0" VerticalAlignment="Center">
+            <Label Foreground="White" FontSize="11"
+                   x:Name="topDepartmentLabel">
+                TOP DEPARTMENT : REETIQUETAGEM
+            </Label>
+        </StackPanel>
 
         <lvc:PieChart x:Name="ChartUC"
             LegendLocation="Bottom" 
