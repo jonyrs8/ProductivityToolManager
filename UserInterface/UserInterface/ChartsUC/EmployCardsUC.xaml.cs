@@ -33,13 +33,13 @@ namespace UserInterface.ChartsUC
             DataContext = this.DataContext;
 
             string departmentEfficiency = DepartmentEfficiencyCollection.GetDepartmentEfficiency(departmentName, list).ToString();
+            name = NameValidation(name);
 
             employNumberTextBlock.Text = $"EMPLOY NUMBER {employNumber}";
-            name = NameValidation(name);
             userNameTextBlock.Text = $"NAME: {name}";
             userDepartmentTextBlock.Text = $"DEPARTMENT: {departmentName}";
             tasksNumberTextBlock.Text = tasksNumber.ToString();
-            efficienceTextBlock.Text = $"DEPARTMENT EFFICIENCY: {departmentEfficiency}";
+            efficienceTextBlock.Text = $"DEPARTMENT EFFICIENCY: {departmentEfficiency}%";
         }
 
         private string NameValidation(string fullName)

@@ -6,12 +6,22 @@ using System.Threading.Tasks;
 
 namespace BusinessLayer.Enumerations
 {
+    /// <summary>
+    /// THIS CLASS IS USED TO DEFINE VIEWTYPE ENUM
+    /// </summary>
+
+    #region ENUM
     public enum ViewType
     {
         Task = 0,
         Efficiency = 1
     }
+    #endregion
+
     #region METHODS
+    /// <summary>
+    /// IS NOT USED BUT ITS HERE TO SHOW AN CLASS EXTENSION
+    /// </summary>
     public static class ViewTypeExtensionsMethods 
     {
         public static string Description(this ViewType viewType) 

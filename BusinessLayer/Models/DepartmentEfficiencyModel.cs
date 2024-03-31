@@ -15,7 +15,6 @@ namespace BusinessLayer.Model
     public class DepartmentEfficiencyModel : IAreaValue
     {
         #region PROPERTIES
-        public DepartmentEfficiencyModel() { }
         public string Area { get; set; }
         public int RealTasksTime { get; set; } //OUT - IN
         public int TheoricalTasksTime { get; set; }

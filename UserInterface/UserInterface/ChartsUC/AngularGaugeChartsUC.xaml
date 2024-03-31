@@ -11,18 +11,20 @@
             <RowDefinition Height="Auto"></RowDefinition>
             <RowDefinition Height="*"></RowDefinition>
         </Grid.RowDefinitions>
+        
         <ComboBox Width="100" x:Name="comboYearObjectives" 
                   HorizontalContentAlignment="Center" HorizontalAlignment="Left"
                   SelectionChanged="comboYearObjectives_SelectionChanged"
                   Margin="20 0 0 10" Height="20">
         </ComboBox>
 
-        <Label x:Name="tasksDoneLabel" Content="sjsjjd"
+        <Label x:Name="tasksDoneLabel" Content="TESTE"
                Width="150" 
                HorizontalAlignment="Right" Margin="0 0 20 10" 
                HorizontalContentAlignment="Center" FontSize="12" Foreground="White">
 
         </Label>
+        
         <lvc:AngularGauge x:Name="angularGauge" Grid.Row="1"
                           Loaded="angularGauge_Loaded"
                           Unloaded="angularGauge_Unloaded"

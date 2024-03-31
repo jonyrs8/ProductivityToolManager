@@ -29,7 +29,7 @@ namespace BusinessLayer.Collections
                 user.TasksDone = datarow.Field<int>("TASK_COUNT");
                 user.DepartmentName = datarow.Field<string>("DEPARTMENT_NAME");
 
-                this.Add(user); // Adiciona a tarefa individualmente à coleção
+                this.Add(user);
             }
         }
         #endregion
@@ -46,6 +46,12 @@ namespace BusinessLayer.Collections
             return user;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="departmentsList"></param>
+        /// <param name="tasks"></param>
+        /// <returns></returns>
         public static IEnumerable<UserInformationModel> UsersByDepartment(List<string> departmentsList, UserInformationCollection tasks)
         {
 

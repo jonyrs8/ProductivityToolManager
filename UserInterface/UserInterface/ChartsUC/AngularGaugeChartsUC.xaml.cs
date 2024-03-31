@@ -26,7 +26,7 @@ namespace UserInterface.ChartsUC
     public partial class AngularGaugeChartsUC : UserControl
     {
         #region GLOBAL VARIAVELS
-        TaskYearObjectivesCollection yearList; //YEAR LIST WITH DEFINED OBJECTIVES IN DATABASE
+        TaskYearObjectivesCollection yearObjectivesList; //YEAR LIST WITH DEFINED OBJECTIVES IN DATABASE
 
         TaskManagerCollection allTasksList; //ALL TASKS IN THE DATABASE
 
@@ -98,7 +98,7 @@ namespace UserInterface.ChartsUC
             angularGauge.FromValue = 0;
             angularGauge.ToValue = objective; //OBJECTIVE IN THIS YEAR
             angularGauge.LabelsStep = objective / 5; //OBJECTIVE/5
-            angularGauge.TicksStep = objective; //OBJECTIVE/10
+            angularGauge.TicksStep = objective / 10; //OBJECTIVE/10
             angularGauge.Wedge = 325;
         }
 
@@ -108,9 +108,9 @@ namespace UserInterface.ChartsUC
 
         private void comboYearObjectives_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            int _yearObjectivesComboSelected = (int)comboYearObjectives.SelectedItem;
-            int year = _yearObjectivesComboSelected;
-            objective = TaskYearObjectivesCollection.YearObjective(year, yearList);
+            int year = (int)comboYearObjectives.SelectedItem;
+
+            objective = TaskYearObjectivesCollection.YearObjective(year, yearObjectivesList);
             tasksDoneInTheYear = TaskManagerCollection.TasksDoneInTheYear(year, allTasksList);
             tasksDoneLabel.Content = $"TASKS DONE: {tasksDoneInTheYear.ToString()}";
             //IF TASKS DONE IS GREATER THAN OBJECTIVE, TASKS DONE WILL BE THE OBJECTIVE
@@ -123,13 +123,13 @@ namespace UserInterface.ChartsUC
 
         private void angularGauge_Loaded(object sender, RoutedEventArgs e)
         {
-            yearList = TaskYearObjectivesCollection.ListAllTasksYearObjectives();
+            yearObjectivesList = TaskYearObjectivesCollection.ListAllTasksYearObjectives();
             allTasksList = TaskManagerCollection.ListAllTasks();
             int countYearsInComboBox = 0;
             //YEARS
-            foreach (BusinessLayer.Models.TaskYearObjectivesModel task in yearList)
+            foreach (BusinessLayer.Models.TaskYearObjectivesModel year in yearObjectivesList)
             {
-                comboYearObjectives.Items.Add(task.Year);
+                comboYearObjectives.Items.Add(year.Year);
                 countYearsInComboBox++;
             }
             //CHART WILL ALWAYS SHOW THE CURRENT YEAR,
@@ -140,7 +140,7 @@ namespace UserInterface.ChartsUC
 
         private void angularGauge_Unloaded(object sender, RoutedEventArgs e)
         {
-            yearList = null;
+            yearObjectivesList = null;
             allTasksList = null;
         }
         #endregion

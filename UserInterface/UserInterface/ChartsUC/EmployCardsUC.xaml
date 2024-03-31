@@ -27,7 +27,7 @@
                         <StackPanel>
                             <Image Source="C:\ProductivityToolManager\Images\jdlimaAvatar.png"
                                HorizontalAlignment="Center" VerticalAlignment="Center"
-                               Height="100">
+                               Height="100" x:Name="colabImage">
                             </Image>
                         </StackPanel>
                     </Border>
@@ -50,7 +50,7 @@
                             <Rectangle Height="1" Fill="White" 
                                    VerticalAlignment="Center" Width="1"
                                    HorizontalAlignment="Left"
-                                   Margin="24 20 0 0">
+                                   Margin="16 20 0 0">
                             </Rectangle>
 
                             <Rectangle Height="1" Fill="White" 
@@ -61,7 +61,7 @@
                             <Rectangle Height="1" Fill="White" 
                                    VerticalAlignment="Center" Width="1"
                                    HorizontalAlignment="Right"
-                                   Margin="0 20 24 0">
+                                   Margin="0 20 16 0">
                             </Rectangle>
 
                             <TextBlock Foreground="White" Grid.Row="1"
@@ -107,7 +107,7 @@
                             <Rectangle Height="1" Fill="White" 
                                    VerticalAlignment="Center" Width="1"
                                    HorizontalAlignment="Left"
-                                   Margin="24 20 0 0">
+                                   Margin="16 20 0 0">
                             </Rectangle>
 
                             <Rectangle Height="1" Fill="White" 
@@ -118,7 +118,7 @@
                             <Rectangle Height="1" Fill="White" 
                                    VerticalAlignment="Center" Width="1"
                                    HorizontalAlignment="Right"
-                                   Margin="0 20 24 0">
+                                   Margin="0 20 16 0">
                             </Rectangle>
 
                             <Border Grid.Column="2" BorderBrush="White"

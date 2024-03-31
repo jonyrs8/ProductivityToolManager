@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace BusinessLayer.Models
 {
     /// <summary>
-    /// THIS CLASS SHOULD ONLY BE USED TO MANAGE VIEWTYPEDESCRIPTION OBJECTS
+    /// THIS CLASS SHOULD ONLY BE USED TO MANAGE VIEW TYPE DESCRIPTION OBJECTS
     /// </summary>
     public class ViewTypeDescription
     {

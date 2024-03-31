@@ -25,10 +25,11 @@ namespace UserInterface
     /// </summary>
     public partial class MainWindow : Window
     {
-        List<string> departmentSelected = new List<string>(); //CONTAINS THE CONTENT OF THE CHECK BOXES SELECTED TO MANAGE CARDS
+        List<string> departmentSelectedList = new List<string>(); //CONTAINS THE CONTENT OF THE CHECK BOXES SELECTED TO MANAGE CARDS
         CheckBox geralCheckBox = new CheckBox(); //CHECKBOX GERAL
         DepartmentEfficiencyCollection efficiencyDepartmentsList; //CONTAINS ALL EFFICIENCIES BY ALL DEPARTMENTS
         UserInformationCollection allUsersInformationList; //CONTAINS THE GREATEST PART OF CARDS INFORMATIONS OF ALL USERS
+        DepartmentTaskManagerCollection allDepartmentsInTasksList;
 
         public MainWindow()
         {
@@ -38,9 +39,10 @@ namespace UserInterface
 
         private void MainWindow_Loaded(object sender, RoutedEventArgs e)
         {
-            EmployCardsFiltersCreate();
             efficiencyDepartmentsList = DepartmentEfficiencyCollection.ListDepartmentEfficiencyCollection();
             allUsersInformationList = UserInformationCollection.ListUserInformation();
+            allDepartmentsInTasksList = DepartmentTaskManagerCollection.ListDepartmentTasksCollection();
+            EmployCardsFiltersCreate();
         }
 
         private void exitButton_Click(object sender, RoutedEventArgs e)
@@ -71,9 +73,9 @@ namespace UserInterface
             geralCheckBox.Checked += CheckBox_CheckedChanged;
             geralCheckBox.Unchecked += CheckBox_CheckedChanged;
 
-            IEnumerable<string> distinctDepartments = BusinessLayer.Collections.DepartmentTaskManagerCollection.DistinctDepartments();
+            IEnumerable<string> distinctDepartmentsList = BusinessLayer.Collections.DepartmentTaskManagerCollection.DistinctDepartments(allDepartmentsInTasksList);
 
-            foreach (var department in distinctDepartments)
+            foreach (var department in distinctDepartmentsList)
             {
                 CheckBox depart = new CheckBox();
                 depart.Content = department;
@@ -85,19 +87,19 @@ namespace UserInterface
             }
         }
 
-        private void EmployCardsCreate(List<string> departmentSelected)
+        private void EmployCardsCreate(List<string> departmentSelectedList)
         {
             //CONTAINS THE GREATEST PART OF CARD INFORMATION OF ONE USER
-            IEnumerable<UserInformationModel> userInformationList = UserInformationCollection.UsersByDepartment(departmentSelected, allUsersInformationList);
+            IEnumerable<UserInformationModel> userInformationList = UserInformationCollection.UsersByDepartment(departmentSelectedList, allUsersInformationList);
             cardsDadWrapPanel.Children.Clear();
             int counter = 0;
             string employNumber = "1";
 
-            if (userInformationList != null) 
+            if (userInformationList != null && topComboBox.SelectedItem != null) 
             {
                 foreach (UserInformationModel user in userInformationList)
                 {
-                    if (counter < (int)topComboBox.SelectedItem && topComboBox.SelectedItem != null)
+                    if (counter < (int)topComboBox.SelectedItem)
                     {
                         EmployCardsUC cardsUC = new EmployCardsUC(user.FullName, user.TasksDone, user.DepartmentName, employNumber, efficiencyDepartmentsList); //PASSAR LISTA DE SECÇOES SELECIONADAS
                         cardsUC.Margin = new Thickness(5);
@@ -111,9 +113,9 @@ namespace UserInterface
 
         private void topComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            if (departmentSelected.Count != 0) 
+            if (departmentSelectedList.Count != 0) 
             {
-                EmployCardsCreate(departmentSelected);
+                EmployCardsCreate(departmentSelectedList);
             }
 
         }
@@ -125,14 +127,14 @@ namespace UserInterface
 
             if (checkBox.IsChecked == true) 
             { 
-                departmentSelected.Add(checkBoxSelected);
+                departmentSelectedList.Add(checkBoxSelected);
             }
 
             else 
             {
-                if (departmentSelected.Contains(checkBoxSelected)) 
+                if (departmentSelectedList.Contains(checkBoxSelected)) 
                 {
-                    departmentSelected.Remove(checkBoxSelected);
+                    departmentSelectedList.Remove(checkBoxSelected);
                 }
             }
 
@@ -142,17 +144,17 @@ namespace UserInterface
              }
 
              else if (checkBoxSelected == "GERAL" && checkBox.IsChecked == true) 
+             {
+                foreach (CheckBox checkBoxChildren in checkBoxDadWrapPanel.Children)
                 {
-                foreach (CheckBox control in checkBoxDadWrapPanel.Children)
-                {
-                    if (control.Content.ToString() != "GERAL")
+                    if (checkBoxChildren.Content.ToString() != "GERAL")
                     {
-                        control.IsChecked = false;
+                        checkBoxChildren.IsChecked = false;
                     }
                 }
-            }
+             }
 
-            EmployCardsCreate(departmentSelected);
+            EmployCardsCreate(departmentSelectedList);
         }
     }
 }
