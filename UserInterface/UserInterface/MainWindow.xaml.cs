@@ -90,14 +90,15 @@ namespace UserInterface
         {
             //WILL CHARGE TOP COMBO BOX WITH PAIR NUMBERS UNTIL 10 INCLUDE
             //AND WIL DEFINE FIRST RECORD(INDEX 0 = NUMBER 2) IN COMBO BOX
-            for (int i = 2; i <= 10; i++)
+            int lastNumber = 10;
+            for (int i = 2; i <= lastNumber; i++)
             {
                 if (i % 2 == 0) //IF PAIR
                 {
                     topComboBox.Items.Add(i);
                 }
             }
-            topComboBox.SelectedIndex = 0;
+            topComboBox.SelectedItem = lastNumber;
 
             //WILL CREATE "GERAL" DEPARTMENTS CHECK BOX AND ADD AN CHECKED CHANGED EVENT 
             geralCheckBox.Content = "GERAL";
@@ -120,6 +121,8 @@ namespace UserInterface
                 depart.Checked += CheckBox_CheckedChanged;
                 depart.Unchecked += CheckBox_CheckedChanged;
             }
+
+            geralCheckBox.IsChecked = true;
         }
 
         /// <summary>

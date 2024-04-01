@@ -181,6 +181,7 @@ namespace UserInterface.ChartsUC
             filterComboBox.Items.Add(new BusinessLayer.Models.ViewTypeDescription(ViewType.Task));
 
             filterComboBox.SelectedIndex = 0; //DEFINE COMBO SELECTED ITEM AS THE FIRST VIEW - EFFICIENCY
+            
         }
 
         private void ChartUC_Unloaded(object sender, RoutedEventArgs e)
