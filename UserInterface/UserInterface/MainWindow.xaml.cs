@@ -25,7 +25,7 @@ namespace UserInterface
     /// </summary>
     public partial class MainWindow : Window
     {
-        //PULL TESTE, O HELDER É PANÃO, NOVO TESTE PULL
+        //PULL TESTE, O HELDER É PANÃO, NOVO TESTE PULL/TESTE 3
 
         #region GLOBAL VARIABELS
         List<string> departmentSelectedList = new List<string>(); //CONTAINS THE CONTENT OF THE CHECK BOXES SELECTED TO MANAGE CARDS

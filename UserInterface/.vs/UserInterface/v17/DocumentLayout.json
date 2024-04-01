@@ -68,7 +68,7 @@
               "RelativeDocumentMoniker": "UserInterface\\MainWindow.xaml.cs",
               "ToolTip": "C:\\ProductivityToolManager\\UserInterface\\UserInterface\\MainWindow.xaml.cs",
               "RelativeToolTip": "UserInterface\\MainWindow.xaml.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAABsAAAA3AAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABsAAAA/AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-01T22:20:06.773Z",
               "EditorCaption": ""
@@ -83,8 +83,7 @@
               "RelativeToolTip": "UserInterface\\obj\\Debug\\ChartsUC\\PieChartsUC.g.i.cs",
               "ViewState": "AQIAACMAAAAAAAAAAAAowHEAAABSAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-31T16:32:33.482Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-31T16:32:33.482Z"
             },
             {
               "$type": "Document",
@@ -107,8 +106,7 @@
               "ToolTip": "C:\\ProductivityToolManager\\UserInterface\\UserInterface\\ChartsUC\\AngularGaugeChartsUC.xaml",
               "RelativeToolTip": "UserInterface\\ChartsUC\\AngularGaugeChartsUC.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-03-31T16:04:30.404Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-31T16:04:30.404Z"
             },
             {
               "$type": "Document",
@@ -119,8 +117,7 @@
               "ToolTip": "C:\\ProductivityToolManager\\UserInterface\\UserInterface\\MainWindow.xaml",
               "RelativeToolTip": "UserInterface\\MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-03-31T15:13:37.553Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-31T15:13:37.553Z"
             },
             {
               "$type": "Document",
@@ -131,8 +128,7 @@
               "ToolTip": "C:\\ProductivityToolManager\\UserInterface\\UserInterface\\ChartsUC\\PieChartsUC.xaml",
               "RelativeToolTip": "UserInterface\\ChartsUC\\PieChartsUC.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-03-31T16:03:33.088Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-31T16:03:33.088Z"
             }
           ]
         }
