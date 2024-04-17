@@ -1,16 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-    "\\BusinessLayer",
-    "\\BusinessLayer\\Collections",
-    "\\BusinessLayer\\Models",
-    "\\DataLayer",
-    "\\DataLayer\\Models",
     "\\UserInterface",
     "\\UserInterface\\UserInterface",
-    "\\UserInterface\\UserInterface\\ChartsUC",
-    "\\UserInterface\\UserInterface\\Windows"
+    "\\UserInterface\\UserInterface\\ChartsUC"
   ],
-  "SelectedNode": "\\UserInterface\\UserInterface\\MainWindow.xaml.cs",
+  "SelectedNode": "\\UserInterface\\UserInterface\\ChartsUC\\PieChartsUC.xaml.cs",
   "PreviewInSolutionExplorer": false
 }

@@ -116,8 +116,7 @@ namespace UserInterface.ChartsUC
                 topDepartmentLabel.Content += "%";
             }
 
-
-
+            o jonas 
         }
         #endregion
 
