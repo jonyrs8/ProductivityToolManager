@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-C:\ProductivityToolManager\ProductivityToolManagerV2\UserInterface\UserInterface\obj\Debug\
+C:\ProductivityToolManagerV2\UserInterface\UserInterface\obj\Debug\
 UserInterface
 none
 false
 DEBUG;TRACE
-C:\ProductivityToolManager\ProductivityToolManagerV2\UserInterface\UserInterface\App.xaml
+C:\ProductivityToolManagerV2\UserInterface\UserInterface\App.xaml
 7-1952402981
 
-10-394346558
-17-39416715
+111527431563
+17-1593437444
 ChartsUC\AngularGaugeChartsUC.xaml;ChartsUC\EmployCardsUC.xaml;ChartsUC\FormLoginUC.xaml;ChartsUC\PieChartsUC.xaml;MainWindow.xaml;StyleDictionary\ButtonsHoverTheme.xaml;Windows\TesteWindow.xaml;
 
 True
