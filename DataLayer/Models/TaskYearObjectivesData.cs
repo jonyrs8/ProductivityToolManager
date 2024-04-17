@@ -24,7 +24,7 @@ namespace DataLayer.Models
         public static DataTable GetTasksYearObjectivesData(out string error)
         {
             string table = "TASKS_YEAR_OBJECTIVES";
-            DataTable dataTable = ListAllTableLogicData.GetTableData(out error, table);
+            DataTable dataTable = DatabaseConnection.GetTableData(out error, table);
             return dataTable;
         }
         #endregion

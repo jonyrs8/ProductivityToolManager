@@ -25,7 +25,6 @@ namespace UserInterface
     /// </summary>
     public partial class MainWindow : Window
     {
-        //PULL TESTE, O HELDER É PANÃO, NOVO TESTE PULL/TESTE 3
 
         #region GLOBAL VARIABELS
         List<string> departmentSelectedList = new List<string>(); //CONTAINS THE CONTENT OF THE CHECK BOXES SELECTED TO MANAGE CARDS
@@ -33,6 +32,7 @@ namespace UserInterface
         DepartmentEfficiencyCollection efficiencyDepartmentsList; //CONTAINS ALL EFFICIENCIES BY ALL DEPARTMENTS
         UserInformationCollection allUsersInformationList; //CONTAINS THE GREATEST PART OF CARDS INFORMATIONS OF ALL USERS
         DepartmentTaskManagerCollection allDepartmentsInTasksList; //CONTAINS ALL DEPARTMENTS WITH TASKS DONE
+        IEnumerable<string> distinctDepartmentsList;
         #endregion
 
         #region CONSTRUCTORES
@@ -50,6 +50,7 @@ namespace UserInterface
             efficiencyDepartmentsList = DepartmentEfficiencyCollection.ListDepartmentEfficiencyCollection();
             allUsersInformationList = UserInformationCollection.ListUserInformation();
             allDepartmentsInTasksList = DepartmentTaskManagerCollection.ListDepartmentTasksCollection();
+            distinctDepartmentsList = BusinessLayer.Collections.DepartmentTaskManagerCollection.DistinctDepartments(allDepartmentsInTasksList);
             EmployCardsFiltersCreate();
         }
 
@@ -58,6 +59,7 @@ namespace UserInterface
             efficiencyDepartmentsList = null;
             allUsersInformationList = null;
             allDepartmentsInTasksList = null;
+            distinctDepartmentsList = null;
         }
 
         private void exitButton_Click(object sender, RoutedEventArgs e)
@@ -68,7 +70,25 @@ namespace UserInterface
         private void CheckBox_CheckedChanged(object sender, RoutedEventArgs e)
         {
             CheckBox checkBox = (CheckBox)sender;
-            ManageDepartmentCheckBoxes(checkBox);
+            string department = checkBox.Content.ToString();
+
+            bool? isChecked = checkBox.IsChecked;
+              if (department != "GERAL" && isChecked == true)
+            {
+                geralCheckBox.IsChecked = false;
+            }
+
+            else if (department == "GERAL" && isChecked == true)
+            {
+                foreach (CheckBox checkBoxChildren in checkBoxDadWrapPanel.Children)
+                {
+                    if (checkBoxChildren.Content.ToString() != "GERAL")
+                    {
+                        checkBoxChildren.IsChecked = false;
+                    }
+                }
+            }
+            ManageDepartmentCheckBoxes(department, isChecked);
             EmployCardsCreate(departmentSelectedList);
         }
 
@@ -110,10 +130,8 @@ namespace UserInterface
             geralCheckBox.Checked += CheckBox_CheckedChanged;
             geralCheckBox.Unchecked += CheckBox_CheckedChanged;
 
-            IEnumerable<string> distinctDepartmentsList = BusinessLayer.Collections.DepartmentTaskManagerCollection.DistinctDepartments(allDepartmentsInTasksList);
-
             //CREATE THE REST OF CHECK BOXES FOR ALL DISTINCT DEPARTMENTS IN THE DATABASE
-            foreach (var department in distinctDepartmentsList)
+            foreach (string department in distinctDepartmentsList)
             {
                 CheckBox depart = new CheckBox();
                 depart.Content = department;
@@ -164,36 +182,19 @@ namespace UserInterface
         /// METHOD WITH ALL THE LOGIC TO MANAGE THE DEPARTMENTS CHECKBOXES 
         /// </summary>
         /// <param name="checkBox"></param>
-        public void ManageDepartmentCheckBoxes(CheckBox checkBox)
+        public void ManageDepartmentCheckBoxes(string department, bool? isChecked)
         {
-            string checkBoxSelected = checkBox.Content.ToString();
 
-            if (checkBox.IsChecked == true)
+            if (isChecked == true)
             {
-                departmentSelectedList.Add(checkBoxSelected);
+                departmentSelectedList.Add(department);
             }
 
             else
             {
-                if (departmentSelectedList.Contains(checkBoxSelected))
+                if (departmentSelectedList.Contains(department))
                 {
-                    departmentSelectedList.Remove(checkBoxSelected);
-                }
-            }
-
-            if (checkBoxSelected != "GERAL" && checkBox.IsChecked == true)
-            {
-                geralCheckBox.IsChecked = false;
-            }
-
-            else if (checkBoxSelected == "GERAL" && checkBox.IsChecked == true)
-            {
-                foreach (CheckBox checkBoxChildren in checkBoxDadWrapPanel.Children)
-                {
-                    if (checkBoxChildren.Content.ToString() != "GERAL")
-                    {
-                        checkBoxChildren.IsChecked = false;
-                    }
+                    departmentSelectedList.Remove(department);
                 }
             }
         }

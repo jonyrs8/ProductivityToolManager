@@ -74,7 +74,7 @@ namespace UserInterface.ChartsUC
         /// <param name="list"></param>
         public void LoadChart(List<IAreaValue> list) 
         {
-            double value = 0;
+
             foreach (IAreaValue department in list)
             {
                 PieSeries pieSeries = new PieSeries
@@ -84,22 +84,18 @@ namespace UserInterface.ChartsUC
                     DataLabels = true,
                     Values = new ChartValues<double> { department.Value },
                     LabelPoint = PointLabel
-                };
-                
-                if (viewType == ViewType.Efficiency && department.Value > value) 
-                {
-                    value = department.Value;
-                    topDepartment = $"TOP DEPARTMENT: {department.Area}";
-                }
-
-                else if(viewType == ViewType.Task && department.Value > value)
-                {
-                    value = department.Value;
-                    topDepartment = $"TOP DEPARTMENT: {department.Area}";
-                }
+                };               
 
                 ChartUC.Series.Add(pieSeries);
             }
+
+
+            IAreaValue area = list.Select(k => k).OrderByDescending(k => k.Value).FirstOrDefault();
+            if (area != null)
+            {
+                this.topDepartment = $"TOP DEPARTMENT: {area.Area}";
+            }
+            
         }
 
         public void Label(string departmentArea, List<IAreaValue> list)
@@ -114,14 +110,12 @@ namespace UserInterface.ChartsUC
 
             }
 
+            topDepartmentLabel.Content = topDepartmentLabel.Content + departmentArea + " " + value;
             if (viewType == ViewType.Efficiency)
             {
-                topDepartmentLabel.Content = topDepartmentLabel.Content + departmentArea + " " + value + "%";
+                topDepartmentLabel.Content += "%";
             }
-            else
-            {
-                topDepartmentLabel.Content = topDepartmentLabel.Content + departmentArea + " " + value;
-            }
+
 
 
         }

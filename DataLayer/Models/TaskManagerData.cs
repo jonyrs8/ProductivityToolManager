@@ -24,7 +24,7 @@ namespace DataLayer.Models
         public static DataTable GetAllTasks (out string error)
         {
             string table = "TASK_MANAGER"; //PRECISA SER TASK_MANAGER !!!!!!!!!
-            DataTable dataTable = ListAllTableLogicData.GetTableData(out error, table);
+            DataTable dataTable = DatabaseConnection.GetTableData(out error, table);
             return dataTable;
         }
         #endregion

@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "C:\\ProductivityToolManager\\UserInterface\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{4389DB82-2895-4320-AA23-6A14BB8A8960}|UserInterface\\UserInterface.csproj|C:\\ProductivityToolManager\\UserInterface\\userinterface\\chartsuc\\piechartsuc.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4389DB82-2895-4320-AA23-6A14BB8A8960}|UserInterface\\UserInterface.csproj|solutionrelative:userinterface\\chartsuc\\piechartsuc.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4389DB82-2895-4320-AA23-6A14BB8A8960}|UserInterface\\UserInterface.csproj|C:\\ProductivityToolManager\\UserInterface\\userinterface\\chartsuc\\piechartsuc.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{4389DB82-2895-4320-AA23-6A14BB8A8960}|UserInterface\\UserInterface.csproj|solutionrelative:userinterface\\chartsuc\\piechartsuc.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{4389DB82-2895-4320-AA23-6A14BB8A8960}|UserInterface\\UserInterface.csproj|c:\\productivitytoolmanager\\userinterface\\userinterface\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4389DB82-2895-4320-AA23-6A14BB8A8960}|UserInterface\\UserInterface.csproj|solutionrelative:userinterface\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -11,20 +19,21 @@
       "RelativeMoniker": "D:0:0:{4389DB82-2895-4320-AA23-6A14BB8A8960}|UserInterface\\UserInterface.csproj|solutionrelative:userinterface\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\ProductivityToolManager\\UserInterface\\UserInterface\\obj\\Debug\\ChartsUC\\PieChartsUC.g.i.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:UserInterface\\obj\\Debug\\ChartsUC\\PieChartsUC.g.i.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{42FF5579-E981-4ABF-9228-7F22AB9D8EF4}|..\\DataLayer\\DataLayer.csproj|c:\\productivitytoolmanager\\datalayer\\databaseconnection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4389DB82-2895-4320-AA23-6A14BB8A8960}|UserInterface\\UserInterface.csproj|C:\\ProductivityToolManager\\UserInterface\\userinterface\\chartsuc\\piechartsuc.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4389DB82-2895-4320-AA23-6A14BB8A8960}|UserInterface\\UserInterface.csproj|solutionrelative:userinterface\\chartsuc\\piechartsuc.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4389DB82-2895-4320-AA23-6A14BB8A8960}|UserInterface\\UserInterface.csproj|C:\\ProductivityToolManager\\UserInterface\\userinterface\\chartsuc\\employcardsuc.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{4389DB82-2895-4320-AA23-6A14BB8A8960}|UserInterface\\UserInterface.csproj|solutionrelative:userinterface\\chartsuc\\employcardsuc.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{42FF5579-E981-4ABF-9228-7F22AB9D8EF4}|..\\DataLayer\\DataLayer.csproj|c:\\productivitytoolmanager\\datalayer\\models\\userinfomationdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6EF72B4C-D92F-4917-87C1-61234173F85D}|..\\BusinessLayer\\BusinessLayer.csproj|c:\\productivitytoolmanager\\businesslayer\\collections\\taskmanagercollection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4389DB82-2895-4320-AA23-6A14BB8A8960}|UserInterface\\UserInterface.csproj|C:\\ProductivityToolManager\\UserInterface\\userinterface\\chartsuc\\angulargaugechartsuc.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{4389DB82-2895-4320-AA23-6A14BB8A8960}|UserInterface\\UserInterface.csproj|solutionrelative:userinterface\\chartsuc\\angulargaugechartsuc.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4389DB82-2895-4320-AA23-6A14BB8A8960}|UserInterface\\UserInterface.csproj|C:\\ProductivityToolManager\\UserInterface\\userinterface\\chartsuc\\piechartsuc.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{4389DB82-2895-4320-AA23-6A14BB8A8960}|UserInterface\\UserInterface.csproj|solutionrelative:userinterface\\chartsuc\\piechartsuc.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,7 +43,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 10,
           "Children": [
             {
               "$type": "Bookmark",
@@ -62,55 +71,81 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
+              "Title": "DatabaseConnection.cs",
+              "DocumentMoniker": "C:\\ProductivityToolManager\\DataLayer\\DatabaseConnection.cs",
+              "RelativeDocumentMoniker": "..\\DataLayer\\DatabaseConnection.cs",
+              "ToolTip": "C:\\ProductivityToolManager\\DataLayer\\DatabaseConnection.cs",
+              "RelativeToolTip": "..\\DataLayer\\DatabaseConnection.cs",
+              "ViewState": "AQIAABEAAAAAAAAAAAAAwA8AAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-01T22:31:59.262Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "MainWindow.xaml.cs",
               "DocumentMoniker": "C:\\ProductivityToolManager\\UserInterface\\UserInterface\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "UserInterface\\MainWindow.xaml.cs",
               "ToolTip": "C:\\ProductivityToolManager\\UserInterface\\UserInterface\\MainWindow.xaml.cs",
               "RelativeToolTip": "UserInterface\\MainWindow.xaml.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABsAAAA/AAAA",
+              "ViewState": "AQIAAE8AAAAAAAAAAAAqwHEAAAAeAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-01T22:20:06.773Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "PieChartsUC.g.i.cs",
-              "DocumentMoniker": "C:\\ProductivityToolManager\\UserInterface\\UserInterface\\obj\\Debug\\ChartsUC\\PieChartsUC.g.i.cs",
-              "RelativeDocumentMoniker": "UserInterface\\obj\\Debug\\ChartsUC\\PieChartsUC.g.i.cs",
-              "ToolTip": "C:\\ProductivityToolManager\\UserInterface\\UserInterface\\obj\\Debug\\ChartsUC\\PieChartsUC.g.i.cs",
-              "RelativeToolTip": "UserInterface\\obj\\Debug\\ChartsUC\\PieChartsUC.g.i.cs",
-              "ViewState": "AQIAACMAAAAAAAAAAAAowHEAAABSAAAA",
+              "DocumentIndex": 6,
+              "Title": "UserInfomationData.cs",
+              "DocumentMoniker": "C:\\ProductivityToolManager\\DataLayer\\Models\\UserInfomationData.cs",
+              "RelativeDocumentMoniker": "..\\DataLayer\\Models\\UserInfomationData.cs",
+              "ToolTip": "C:\\ProductivityToolManager\\DataLayer\\Models\\UserInfomationData.cs",
+              "RelativeToolTip": "..\\DataLayer\\Models\\UserInfomationData.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-31T16:32:33.482Z"
+              "WhenOpened": "2024-04-10T19:39:14.029Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 7,
+              "Title": "TaskManagerCollection.cs",
+              "DocumentMoniker": "C:\\ProductivityToolManager\\BusinessLayer\\Collections\\TaskManagerCollection.cs",
+              "RelativeDocumentMoniker": "..\\BusinessLayer\\Collections\\TaskManagerCollection.cs",
+              "ToolTip": "C:\\ProductivityToolManager\\BusinessLayer\\Collections\\TaskManagerCollection.cs",
+              "RelativeToolTip": "..\\BusinessLayer\\Collections\\TaskManagerCollection.cs",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-10T19:38:12.541Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "PieChartsUC.xaml.cs",
               "DocumentMoniker": "C:\\ProductivityToolManager\\UserInterface\\UserInterface\\ChartsUC\\PieChartsUC.xaml.cs",
               "RelativeDocumentMoniker": "UserInterface\\ChartsUC\\PieChartsUC.xaml.cs",
               "ToolTip": "C:\\ProductivityToolManager\\UserInterface\\UserInterface\\ChartsUC\\PieChartsUC.xaml.cs",
               "RelativeToolTip": "UserInterface\\ChartsUC\\PieChartsUC.xaml.cs",
-              "ViewState": "AQIAAB0AAAAAAAAAAAAAwKsAAABFAAAA",
+              "ViewState": "AQIAAFAAAAAAAAAAAAAawFwAAAAbAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-31T16:03:37.194Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "AngularGaugeChartsUC.xaml",
-              "DocumentMoniker": "C:\\ProductivityToolManager\\UserInterface\\UserInterface\\ChartsUC\\AngularGaugeChartsUC.xaml",
-              "RelativeDocumentMoniker": "UserInterface\\ChartsUC\\AngularGaugeChartsUC.xaml",
-              "ToolTip": "C:\\ProductivityToolManager\\UserInterface\\UserInterface\\ChartsUC\\AngularGaugeChartsUC.xaml",
-              "RelativeToolTip": "UserInterface\\ChartsUC\\AngularGaugeChartsUC.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-03-31T16:04:30.404Z"
+              "WhenOpened": "2024-03-31T16:03:37.194Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "PieChartsUC.xaml",
+              "DocumentMoniker": "C:\\ProductivityToolManager\\UserInterface\\UserInterface\\ChartsUC\\PieChartsUC.xaml",
+              "RelativeDocumentMoniker": "UserInterface\\ChartsUC\\PieChartsUC.xaml",
+              "ToolTip": "C:\\ProductivityToolManager\\UserInterface\\UserInterface\\ChartsUC\\PieChartsUC.xaml",
+              "RelativeToolTip": "UserInterface\\ChartsUC\\PieChartsUC.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-03-31T16:03:33.088Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "C:\\ProductivityToolManager\\UserInterface\\UserInterface\\MainWindow.xaml",
               "RelativeDocumentMoniker": "UserInterface\\MainWindow.xaml",
@@ -122,13 +157,24 @@
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "PieChartsUC.xaml",
-              "DocumentMoniker": "C:\\ProductivityToolManager\\UserInterface\\UserInterface\\ChartsUC\\PieChartsUC.xaml",
-              "RelativeDocumentMoniker": "UserInterface\\ChartsUC\\PieChartsUC.xaml",
-              "ToolTip": "C:\\ProductivityToolManager\\UserInterface\\UserInterface\\ChartsUC\\PieChartsUC.xaml",
-              "RelativeToolTip": "UserInterface\\ChartsUC\\PieChartsUC.xaml",
+              "Title": "EmployCardsUC.xaml",
+              "DocumentMoniker": "C:\\ProductivityToolManager\\UserInterface\\UserInterface\\ChartsUC\\EmployCardsUC.xaml",
+              "RelativeDocumentMoniker": "UserInterface\\ChartsUC\\EmployCardsUC.xaml",
+              "ToolTip": "C:\\ProductivityToolManager\\UserInterface\\UserInterface\\ChartsUC\\EmployCardsUC.xaml",
+              "RelativeToolTip": "UserInterface\\ChartsUC\\EmployCardsUC.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-03-31T16:03:33.088Z"
+              "WhenOpened": "2024-04-10T20:15:02.002Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "AngularGaugeChartsUC.xaml",
+              "DocumentMoniker": "C:\\ProductivityToolManager\\UserInterface\\UserInterface\\ChartsUC\\AngularGaugeChartsUC.xaml",
+              "RelativeDocumentMoniker": "UserInterface\\ChartsUC\\AngularGaugeChartsUC.xaml",
+              "ToolTip": "C:\\ProductivityToolManager\\UserInterface\\UserInterface\\ChartsUC\\AngularGaugeChartsUC.xaml",
+              "RelativeToolTip": "UserInterface\\ChartsUC\\AngularGaugeChartsUC.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-03-31T16:04:30.404Z"
             }
           ]
         }

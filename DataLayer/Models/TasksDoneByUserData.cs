@@ -24,7 +24,7 @@ namespace DataLayer.Models
         public static DataTable GetTasksDoneByUserData(out string error)
         {
             string table = "USER_TASKS_VIEW";
-            DataTable dataTable = ListAllTableLogicData.GetTableData(out error, table);
+            DataTable dataTable = DatabaseConnection.GetTableData(out error, table);
             return dataTable;
         }
         #endregion

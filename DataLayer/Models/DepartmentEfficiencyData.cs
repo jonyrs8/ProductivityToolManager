@@ -25,7 +25,7 @@ namespace DataLayer.Models
         public static DataTable GetDepartmentEfficiencyData(out string error)
         {
             string table = "DEPARTMENT_EFFICIENCY_VIEW";
-            DataTable dataTable = ListAllTableLogicData.GetTableData(out error, table);
+            DataTable dataTable = DatabaseConnection.GetTableData(out error, table);
             return dataTable;
         }
         #endregion

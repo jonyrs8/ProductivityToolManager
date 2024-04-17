@@ -24,7 +24,7 @@ namespace DataLayer.Models
         public static DataTable GetDepartmentTasksData(out string error)
         {
             string table = "DEPARTMENT_TASKS_VIEW";
-            DataTable dataTable = ListAllTableLogicData.GetTableData(out error, table);
+            DataTable dataTable = DatabaseConnection.GetTableData(out error, table);
             return dataTable;
         }
         #endregion

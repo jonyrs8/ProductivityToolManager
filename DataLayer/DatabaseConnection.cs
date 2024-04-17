@@ -11,7 +11,7 @@ namespace DataLayer
     /// <summary>
     /// THIS CLASS SHOULD ONLY BE USED TO EXTRACT DATA FROM DATABASE
     /// </summary>
-    public class ListAllTableLogicData
+    public class DatabaseConnection
     {
         #region METHODS
         /// <summary>
