@@ -1,5 +1,6 @@
 ﻿using BusinessLayer;
 using BusinessLayer.Collections;
+using BusinessLayer.Enumerations;
 using BusinessLayer.Model;
 using BusinessLayer.Models;
 using System;
@@ -32,7 +33,9 @@ namespace UserInterface
         DepartmentEfficiencyCollection efficiencyDepartmentsList; //CONTAINS ALL EFFICIENCIES BY ALL DEPARTMENTS
         UserInformationCollection allUsersInformationList; //CONTAINS THE GREATEST PART OF CARDS INFORMATIONS OF ALL USERS
         DepartmentTaskManagerCollection allDepartmentsInTasksList; //CONTAINS ALL DEPARTMENTS WITH TASKS DONE
+        TasksDoneByUserCollection userList;
         IEnumerable<string> distinctDepartmentsList;
+        IEnumerable<string> distinctUserList;
         #endregion
 
         #region CONSTRUCTORES
@@ -51,6 +54,8 @@ namespace UserInterface
             allUsersInformationList = UserInformationCollection.ListUserInformation();
             allDepartmentsInTasksList = DepartmentTaskManagerCollection.ListDepartmentTasksCollection();
             distinctDepartmentsList = BusinessLayer.Collections.DepartmentTaskManagerCollection.DistinctDepartments(allDepartmentsInTasksList);
+            userList = TasksDoneByUserCollection.ListNumberOfTasksDoneByUser();
+            distinctUserList = BusinessLayer.Collections.DepartmentTaskManagerCollection.DistinctUsers(userList);
             EmployCardsFiltersCreate();
         }
 
@@ -105,44 +110,72 @@ namespace UserInterface
 
         #region METHODS
         /// <summary>
-        /// THIS METHOD CREATE CHECKBOXES OF ALL DEPARTMENTS EXISTIS IN DATABASE WITH TASKS DONE
+        /// THIS METHOD CREATE CHECKBOXES OF ALL DEPARTMENTS EXISTIS IN DATABASE WITH TASKS DONE - OTIMIZADA
         /// AND CHARGE OPTIONS TO THE TOP COMBO BOX
         /// </summary>
         private void EmployCardsFiltersCreate() 
         {
+            ComboBoxCreate(2, 10, IntervaloComboBox.Pair);
+
+            GeralCheckBoxStaticCreate("GERAL", Brushes.White);
+
+            CheckBoxCreate(distinctDepartmentsList);
+        }
+
+        private void ComboBoxCreate(int firstNumber,int lastNumber, IntervaloComboBox intervalo) 
+        {
             //WILL CHARGE TOP COMBO BOX WITH PAIR NUMBERS UNTIL 10 INCLUDE
             //AND WIL DEFINE FIRST RECORD(INDEX 0 = NUMBER 2) IN COMBO BOX
-            int lastNumber = 10;
-            for (int i = 2; i <= lastNumber; i++)
+
+            ComboBox comboBox = topComboBox;
+
+            for (int i = firstNumber; i <= lastNumber; i++)
             {
-                if (i % 2 == 0) //IF PAIR
+                if (intervalo == IntervaloComboBox.Pair && i % 2 == 0)
                 {
-                    topComboBox.Items.Add(i);
+                    comboBox.Items.Add(i);
+                }
+
+                else if (intervalo == IntervaloComboBox.Impair && i % 2 != 0)
+                {
+                    comboBox.Items.Add(i);
+                }
+
+                else if (intervalo == IntervaloComboBox.Normal)
+                {
+                    comboBox.Items.Add(i);
                 }
             }
-            topComboBox.SelectedItem = lastNumber;
 
+            comboBox.SelectedItem = lastNumber;
+        }
+
+        private void GeralCheckBoxStaticCreate(string name, SolidColorBrush color) 
+        {
             //WILL CREATE "GERAL" DEPARTMENTS CHECK BOX AND ADD AN CHECKED CHANGED EVENT 
-            geralCheckBox.Content = "GERAL";
-            geralCheckBox.Foreground = Brushes.White;
+            geralCheckBox.Content = name;
+            geralCheckBox.Foreground = color;
             geralCheckBox.Margin = new Thickness(5);
             checkBoxDadWrapPanel.Children.Add(geralCheckBox);
             geralCheckBox.Checked += CheckBox_CheckedChanged;
             geralCheckBox.Unchecked += CheckBox_CheckedChanged;
 
-            //CREATE THE REST OF CHECK BOXES FOR ALL DISTINCT DEPARTMENTS IN THE DATABASE
-            foreach (string department in distinctDepartmentsList)
-            {
-                CheckBox depart = new CheckBox();
-                depart.Content = department;
-                depart.Foreground = Brushes.White;
-                depart.Margin = new Thickness(5);
-                checkBoxDadWrapPanel.Children.Add(depart);
-                depart.Checked += CheckBox_CheckedChanged;
-                depart.Unchecked += CheckBox_CheckedChanged;
-            }
-
             geralCheckBox.IsChecked = true;
+        }
+
+        private void CheckBoxCreate(IEnumerable<string> list) 
+        {
+            //CREATE THE REST OF CHECK BOXES FOR ALL DISTINCT DEPARTMENTS IN THE DATABASE
+            foreach (string items in list)
+            {
+                CheckBox item = new CheckBox();
+                item.Content = items;
+                item.Foreground = Brushes.White;
+                item.Margin = new Thickness(5);
+                checkBoxDadWrapPanel.Children.Add(item);
+                item.Checked += CheckBox_CheckedChanged;
+                item.Unchecked += CheckBox_CheckedChanged;
+            }
         }
 
         /// <summary>

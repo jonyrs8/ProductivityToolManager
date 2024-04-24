@@ -50,7 +50,7 @@ namespace BusinessLayer.Collections
 
         }
 
-        public static int TasksDoneInTheYear(int year, TaskManagerCollection tasks)
+        public static int TasksDoneInTheYear (int year, TaskManagerCollection tasks)
         {
             var result = (from task in tasks
                              where task.TimeOut.Year == year

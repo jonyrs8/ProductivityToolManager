@@ -53,7 +53,7 @@ namespace BusinessLayer.Collections
         public static double GetDepartmentEfficiency(string department, DepartmentEfficiencyCollection listOfDepartmentsEfficiency)
         {
 
-            var result = (from departments in listOfDepartmentsEfficiency
+            double result = (from departments in listOfDepartmentsEfficiency
                          where departments.Area == department
                          select departments.Efficiency).FirstOrDefault();
 

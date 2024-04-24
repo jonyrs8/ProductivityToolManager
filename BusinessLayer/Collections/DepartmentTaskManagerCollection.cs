@@ -49,8 +49,17 @@ namespace BusinessLayer.Collections
         public static IEnumerable<string> DistinctDepartments(DepartmentTaskManagerCollection tasks)
         {
 
-            var result = (from task in tasks
+            IEnumerable<string> result = (from task in tasks
                           select task.Area).Distinct();
+
+            return result;
+        }
+
+        public static IEnumerable<string> DistinctUsers (TasksDoneByUserCollection tasks)
+        {
+
+            IEnumerable<string> result = (from task in tasks
+                          select task.UserID).Distinct();
 
             return result;
         }

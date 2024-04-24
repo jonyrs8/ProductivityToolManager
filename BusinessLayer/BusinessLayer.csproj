@@ -52,6 +52,7 @@
     <Compile Include="Collections\UserInformationCollection.cs" />
     <Compile Include="Collections\TasksDoneByUserCollection.cs" />
     <Compile Include="Collections\TaskYearObjectivesCollection.cs" />
+    <Compile Include="Enumerations\IntervaloComboBox.cs" />
     <Compile Include="Enumerations\ViewType.cs" />
     <Compile Include="Interfaces\IAreaValue.cs" />
     <Compile Include="Models\DepartmentTaskModel.cs" />
