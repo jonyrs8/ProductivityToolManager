@@ -1,22 +1,10 @@
-﻿using BusinessLayer;
-using BusinessLayer.Collections;
+﻿using BusinessLayer.Collections;
 using BusinessLayer.Enumerations;
-using BusinessLayer.Model;
 using BusinessLayer.Models;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
 using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 using UserInterface.ChartsUC;
 
 namespace UserInterface
@@ -28,11 +16,15 @@ namespace UserInterface
     {
 
         #region GLOBAL VARIABELS
-        List<string> departmentSelectedList = new List<string>(); //CONTAINS THE CONTENT OF THE CHECK BOXES SELECTED TO MANAGE CARDS
-        CheckBox geralCheckBox = new CheckBox(); //CHECKBOX GERAL
-        DepartmentEfficiencyCollection efficiencyDepartmentsList; //CONTAINS ALL EFFICIENCIES BY ALL DEPARTMENTS
-        UserInformationCollection allUsersInformationList; //CONTAINS THE GREATEST PART OF CARDS INFORMATIONS OF ALL USERS
-        DepartmentTaskManagerCollection allDepartmentsInTasksList; //CONTAINS ALL DEPARTMENTS WITH TASKS DONE
+        //CONTAINS THE CONTENT OF THE CHECK BOXES SELECTED TO MANAGE CARDS
+        List<string> departmentSelectedList = new List<string>(); 
+        CheckBox geralCheckBox = new CheckBox();
+        //CONTAINS ALL EFFICIENCIES BY ALL DEPARTMENTS
+        DepartmentEfficiencyCollection efficiencyDepartmentsList;
+        //CONTAINS THE GREATEST PART OF CARDS INFORMATIONS OF ALL USERS
+        UserInformationCollection allUsersInformationList;
+        //CONTAINS ALL DEPARTMENTS WITH TASKS DONE
+        DepartmentTaskManagerCollection allDepartmentsInTasksList;
         TasksDoneByUserCollection userList;
         IEnumerable<string> distinctDepartmentsList;
         IEnumerable<string> distinctUserList;
@@ -53,7 +45,8 @@ namespace UserInterface
             efficiencyDepartmentsList = DepartmentEfficiencyCollection.ListDepartmentEfficiencyCollection();
             allUsersInformationList = UserInformationCollection.ListUserInformation();
             allDepartmentsInTasksList = DepartmentTaskManagerCollection.ListDepartmentTasksCollection();
-            distinctDepartmentsList = BusinessLayer.Collections.DepartmentTaskManagerCollection.DistinctDepartments(allDepartmentsInTasksList);
+            distinctDepartmentsList 
+                = BusinessLayer.Collections.DepartmentTaskManagerCollection.DistinctDepartments(allDepartmentsInTasksList);
             userList = TasksDoneByUserCollection.ListNumberOfTasksDoneByUser();
             distinctUserList = BusinessLayer.Collections.DepartmentTaskManagerCollection.DistinctUsers(userList);
             EmployCardsFiltersCreate();
@@ -75,15 +68,15 @@ namespace UserInterface
         private void CheckBox_CheckedChanged(object sender, RoutedEventArgs e)
         {
             CheckBox checkBox = (CheckBox)sender;
-            string department = checkBox.Content.ToString();
+            string departmentName = checkBox.Content.ToString();
 
             bool? isChecked = checkBox.IsChecked;
-              if (department != "GERAL" && isChecked == true)
+            if (departmentName != "GERAL" && isChecked == true)
             {
                 geralCheckBox.IsChecked = false;
             }
 
-            else if (department == "GERAL" && isChecked == true)
+            else if (departmentName == "GERAL" && isChecked == true)
             {
                 foreach (CheckBox checkBoxChildren in checkBoxDadWrapPanel.Children)
                 {
@@ -93,7 +86,9 @@ namespace UserInterface
                     }
                 }
             }
-            ManageDepartmentCheckBoxes(department, isChecked);
+
+            ManageDepartmentCheckBoxes(departmentName, isChecked);
+
             EmployCardsCreate(departmentSelectedList);
         }
 
@@ -113,7 +108,7 @@ namespace UserInterface
         /// THIS METHOD CREATE CHECKBOXES OF ALL DEPARTMENTS EXISTIS IN DATABASE WITH TASKS DONE - OTIMIZADA
         /// AND CHARGE OPTIONS TO THE TOP COMBO BOX
         /// </summary>
-        private void EmployCardsFiltersCreate() 
+        private void EmployCardsFiltersCreate()
         {
             ComboBoxCreate(2, 10, IntervaloComboBox.Pair);
 
@@ -122,7 +117,7 @@ namespace UserInterface
             CheckBoxCreate(distinctDepartmentsList);
         }
 
-        private void ComboBoxCreate(int firstNumber,int lastNumber, IntervaloComboBox intervalo) 
+        private void ComboBoxCreate(int firstNumber, int lastNumber, IntervaloComboBox intervalo)
         {
             //WILL CHARGE TOP COMBO BOX WITH PAIR NUMBERS UNTIL 10 INCLUDE
             //AND WIL DEFINE FIRST RECORD(INDEX 0 = NUMBER 2) IN COMBO BOX
@@ -150,7 +145,7 @@ namespace UserInterface
             comboBox.SelectedItem = lastNumber;
         }
 
-        private void GeralCheckBoxStaticCreate(string name, SolidColorBrush color) 
+        private void GeralCheckBoxStaticCreate(string name, SolidColorBrush color)
         {
             //WILL CREATE "GERAL" DEPARTMENTS CHECK BOX AND ADD AN CHECKED CHANGED EVENT 
             geralCheckBox.Content = name;
@@ -163,7 +158,7 @@ namespace UserInterface
             geralCheckBox.IsChecked = true;
         }
 
-        private void CheckBoxCreate(IEnumerable<string> list) 
+        private void CheckBoxCreate(IEnumerable<string> list)
         {
             //CREATE THE REST OF CHECK BOXES FOR ALL DISTINCT DEPARTMENTS IN THE DATABASE
             foreach (string items in list)
@@ -186,21 +181,26 @@ namespace UserInterface
         private void EmployCardsCreate(List<string> departmentSelectedList)
         {
             //CONTAINS THE GREATEST PART OF CARD INFORMATION OF ONE USER
-            IEnumerable<UserInformationModel> userInformationList = UserInformationCollection.UsersByDepartment(departmentSelectedList, allUsersInformationList);
+            IEnumerable<UserInformationModel> userInformationList 
+            = UserInformationCollection.UsersByDepartment(departmentSelectedList, allUsersInformationList);
+
             //CLEAN PANEL
             cardsDadWrapPanel.Children.Clear();
             int counter = 0;
-            string employNumber = "1";
-            object topComboBoxSelectedObject = topComboBox.SelectedItem;
+            string employNumber = "1"; //STARTS IN 1
+            object topComboBoxSelectedObjects = topComboBox.SelectedItem;
 
-            if (userInformationList != null && topComboBoxSelectedObject != null) 
+            if (userInformationList != null && topComboBoxSelectedObjects != null)
             {
                 foreach (UserInformationModel user in userInformationList)
                 {
                     //IF COUNTER IS LESS THAN NUMBER YOU SELECTED IN COMBO BOX CREATE A CARD
-                    if (counter < (int)topComboBox.SelectedItem)
+                    if (counter < (int)topComboBoxSelectedObjects)
                     {
-                        EmployCardsUC cardsUC = new EmployCardsUC(user.FullName, user.TasksDone, user.DepartmentName, employNumber, efficiencyDepartmentsList); //PASSAR LISTA DE SECÇOES SELECIONADAS
+                        EmployCardsUC cardsUC 
+                            = new EmployCardsUC(user.FullName, user.TasksDone, user.DepartmentName, 
+                                employNumber, efficiencyDepartmentsList);
+
                         cardsUC.Margin = new Thickness(5);
                         //ADD TO INTERFACE PANEL
                         cardsDadWrapPanel.Children.Add(cardsUC);

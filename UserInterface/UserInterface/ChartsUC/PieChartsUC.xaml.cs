@@ -1,25 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-using BusinessLayer;
-using BusinessLayer.Collections;
+﻿using BusinessLayer.Collections;
 using BusinessLayer.Enumerations;
 using BusinessLayer.Interfaces;
-using BusinessLayer.Model;
-using BusinessLayer.Models;
 using LiveCharts;
 using LiveCharts.Wpf;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Documents;
 
 namespace UserInterface.ChartsUC
 {
@@ -29,8 +18,8 @@ namespace UserInterface.ChartsUC
     public partial class PieChartsUC : UserControl
     {
         #region GLOBAL VARIAVELS
-        DepartmentTaskManagerCollection departmentTasks;
-        DepartmentEfficiencyInCompanyColection departmentEfficiency; //SHOW THE MOST EFFICIENT DEPARTMENT DURING TASKS
+        DepartmentTaskManagerCollection departmentTasksList;
+        DepartmentEfficiencyInCompanyColection departmentEfficiencyList; //SHOW THE MOST EFFICIENT DEPARTMENT DURING TASKS
         ViewType viewType;
         string topDepartment = string.Empty;
         #endregion
@@ -58,23 +47,18 @@ namespace UserInterface.ChartsUC
         {
             if (viewType == ViewType.Task)
             {
-                LoadChart(departmentTasks);
+                LoadChart(departmentTasksList);
             }
             else if (viewType == ViewType.Efficiency)
             {
-                LoadChart(departmentEfficiency);
+                LoadChart(departmentEfficiencyList);
             }
 
             topDepartmentLabel.Content = topDepartment;
         }
 
-        /// <summary>
-        /// METHOD TO RECIBE 2 DIFERENT LIST WITH SAME OBJECT INTERFACE IMPLEMENTED, AND MAKE CHART
-        /// </summary>
-        /// <param name="list"></param>
-        public void LoadChart(List<IAreaValue> list) 
+        public void MakePieSeries(List<IAreaValue> list) 
         {
-
             foreach (IAreaValue department in list)
             {
                 PieSeries pieSeries = new PieSeries
@@ -84,40 +68,58 @@ namespace UserInterface.ChartsUC
                     DataLabels = true,
                     Values = new ChartValues<double> { department.Value },
                     LabelPoint = PointLabel
-                };               
+                };
 
                 ChartUC.Series.Add(pieSeries);
             }
+        }
+
+        /// <summary>
+        /// METHOD TO RECIBE 2 DIFERENT LIST WITH SAME OBJECT INTERFACE IMPLEMENTED, AND MAKE CHART
+        /// </summary>
+        /// <param name="list"></param>
+        public void LoadChart(List<IAreaValue> list)
+        {
+
+            MakePieSeries(list);
 
 
+            TopDepartmentLabel(list);
+
+        }
+
+        public void TopDepartmentLabel(List<IAreaValue> list) 
+        {
             IAreaValue area = list.Select(k => k).OrderByDescending(k => k.Value).FirstOrDefault();
             if (area != null)
             {
                 this.topDepartment = $"TOP DEPARTMENT: {area.Area}";
             }
-            
         }
 
         public void Label(string departmentArea, List<IAreaValue> list)
         {
             double value = 0;
-            foreach (IAreaValue department in list)
+            string topDepartmentLabelName = topDepartmentLabel.Content.ToString();
+
+            foreach (IAreaValue departmentAreas in list)
             {
-                if (departmentArea == department.Area)
+                if (departmentArea == departmentAreas.Area)
                 {
-                    value = (double)department.Value;
+                    value = departmentAreas.Value;
+                    break;
                 }
 
             }
 
-            topDepartmentLabel.Content = topDepartmentLabel.Content + departmentArea + " " + value;
+            topDepartmentLabel.Content = topDepartmentLabelName + departmentArea + " " + value;
+
+      
+
             if (viewType == ViewType.Efficiency)
             {
                 topDepartmentLabel.Content += "%";
             }
-
-
-
         }
         #endregion
 
@@ -128,7 +130,7 @@ namespace UserInterface.ChartsUC
             var chart = (LiveCharts.Wpf.PieChart)chartpoint.ChartView;
 
             //clear selected slice.
-            foreach (PieSeries series in chart.Series) 
+            foreach (PieSeries series in chart.Series)
             {
                 series.PushOut = 0;
             }
@@ -138,13 +140,13 @@ namespace UserInterface.ChartsUC
             if (viewType == ViewType.Task)
             {
                 topDepartmentLabel.Content = "TASKS DONE: ";
-                Label(selectedSeries.Title.ToString(), departmentTasks);
+                Label(selectedSeries.Title.ToString(), departmentTasksList);
 
             }
             else if (viewType == ViewType.Efficiency)
             {
                 topDepartmentLabel.Content = "EFFICIENCY: ";
-                Label(selectedSeries.Title.ToString(), departmentEfficiency);
+                Label(selectedSeries.Title.ToString(), departmentEfficiencyList);
 
             }
 
@@ -155,7 +157,7 @@ namespace UserInterface.ChartsUC
         private void ViewType_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             BusinessLayer.Models.ViewTypeDescription selectedViewType = filterComboBox.SelectedItem as BusinessLayer.Models.ViewTypeDescription;
-            if(selectedViewType != null) 
+            if (selectedViewType != null)
             {
                 viewType = selectedViewType.ViewType;
                 ChartUC.Series.Clear();
@@ -165,8 +167,8 @@ namespace UserInterface.ChartsUC
 
         private void ChartUC_Loaded(object sender, RoutedEventArgs e)
         {
-            departmentTasks = DepartmentTaskManagerCollection.ListDepartmentTasksCollection();
-            departmentEfficiency = DepartmentEfficiencyInCompanyColection.ListDepartmentEfficienceInCompanyColection();
+            departmentTasksList = DepartmentTaskManagerCollection.ListDepartmentTasksCollection();
+            departmentEfficiencyList = DepartmentEfficiencyInCompanyColection.ListDepartmentEfficienceInCompanyColection();
 
             filterComboBox.DisplayMemberPath = "Description"; //MOSTRA A PROPRIEDADE DESCRIPTION DO ITEM SELECIONADO
             filterComboBox.SelectedValuePath = "ViewType"; //SELECIONA INTERNAMENTE A PROPRIEDADE VIEWTYPE DO OBJETO
@@ -175,13 +177,13 @@ namespace UserInterface.ChartsUC
             filterComboBox.Items.Add(new BusinessLayer.Models.ViewTypeDescription(ViewType.Task));
 
             filterComboBox.SelectedIndex = 0; //DEFINE COMBO SELECTED ITEM AS THE FIRST VIEW - EFFICIENCY
-            
+
         }
 
         private void ChartUC_Unloaded(object sender, RoutedEventArgs e)
         {
-            departmentTasks = null;
-            departmentEfficiency = null;
+            departmentTasksList = null;
+            departmentEfficiencyList = null;
         }
         #endregion
     }

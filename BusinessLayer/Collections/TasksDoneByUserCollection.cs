@@ -49,7 +49,7 @@ namespace BusinessLayer.Collections
             TasksDoneByUserCollection tasks = ListNumberOfTasksDoneByUser();
 
             // Ordena as tarefas por número de tarefas concluídas por usuário
-            var result = tasks.OrderByDescending(task => task.TasksNumber);
+            IOrderedEnumerable<TasksDoneByUserModel> result = tasks.OrderByDescending(task => task.TasksNumber);
 
             return result;
         }

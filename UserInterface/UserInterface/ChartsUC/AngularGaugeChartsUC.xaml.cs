@@ -1,22 +1,9 @@
 ﻿using BusinessLayer.Collections;
-using LiveCharts.Wpf.Charts.Base;
 using LiveCharts.Wpf;
-using LiveCharts;
-using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
 using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace UserInterface.ChartsUC
 {
@@ -53,14 +40,15 @@ namespace UserInterface.ChartsUC
             angularGauge.Sections.Clear();
 
             List<SolidColorBrush> colorList = this.sectionsColorsYearObjectivesListCreator();
+
             LoadSections(colorList);
 
             //CHART CONSTRUCTION
             angularGauge.Value = tasksDoneInTheYear; //NUMBER OF TASKS DONE IN A YEAR
             angularGauge.FromValue = 0;
             angularGauge.ToValue = objective; //OBJECTIVE IN THIS YEAR
-            angularGauge.LabelsStep = objective / 5; //OBJECTIVE/5
-            angularGauge.TicksStep = objective / 10; //OBJECTIVE/10
+            angularGauge.LabelsStep = (double)objective / 5; //OBJECTIVE/5
+            angularGauge.TicksStep = (double)objective / 10; //OBJECTIVE/10
             angularGauge.Wedge = 325;
         }
 
@@ -68,7 +56,7 @@ namespace UserInterface.ChartsUC
         /// METHOD TO CREATE COLORS THAT WE WILL USE IN YEAR OBJECTIVES CHART
         /// </summary>
         /// <returns></returns>
-        public List<SolidColorBrush> sectionsColorsYearObjectivesListCreator() 
+        public List<SolidColorBrush> sectionsColorsYearObjectivesListCreator()
         {
             List<SolidColorBrush> colorList = new List<SolidColorBrush>();
             colorList.Add(new SolidColorBrush(Colors.Red));
@@ -84,7 +72,7 @@ namespace UserInterface.ChartsUC
         /// METHOD TO CREATE CHART SECTIONS BASED ON A COLOR LIST RECEIVED
         /// </summary>
         /// <param name="colorList"></param>
-        public void LoadSections(List<SolidColorBrush> colorList) 
+        public void LoadSections(List<SolidColorBrush> colorList)
         {
             List<AngularSection> sectionsList = new List<AngularSection>();
 
@@ -118,11 +106,13 @@ namespace UserInterface.ChartsUC
             objective = TaskYearObjectivesCollection.YearObjective(year, yearObjectivesList);
             tasksDoneInTheYear = TaskManagerCollection.TasksDoneInTheYear(year, allTasksList);
             tasksDoneLabel.Content = $"TASKS DONE: {tasksDoneInTheYear.ToString()}";
+
             //IF TASKS DONE IS GREATER THAN OBJECTIVE, TASKS DONE WILL BE THE OBJECTIVE
             if (tasksDoneInTheYear > objective)
             {
                 tasksDoneInTheYear = objective;
             }
+
             LoadTasksYearObjectivesChart();
         }
 
@@ -130,6 +120,11 @@ namespace UserInterface.ChartsUC
         {
             yearObjectivesList = TaskYearObjectivesCollection.ListAllTasksYearObjectives();
             allTasksList = TaskManagerCollection.ListAllTasks();
+            YearComboBoxCreate();
+        }
+
+        public void YearComboBoxCreate() 
+        {
             int countYearsInComboBox = 0;
             //YEARS
             foreach (BusinessLayer.Models.TaskYearObjectivesModel yearAndObjectives in yearObjectivesList)

@@ -47,7 +47,7 @@ namespace BusinessLayer.Collections
         public static int YearObjective(int year, TaskYearObjectivesCollection tasks)
         {
 
-            var objective = (from task in tasks
+            int objective = (from task in tasks
                              where task.Year == year
                              select task.Tasks_Objective).FirstOrDefault();
 

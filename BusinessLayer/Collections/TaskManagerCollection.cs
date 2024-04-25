@@ -52,7 +52,7 @@ namespace BusinessLayer.Collections
 
         public static int TasksDoneInTheYear (int year, TaskManagerCollection tasks)
         {
-            var result = (from task in tasks
+            int result = (from task in tasks
                              where task.TimeOut.Year == year
                              select task.TaskID).Count();
 
